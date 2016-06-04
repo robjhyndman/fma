@@ -13,7 +13,7 @@ Data sets from "Forecasting: methods and applications" by Makridakis, Wheelwrigh
 
 \references{
 Makridakis, Wheelwright and Hyndman (1998) \emph{Forecasting: methods and applications}, John Wiley
-& Sons: New York. \url{http://www.robhyndman.info/forecasting}}
+& Sons: New York. \url{http://robjhyndman.com/forecasting}}
 
 \keyword{ package }
 

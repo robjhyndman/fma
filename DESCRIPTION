@@ -2,9 +2,9 @@ Package: fma
 Title: Data sets from "Forecasting: methods and applications" by Makridakis, Wheelwright & Hyndman (1998)
 Description: All data sets from "Forecasting: methods and applications" by
              Makridakis, Wheelwright & Hyndman (Wiley, 3rd ed., 1998).
-Version: 2.02
-Date: 2016-06-04
-Depends: R (>= 2.0.0), graphics, stats, tseries, forecast
+Version: 2.03
+Date: 2017-02-12
+Depends: R (>= 2.0.0), forecast
 LazyData: yes
 LazyLoad: yes
 Author: Rob J Hyndman <Rob.Hyndman@monash.edu>

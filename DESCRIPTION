@@ -9,5 +9,5 @@ LazyLoad: yes
 Authors@R:
   person("Rob", "Hyndman", email="Rob.Hyndman@monash.edu", role=c("aut", "cre", "cph"))
 License: GPL (>= 2)
-URL: http://robjhyndman.com/software/fma/
+URL: http://pkg.robjhyndman.com/fma/
 RoxygenNote: 6.0.1.9000

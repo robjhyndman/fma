@@ -1,0 +1,20 @@
+
+year <- sub("-.*", "", meta$Date)
+if(!length(year))
+  year <- substr(Sys.Date(),1,4)
+vers <- paste("R package version", packageVersion("fma"))
+
+citHeader("To cite the fma package in publications, please use:")
+
+bibentry(bibtype = "Manual",
+  title = 'Data sets from "Forecasting: methods and applications" by Makridakis, Wheelwright & Hyndman (1998)',
+  author = "Rob J Hyndman",
+  year = year,
+  note = vers,
+  url = "http://pkg.robjhyndman.com/fma")
+
+bibentry(bibtype = "Book",
+  title="Forecasting: methods and applications",
+  author="Spyros Makridakis and Steve Wheelwright and Rob J Hyndman",
+  year = "1998",
+  publisher = "John Wiley & Sons")

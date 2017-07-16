@@ -13,7 +13,8 @@
 #' @examples
 #' plot(hsales)
 #' plot(stl(hsales,"periodic"),main="Sales of new one-family houses, USA")
-#'
+#' @export
+
 
 hsales <- stats::ts(c(55, 60, 68, 63, 65, 61, 54, 52, 46, 42, 37, 30, 37,
 44, 55, 53, 58, 50, 48, 45, 41, 34, 30, 24, 29, 34, 44, 54, 57,

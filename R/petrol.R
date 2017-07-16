@@ -15,7 +15,8 @@
 #' @keywords datasets
 #' @examples
 #' plot(petrol)
-#'
+#' @export
+
 
 petrol <- stats::ts (t (matrix (data = c(
  3.896, 49.780 , 2.154,  4.367,

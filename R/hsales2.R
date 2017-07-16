@@ -13,7 +13,8 @@
 #' plot(hsales2)
 #' seasonplot(hsales2)
 #' tsdisplay(hsales2)
-#'
+#' @export
+
 
 
 hsales2 <- stats::ts(c(53, 59, 73, 72, 62, 58, 55, 56, 52, 52, 43, 37,

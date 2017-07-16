@@ -17,7 +17,6 @@ Number of strikes in the US from 1951 to 1980.
 }
 \examples{
 tsdisplay(strikes)
-
 }
 \references{
 Brockwell and Davis (1991)

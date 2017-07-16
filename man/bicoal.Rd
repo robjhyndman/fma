@@ -17,6 +17,5 @@ Annual bituminous coal production in the USA: 1920--1968.
 }
 \examples{
 tsdisplay(bicoal)
-
 }
 \keyword{datasets}

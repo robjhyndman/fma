@@ -1,3 +1,6 @@
+#' @import forecast
+NULL
+
 #' Data sets from "Forecasting: methods and applications" by Makridakis,
 #' Wheelwright and Hyndman (1998)
 #'
@@ -13,3 +16,4 @@
 #' \url{http://robjhyndman.com/forecasting}
 #' @keywords package
 NULL
+

@@ -17,6 +17,5 @@ Telephone cost in San Francisco, New York: 1915--1996.
 }
 \examples{
 plot(telephone)
-
 }
 \keyword{datasets}

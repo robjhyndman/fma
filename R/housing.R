@@ -15,7 +15,8 @@
 #' @keywords datasets
 #' @examples
 #' plot(housing)
-#'
+#' @export
+
 
 housing <- stats::ts(t(matrix(data=c(
    91.3  , 11.358 , 13    ,

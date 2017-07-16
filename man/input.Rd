@@ -17,6 +17,5 @@ Input series for exercise 8.6.
 }
 \examples{
 plot(input)
-
 }
 \keyword{datasets}

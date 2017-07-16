@@ -14,7 +14,8 @@
 #' plot(motion)
 #' seasonplot(motion)
 #' tsdisplay(motion)
-#'
+#' @export
+
 
 motion <- stats::ts(c(218.20, 217.90, 224.70, 236.40, 238.70, 240.80,
 241.90, 241.30, 240.40, 233.40, 226.60, 219.40, 215.80, 213.80,

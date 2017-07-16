@@ -9,7 +9,8 @@
 #' @keywords datasets
 #' @examples
 #' plot(oilprice)
-#'
+#' @export
+
 
 
 oilprice <- stats::ts(c(49.32, 58.53, 49.09, 24.68, 16.71, 19.86, 38.23,

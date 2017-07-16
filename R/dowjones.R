@@ -10,7 +10,8 @@
 #' @keywords datasets
 #' @examples
 #' tsdisplay(dowjones)
-#'
+#' @export
+
 
 dowjones <- stats::ts(c(110.94,  110.69, 110.43, 110.56, 110.75, 110.84,
 110.46, 110.56, 110.46, 110.05, 109.6, 109.31, 109.31, 109.25,

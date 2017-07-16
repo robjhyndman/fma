@@ -17,6 +17,5 @@ Quarterly electricity production.
 }
 \examples{
 plot(decompose(qelec))
-
 }
 \keyword{datasets}

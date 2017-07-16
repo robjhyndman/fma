@@ -17,7 +17,6 @@ Dow-Jones index on 251 trading days ending 26 Aug 1994.
 }
 \examples{
 tsdisplay(dj)
-
 }
 \references{
 Brockwell and Davis (1996)

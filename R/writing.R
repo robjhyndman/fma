@@ -11,7 +11,8 @@
 #' @examples
 #' tsdisplay(writing)
 #' seasonplot(writing)
-#'
+#' @export
+
 
 writing <- stats::ts(c(562.674, 599.000, 668.516, 597.798, 579.889,
 668.233, 499.232, 215.187, 555.813, 586.935, 546.136, 571.111,

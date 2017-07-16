@@ -9,7 +9,7 @@
 #' @keywords datasets
 #' @examples
 #' plot(nail)
-#'
+#' @export
 
 
 nail <- stats::ts(c(168.89, 172.27, 218.71, 188.72, 188.36, 188.36,

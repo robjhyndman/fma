@@ -21,7 +21,6 @@ worn.
 plot(ukdeaths)
 seasonplot(ukdeaths)
 tsdisplay(ukdeaths)
-
 }
 \references{
 Harvey (1989)

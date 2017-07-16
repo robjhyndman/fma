@@ -17,7 +17,6 @@ Daily closing IBM stock price.
 }
 \examples{
 tsdisplay(ibmclose)
-
 }
 \references{
 Box, Jenkins and Reinsell (1994) \emph{Time series analysis:

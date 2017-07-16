@@ -17,6 +17,5 @@ Level of Lake Huron in feet (reduced by 570 feet): 1875--1972.
 }
 \examples{
 plot(huron)
-
 }
 \keyword{datasets}

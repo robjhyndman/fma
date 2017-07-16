@@ -19,6 +19,5 @@ Jul 1992).
 \examples{
 plot(dole)
 tsdisplay(dole)
-
 }
 \keyword{datasets}

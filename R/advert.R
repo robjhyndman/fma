@@ -14,7 +14,7 @@
 #' @keywords datasets
 #' @examples
 #' plot(sales ~ advert, data=advert)
-#'
+#' @export
 
 advert <- stats::ts(t(matrix(data=c(
 25, 92.8,

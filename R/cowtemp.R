@@ -14,7 +14,8 @@
 #' @examples
 #' plot(cowtemp)
 #' tsdisplay(cowtemp)
-#'
+#' @export
+
 
 cowtemp <- stats::ts(c(60, 70, 54, 56, 70, 66, 53, 95, 70, 69, 56, 70,
 70, 60, 60, 60, 50, 50, 48, 59, 50, 60, 70, 54, 46, 57, 57, 51,

@@ -18,6 +18,5 @@ Inventory demand for product E15.
 }
 \examples{
 plot(invent15)
-
 }
 \keyword{datasets}

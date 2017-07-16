@@ -11,7 +11,8 @@
 #' @keywords datasets
 #' @examples
 #' tsdisplay(internet)
-#'
+#' @export
+
 
 
 internet <- stats::ts(c(88, 84, 85, 85, 84, 85, 83, 85, 88, 89, 91, 99,

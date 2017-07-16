@@ -14,7 +14,8 @@
 #' @examples
 #' plot(fancy)
 #' seasonplot(fancy)
-#'
+#' @export
+
 
 
 fancy <- stats::ts(c(1664.81, 2397.53, 2840.71, 3547.29, 3752.96,

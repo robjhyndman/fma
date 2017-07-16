@@ -12,7 +12,8 @@
 #' plot(bricksq)
 #' seasonplot(bricksq)
 #' tsdisplay(bricksq)
-#'
+#' @export
+
 
 bricksq <- stats::ts(c(189, 204, 208, 197, 187, 214, 227, 223, 199,
 229, 249, 234, 208, 253, 267, 255, 242, 268, 290, 277, 241, 253,

@@ -17,6 +17,5 @@ Shipments
 }
 \examples{
 plot(shipex)
-
 }
 \keyword{datasets}

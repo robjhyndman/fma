@@ -18,7 +18,8 @@
 #' @examples
 #' plot(lynx)
 #' tsdisplay(lynx)
-#'
+#' @export
+
 
 
 lynx <- stats::ts(c(269, 321, 585, 871, 1475, 2821, 3928, 5943, 4950,

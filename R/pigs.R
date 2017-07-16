@@ -10,7 +10,7 @@
 #' @keywords datasets
 #' @examples
 #' tsdisplay(pigs)
-#'
+#' @export
 
 
 pigs <- stats::ts(c(76378, 71947, 33873, 96428, 105084, 95741, 110647,

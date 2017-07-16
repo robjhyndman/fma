@@ -18,6 +18,5 @@ Canada: 1848--1911.
 }
 \examples{
 tsdisplay(mink)
-
 }
 \keyword{datasets}

@@ -22,7 +22,6 @@ plot(milk,xlab="Year",ylab="pounds",
 milk.adj <- milk/monthdays(milk)*365.25/12
 plot(milk.adj,xlab="Year",ylab="pounds",
     main="Adjusted monthly milk production per cow")
-
 }
 \references{
 Cryer (1986) \emph{Time series analysis}, Duxbury Press:

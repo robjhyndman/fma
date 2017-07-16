@@ -19,6 +19,5 @@ Australian monthly electricity production: Jan 1956 -- Aug 1995.
 plot(elec)
 seasonplot(elec)
 tsdisplay(elec)
-
 }
 \keyword{datasets}

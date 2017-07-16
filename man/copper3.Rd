@@ -17,6 +17,5 @@ Yearly copper prices for 43 consecutive years (in constant 1997 dollars).
 }
 \examples{
 plot(copper3)
-
 }
 \keyword{datasets}

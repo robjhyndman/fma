@@ -17,6 +17,5 @@ Nail prices, 1800--1996 in constant dollars.
 }
 \examples{
 plot(nail)
-
 }
 \keyword{datasets}

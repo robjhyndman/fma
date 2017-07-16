@@ -13,7 +13,8 @@
 #' @keywords datasets
 #' @examples
 #' tsdisplay(ibmclose)
-#'
+#' @export
+
 
 
 ibmclose <- stats::ts(c(460, 457, 452, 459, 462, 459, 463, 479, 493, 490,

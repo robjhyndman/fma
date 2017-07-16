@@ -18,7 +18,8 @@
 #' log.jcars <- BoxCox(jcars,0)
 #' jcars.f <- holt(log.jcars)
 #' plot(jcars.f)
-#'
+#' @export
+
 
 jcars <- stats::ts(c(11, 20, 29, 32, 38, 39, 50, 70, 69, 111, 182, 188,
 263, 482, 814, 991, 1284, 1702, 1876, 2286, 3146, 4086, 4675,

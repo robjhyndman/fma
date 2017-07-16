@@ -10,7 +10,8 @@
 #' @keywords datasets
 #' @examples
 #' tsdisplay(pollution)
-#'
+#' @export
+
 
 pollution <- stats::ts(c(122.640, 120.888, 164.688, 147.168, 171.696,
 228.636, 124.392, 155.928, 217.248, 176.076, 142.788, 196.224,

@@ -17,6 +17,5 @@ Expenditure for 12 supermarket customers.
 }
 \examples{
 hist(expenditure)
-
 }
 \keyword{datasets}

@@ -12,5 +12,6 @@
 #' @examples
 #' plot(sales,type="p")
 #' abline(lsfit(1:10,sales))
-#'
+#' @export
+
 sales <- stats::ts(c(30, 20, 45, 35, 30, 60, 40, 50, 45, 65),s=1,f=1)

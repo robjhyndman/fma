@@ -17,6 +17,5 @@ Sales of Elco's laser printers: 1992--1998.
 }
 \examples{
 plot(elco)
-
 }
 \keyword{datasets}

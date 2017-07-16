@@ -11,7 +11,8 @@
 #' plot(plastics)
 #' seasonplot(plastics)
 #' plot(stl(plastics,"periodic"))
-#'
+#' @export
+
 
 plastics <- stats::ts(c(matrix(c(742, 741, 896, 951, 1030,
 697, 700, 793, 861, 1032,

@@ -17,7 +17,8 @@
 #' milk.adj <- milk/monthdays(milk)*365.25/12
 #' plot(milk.adj,xlab="Year",ylab="pounds",
 #'     main="Adjusted monthly milk production per cow")
-#'
+#' @export
+
 
 milk <- stats::ts(c(589, 561, 640, 656, 727, 697, 640, 599, 568, 577,
 553, 582, 600, 566, 653, 673, 742, 716, 660, 617, 583, 587, 565,

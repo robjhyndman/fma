@@ -15,7 +15,8 @@
 #' labour.stl <- stl(labour,10)
 #' plot(labour.stl)
 #' monthplot(labour.stl$time.series[,1],type="h")
-#'
+#' @export
+
 
 labour <- stats::ts(c(6468.5, 6465.4, 6457.6, 6436.7, 6424.8, 6416.6,
 6403.7, 6411.6, 6416.2, 6406.6, 6570.0, 6421.2, 6508.8, 6524.6,

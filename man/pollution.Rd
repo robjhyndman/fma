@@ -18,6 +18,5 @@ Jan 1986 -- Oct 1996.
 }
 \examples{
 tsdisplay(pollution)
-
 }
 \keyword{datasets}

@@ -20,6 +20,5 @@ Monthly accidental deaths in USA.
 plot(usdeaths)
 seasonplot(usdeaths)
 tsdisplay(usdeaths)
-
 }
 \keyword{datasets}

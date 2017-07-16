@@ -19,7 +19,6 @@ Canada: 1821--1934.
 \examples{
 plot(lynx)
 tsdisplay(lynx)
-
 }
 \references{
 Campbell, M. J.and A. M. Walker (1977). A Survey of statistical

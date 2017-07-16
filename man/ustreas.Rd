@@ -19,6 +19,5 @@ days in 1981.
 \examples{
 plot(ustreas)
 tsdisplay(ustreas)
-
 }
 \keyword{datasets}

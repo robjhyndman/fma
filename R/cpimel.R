@@ -9,7 +9,8 @@
 #' @keywords datasets
 #' @examples
 #' tsdisplay(cpimel)
-#'
+#' @export
+
 
 cpimel <- stats::ts(c(45.2, 46.6, 47.5, 48.5, 49.6, 50.7, 51.8, 54.1,
 54.8, 56.1, 58.1, 59.6, 60.9, 62.6, 63.6, 65.5, 65.1, 65.3, 66.3,

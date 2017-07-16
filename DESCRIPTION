@@ -1,13 +1,12 @@
 Package: fma
 Title: Data Sets from "Forecasting: Methods and Applications" by Makridakis, Wheelwright & Hyndman (1998)
-Description: All data sets from "Forecasting: methods and applications" by
-             Makridakis, Wheelwright & Hyndman (Wiley, 3rd ed., 1998).
+Description: All data sets from "Forecasting: methods and applications" by Makridakis, Wheelwright & Hyndman (Wiley, 3rd ed., 1998).
 Version: 2.4
 Depends: R (>= 2.0.0), forecast
 LazyData: yes
 LazyLoad: yes
 Authors@R:
   person("Rob", "Hyndman", email="Rob.Hyndman@monash.edu", role=c("aut", "cre", "cph"))
-License: GPL 3
+License: GPL-3
 URL: http://pkg.robjhyndman.com/fma/, https://github.com/robjhyndman/fma
 RoxygenNote: 6.0.1.9000

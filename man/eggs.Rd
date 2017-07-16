@@ -17,6 +17,5 @@ Price of dozen eggs in US, 1900--1993, in constant dollars.
 }
 \examples{
 plot(eggs)
-
 }
 \keyword{datasets}

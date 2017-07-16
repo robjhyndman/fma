@@ -20,7 +20,6 @@ expected that this drug would reduce perceptual speed.
 }
 \examples{
 plot(schizo)
-
 }
 \references{
 McCleary and Hay (1980).

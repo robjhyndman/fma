@@ -9,7 +9,8 @@
 #' @keywords datasets
 #' @examples
 #' tsdisplay(bicoal)
-#'
+#' @export
+
 
 bicoal <- stats::ts(c(569, 416   , 422, 565, 484, 520, 573, 518, 501,
 505, 468, 382, 310, 334, 359, 372, 439, 446, 349, 395, 461, 511,

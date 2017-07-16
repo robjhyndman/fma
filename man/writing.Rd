@@ -19,6 +19,5 @@ francs): Jan 1963 -- Dec 1972.
 \examples{
 tsdisplay(writing)
 seasonplot(writing)
-
 }
 \keyword{datasets}

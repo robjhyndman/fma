@@ -18,6 +18,5 @@ Quarterly exports of a French company in thousands of francs.
 }
 \examples{
 plot(qsales)
-
 }
 \keyword{datasets}

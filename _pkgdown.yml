@@ -18,7 +18,113 @@ navbar:
       href: https://github.com/robjhyndman/fma
 
 reference:
-  - title: "Data"
-    desc: "Data sets used in the book"
+  - title: "Super-Annual Data"
+    desc: "Data recorded at intervals greater than one year"
     contents:
-      - -ends_with("package")
+      - olympic
+  - title: "Annual Data"
+    desc: "Data recorded every year"
+    contents:
+      - bicoal
+      - chicken
+      - copper2
+      - copper3
+      - copper
+      - eggs
+      - elco
+      - ibm
+      - huron
+      - jcars
+      - lynx
+      - mink
+      - nail
+      - oilprice
+      - pcv
+      - sheep
+      - strikes
+      - telephone
+      - wagesuk
+      - wheat
+  - title: "Quarterly Data"
+    desc: "Data recorded every quarter"
+    contents:
+      - bricksq
+      - canadian
+      - capital
+      - cpimel
+      - qelec
+      - qsales
+  - title: "Monthly Data"
+    desc: "Data recorded every month"
+    contents:
+      - advert
+      - advsales
+      - airpass
+      - bank
+      - beer
+      - boston
+      - condmilk
+      - copper1
+      - dole
+      - eknives
+      - elec
+      - fancy
+      - french
+      - housing
+      - hsales
+      - hsales2
+      - invent15
+      - labour
+      - milk
+      - motel
+      - motion
+      - paris
+      - petrol
+      - pigs
+      - plastics
+      - pollution
+      - productC
+      - shampoo
+      - ship
+      - ukdeaths
+      - usdeaths
+      - uselec
+      - writing
+  - title: "Daily Data"
+    desc: "Data recorded every day"
+    contents:
+      - books
+      - cowtemp
+      - dj
+      - dowjones
+      - econsumption
+      - ibmclose
+      - schizo
+      - ustreas
+  - title: "Minute Data"
+    desc: "Data recorded every minute"
+    contents:
+      - internet
+  - title: "Other Time Series Data"
+    desc: "Data recorded at unspecified time intervals"
+    contents:
+      - input
+      - pulpprice
+      - sales
+      - shipex
+      - wn
+      - wnoise
+  - title: "Cross-sectional Data"
+    desc: "Data recorded at one time"
+    contents:
+      - auto
+      - cement
+      - dexter
+      - expenditure
+      - kkong
+      - mortal
+      - ozone
+      - running
+      - texasgas
+
+

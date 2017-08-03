@@ -7,7 +7,7 @@ vers <- paste("R package version", packageVersion("fma"))
 citHeader("To cite the fma package in publications, please use:")
 
 bibentry(bibtype = "Manual",
-  title = 'Data sets from "Forecasting: methods and applications" by Makridakis, Wheelwright & Hyndman (1998)',
+  title = 'fma: Data sets from "Forecasting: methods and applications" by Makridakis, Wheelwright & Hyndman (1998)',
   author = "Rob J Hyndman",
   year = year,
   note = vers,

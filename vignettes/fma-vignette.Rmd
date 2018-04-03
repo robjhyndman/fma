@@ -15,11 +15,8 @@ knitr::opts_chunk$set(
   comment = "#>"
 )
 library(tidyverse)
-library(tsibble)
 library(fma)
 library(forecast)
-library(lubridate)
-library(zoo)
 library(gridExtra)
 data(beer)
 data(auto)
@@ -52,10 +49,6 @@ There are a number of data sets that are included in the `fma` package, which ar
     Time-series data for the monthly Australian beer production (in megalitres) from January 1991 to August 1995. <br/>
     Can be loaded with the command `data(beer)`. <br/>
     + This data is represented as a time series (`ts`) object. The row names indicate the **year** while the column names indicate the **month** of the year. The values indicate the **beer production** in megalitres for the corresponding year and month. <br/>
-    <br/>
-    If this data set is coerced into a tsibble (via the `as.tsibble()` function from the `tsibble` package), then it will have the following columns:
-    + **index**: A `Date` object in the format `YYYY-MM-DD` representing the year and month of each observation
-    + **value**: The beer production value (in megalitres) recorded during the corresponding month and year
     
 - **elec** <br/>
     Time-series data containing monthly Australian electricity production from January 1956 to August 1995. <br/>
@@ -77,15 +70,12 @@ Chapter 2 describes three main types of graph that are useful for forecasting. R
 For time series data the most obvious graphical form is a *time plot* (in which the data are plotted over time). A time plot immediately reveals any trends over time, any regular seasonal behavior, and other systematic features of the data.
 **Figure 2-1** below shows a time plot of the beer data. This reveals the range of the data and the time at which peaks occur, the relative size of the peaks and the randomness in the time series. <br/>
 ```{r fig.width=7.15, fig.height=5}
-beer %>% 
-  as.tsibble() %>%
-  ggplot(aes(x=index, y=value)) +
-  geom_line() +
-  labs(title="Monthly Australian Beer Production",
-       x = "Year",
-       y = "Megalitres",
-       caption = "Figure 2-1: Time plot of monthly Australian beer production (megaliters, Ml) from January 1991–August 1995.")
-
+beer %>%
+  autoplot() +
+  ggtitle("Monthly Australian Beer Production") +
+  xlab("Year") +
+  ylab("Megalitres") +
+  labs(caption = "Figure 2-1: Time plot of monthly Australian beer production (megaliters, Ml) from January 1991–August 1995.")
 ```
 <br/>
 
@@ -93,28 +83,7 @@ beer %>%
 
 For time series data that have seasonal patterns, it is often useful to also produce a seasonal plot. This involves grouping the data by a chosen 'season', and overlapping the plots from those seasons for different time periods. This can make the underlying seasonal pattern more obvious, as well as more easily identify deviations from this pattern. **Figure 2-2** shows a seasonal plot of the `beer` data. <br/>
 <br/>
-This can be done using functions from the `ggplot2` package:<br/>
-```{r fig.width=8, fig.height=5, warning = FALSE}
-beer %>% 
-  as.tsibble() %>%
-  mutate(year = format(index, '%Y'),
-         month = format(index, '%B')) %>%
-  ggplot(aes(x = month, y = value, group = year, colour = year)) +
-  geom_line() +
-  geom_point() +
-  labs(title = 'Monthly Australian Beer Production',
-       x = 'Months',
-       y = 'Megalitres',
-       caption = 'Figure 2-2: A seasonal plot of the Australian beer production data. Note that  
-       production peaks in November and December in preparation for the southern 
-       hemisphere summer and is least in winter.') +
-  scale_x_discrete(limits = c('January','February','March','April','May','June',
-                              'July','August','September','October','November','December'))
-
-```
-<br/>
-<br/>
-This can also be done using the `ggseasonplot()` function from the `forecast` package, which offers a simpler syntax:<br/>
+This can be done using the `ggseasonplot()` function from the `forecast` package:<br/>
 ```{r fig.width=7.15, fig.height=5}
 ggseasonplot(beer, col = rainbow(5), year.labels = TRUE) +
   labs(title = 'Monthly Australian Beer Production',
@@ -130,7 +99,6 @@ Timeplots and Seasonal Plots are not appropriate for cross-sectional data. Patte
 <br/>
 ```{r fig.width=7.15, fig.height=5}
 auto %>%
-  as.tibble() %>%
   ggplot(aes(x = Mileage, y = Price)) +
   geom_point(size = 3) +
   labs(x = 'Mileage (mpg)',
@@ -144,7 +112,6 @@ The `auto` data also has an additional explanatory variable **Country**. It is a
 <br/>
 ```{r fig.width=7.15, fig.height=5}
 auto %>%
-  as.tibble() %>%
   ggplot(aes(x = Mileage, y = Price, shape=Country)) +
   geom_point(size = 3) +
   labs(x = 'Mileage (mpg)',
@@ -163,11 +130,9 @@ In addition to graphics, it is also helpful to provide numerical summaries. A su
 **Table 2-4** shows the computation of some useful univariate statistics for the **Mileage** variable in the `auto` dataset, after filtering the data set to only include cars from Japan. These statistics are defined and explained in the textbook. The following code produces these summary statistics:<br/>
 <br/>
 
-```{r}
-auto %>%
-  as.tibble %>%
-  filter(Country == 'Japan') ->
-  auto_japan
+```{r warning=FALSE}
+auto_japan <- auto %>%
+  filter(Country == 'Japan')
 auto_japan
 ```
 ```{r}
@@ -200,19 +165,33 @@ The covariance and correlation coefficient are statistics that measure the exten
 <br/>
 For example, if we compare Y~t~ (the observation at time t) with Y~t−1~ (the observation at time t−1), then we see how consecutive observations are related. The observation Y~t−1~ is described as *lagged* by one period.<br/>
 <br/>
-**Table 2-7** takes the `beer` data set and shows the **lagged** series, then shows the calculation of **autocorrelation** and **autocovariance** for this lag of one period. These calculations are shown below:<br/>
+**Table 2-7** takes the `beer` data set and shows the **lagged** series, then shows the calculation of **autocorrelation** and **autocovariance** for this lag of one period. The `lag()` function is demonstrated, and the calculations of autocorrelation and autocovariance are shown for a lag of one period:<br/>
 <br/>
-
 ```{r}
-beer %>%
-  as.tsibble %>%
-  mutate(index= as.Date(as.yearmon(index)),
-         lag1 = lag(index),
-         `Yt-1` = lag(value),
-         lag2 = lag(lag(index)),
-         `Yt-2` = lag(lag(value))) %>%
-  rename(t = index, Yt = value)
+beer
 ```
+```{r}
+stats::lag(beer, -1)
+```
+```{r}
+stats::lag(beer, -2)
+```
+Autocorrelation and autocovariance are then calculated using **Equation (2.10)** and **Equation (2.11)**, and a lag of one period. The R code below reproduces the calculations in the textbook in **Table 2-7**.
+```{r}
+beer_lag1 <- stats::lag(beer, -1)
+
+mean <- sum(beer) / length(beer)
+
+autocovar_lag1 <- sum((beer - mean) * (beer_lag1 - mean)) / length(beer)
+
+autocorr_lag1 <- sum((beer - mean) * (beer_lag1 - mean)) / sum((beer - mean)^2)
+
+mean
+autocovar_lag1
+autocorr_lag1
+```
+
+
 **Table 2-7**
 <br/>
 <br/>
@@ -234,12 +213,10 @@ In this section of the book, a variety of measures of forecasting (or modelling)
 The textbook refers to a simple forecasting method called *Naive Forecast 1* (NF1) which is generally used as a base line with which to compare more sophisticated methods. This method uses the most recent observation available as a forecast. **Table 2-11** shows NF1 used to forecast the monthly beer production for the year of 1995. Below this table in the textbook, the calculations of the MAE and the MAPE are shown. Here, the `accuracy()` function from the forecast package is used, which outputs the MAE and the MAPE as well as a number of other measures of accuracy.
 <br/><br/>
 ```{r}
-# subset the data such that Yt contains data for 1995, and Ft is this data lagged by one period
-fcst <- tibble(Yt = pull(as.tibble(beer)[49:56,]),
-               Ft = pull(as.tibble(beer)[48:55,]))
-fcst
+fcst <- window(beer, start=1995)
+fcst_lag1 <- window(stats::lag(beer, -1), start=1995)
 
-accuracy(fcst$Ft, fcst$Yt)
+accuracy(fcst_lag1, fcst)
 ```
 <br/><br/>
 
@@ -253,83 +230,59 @@ Sometimes adjusting the data will lead to a simpler and more interpretable forec
 **Figure 2-10** below shows a plot of the `elec` data set. <br/>
 ```{r fig.width=7.15, fig.height=5}
 elec %>%
-  as.tsibble() %>%
-  ggplot(aes(index, value)) +
-  geom_line() + 
-  labs(title = 'Australian Monthly Electricity Production',
-       x = 'Year',
-       y = 'million kWh',
-       caption = 'Figure 2-10: Monthly Australian electricity production from January 1956 to August 1995. 
-       Note the increasing variation as the level of the series increases.')
+  autoplot() +
+  ggtitle("Australian Monthly Electricity Production") +
+  xlab("Year") +
+  ylab("million kWh") +
+  labs(caption = "Figure 2-10: Monthly Australian electricity production from January 1956 to August 1995. 
+       Note the increasing variation as the level of the series increases.")
 ```
 <br/><br/>
 This time plot shows that, for this data set, the size of the annual seasonal variation increases as the level of the series increases. The variation at the start (towards the left) is about 300 million kWh, while in more recent years (to the right) the variation exceeds 2500 kWh. A mathematical transformation is a convenient method for the necessary task of including this increasing variation into the forecasts for this data. <br/>
 <br/>
-One possible transformation is the *square root* function. A new column is added to the data set with row entries containing the square roots of the values in the `elec` data. This result is plotted below: <br/>
-```{r}
-elec %>% 
-  as.tsibble() %>%
-  rename(date=index, production=value) %>%
-  mutate(sqrt_production = sqrt(production))
-```
+One possible transformation is the *square root* function. This transform is plotted below: <br/>
 ```{r fig.width=7.15, fig.height=5}
-elec %>% 
-  as.tsibble() %>%
-  rename(date=index, production=value) %>%
-  mutate(square_root = sqrt(production)) %>%
-  ggplot(aes(date, square_root)) +
-  geom_line() + 
-  labs(title = 'Square Root of Electricity Production',
-       x = 'Year',
-       y = 'sqrt(million kWh)')
+elec %>%
+  sqrt() %>%
+  autoplot() +
+  ggtitle("Square Root of Electricity Production") +
+  xlab("Year") +
+  ylab("sqrt(million kWh)")
 ```
 <br/><br/>
 So we can see that this transformation has helped in reducing the variation in the seasonal cycles. This will make the forecasting task easier than the un-transformed data shown in **Figure 2-10**. <br/>
 <br/>
 There are a number of other useful transformations. One of the most common is the logarithm, as it is relatively easy to interpret. **Section 2/7** of the textbook gives the formulation for the the set of *power transformations*. The plots below show a selection of these transformations. <br/>
-```{r}
-elec_transform <- elec %>% 
-  as.tsibble() %>%
-  rename(date = index, production = value) %>%
-  mutate(square_root = sqrt(production),
-         cube_root = production**(1/3),
-         logarithm = log(production),
-         negative_reciprocal= -1 / production)
-
-elec_transform
-```
 ```{r fig.width=7.15, fig.height=15}
 # create plot for square root
-p1 <- elec_transform %>%
-  ggplot(aes(x = date, y = square_root)) + 
-  geom_line() +
-  labs(title = 'Square Root of Electricity Production',
-       x = 'Year',
-       y = 'sqrt(million kWh)')
+p1 <- elec %>%
+  sqrt() %>%
+  autoplot() +
+  ggtitle("Square Root of Electricity Production") +
+  xlab("Year") +
+  ylab("sqrt(million kWh)")
 
 # create plot for cube root
-p2 <- elec_transform %>%
-  ggplot(aes(x = date, y = cube_root)) + 
-  geom_line() +
-  labs(title = 'Cube Root of Electricity Production',
-       x = 'Year',
-       y = '(million kWh)**(1/3)')
+p2 <- elec ^ (1/3) %>%
+  autoplot() +
+  ggtitle("Cube Root of Electricity Production") +
+  xlab("Year") +
+  ylab("million kWh ^ 1/3")
 
 # create plot for logarithm
-p3 <- elec_transform %>%
-  ggplot(aes(x = date, y = logarithm)) + 
-  geom_line() +
-  labs(title = 'Logarithm of Electricity Production',
-       x = 'Year',
-       y = 'log(million kWh)')
+p3 <- elec %>%
+  log() %>%
+  autoplot() +
+  ggtitle("Logarithm of Electricity Production") +
+  xlab("Year") +
+  ylab("log(million kWh)")
 
 # create plot for negative reciprocal
-p4 <- elec_transform %>%
-  ggplot(aes(x = date, y = negative_reciprocal)) + 
-  geom_line() +
-  labs(title = 'Negative Reciprocal of Electricity Production',
-       x = 'Year',
-       y = '-1/(million kWh)')
+p4 <- (-1 / elec) %>%
+  autoplot() +
+  ggtitle("Negative Reciprocal of Electricity Production") +
+  xlab("Year") +
+  ylab("-1 / million kWh")
 
 grid.arrange(p1, p2, p3, p4, ncol = 1)
 ```
@@ -343,24 +296,16 @@ Some of the variation in a time series may be due to the variation in the number
 <br/>
 ```{r fig.width=7.15, fig.height=8}
 p1 <- milk %>%
-  as.tsibble %>%
-  mutate(index= as.Date(as.yearmon(index))) %>%
-  ggplot(aes(x = index, y = value)) +
-  geom_line() +
-  labs(title = 'Monthly Milk Production per Cow',
-       x = 'Months',
-       y = 'Pounds')
+  autoplot() +
+  ggtitle("Monthly Milk Production per Cow") +
+  xlab("Months") +
+  ylab("Pounds")
 
-p2 <- milk %>%
-  as.tsibble %>%
-  mutate(index= as.Date(as.yearmon(index)),
-         month_days = days_in_month(index),
-         adjusted = value * 365.25 / 12 / month_days) %>%
-  ggplot(aes(x = index, y = adjusted)) +
-  geom_line() +
-  labs(title = 'Adjusted Monthly Milk Production per Cow',
-       x = 'Months',
-       y = 'Pounds')
+p2 <- cbind(milk/monthdays(milk)) %>%
+  autoplot() +
+  ggtitle("Adjusted Monthly Milk Production per Cow") +
+  xlab("Months") +
+  ylab("Pounds")
 
 grid.arrange(p1, p2, ncol=1)
 ```

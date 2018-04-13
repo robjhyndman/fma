@@ -23,9 +23,9 @@ library(tidyverse)
 
 # Introduction
 
-This package contains a collection of datasets and functions that are designed to accompany the textbook "Forecasting: Methods and Applications" by Makridakis, Wheelwright & Hyndman (Wiley, 3rd ed., 1998). The book can be purchased [here](http://amzn.com/0471532339/?tag=otexts-20).
+This package contains a collection of datasets and functions that are designed to accompany the textbook "Forecasting: Methods and Applications" by Makridakis, Wheelwright & Hyndman (Wiley, 3rd ed., 1998). The book can be purchased [here](https://amzn.com/0471532339/?tag=otexts-20).
 
-[![](https://robjhyndman.com/img/fma.jpg)](http://robjhyndman.com/forecasting/)
+[![](https://robjhyndman.com/img/fma.jpg)](https://robjhyndman.com/forecasting/)
 
 This vignette will give a brief introduction to the ways in which the datasets in the `fma` package can be analysed using the `forecast` package, along with some functionality from the `tidyverse` set of packages. Most of the figures from Chapter 2 are reproduced here. The figure numbers used here correspond to figures in the textbook. 
 

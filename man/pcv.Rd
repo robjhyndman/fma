@@ -20,7 +20,7 @@ pcv
 GDP for Western Europe and PCV industry sales.
 }
 \examples{
-plot(PCV~GDP,data=pcv,pch=20,col=2)
+plot(PCV~GDP, data=pcv, pch=20, col=2)
 
 }
 \keyword{datasets}

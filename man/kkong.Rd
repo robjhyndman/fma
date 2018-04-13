@@ -21,7 +21,7 @@ kkong
 King Kong data.
 }
 \examples{
-plot(weight~height,data=kkong,pch=19,col=2)
+plot(weight~height, data=kkong, pch=19, col=2)
 
 }
 \keyword{datasets}

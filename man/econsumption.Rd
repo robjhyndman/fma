@@ -20,7 +20,7 @@ econsumption
 Electricity consumption and maximum temperature for 12 randomly chosen days.
 }
 \examples{
-plot(Mwh ~ temp, data=econsumption,pch=19,col=4)
+plot(Mwh ~ temp, data=econsumption, pch=19, col=4)
 
 }
 \keyword{datasets}

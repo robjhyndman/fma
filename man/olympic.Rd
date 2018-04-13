@@ -20,7 +20,7 @@ olympic
 Winning times for the men's 400 m final in each Olympic Games: 1896--1996.
 }
 \examples{
-plot(time~Year,data=olympic,pch=19,col=3)
+plot(time~Year, data=olympic, pch=19, col=3)
 
 }
 \keyword{datasets}

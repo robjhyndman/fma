@@ -22,7 +22,8 @@ Total room nights occupied and total monthly takings from accommodation at
 hotel, motel and guest house in Victoria, Australia: Jan 1980 - June 1995.
 }
 \examples{
-plot(motel[,2],motel[,1], xlab="Room nights", ylab="Takings",pch=19,col=4)
+plot(motel[,2], motel[,1], xlab="Room nights", ylab="Takings",
+  pch=19, col=4)
 
 }
 \keyword{datasets}

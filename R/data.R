@@ -15,9 +15,10 @@
 #' methods and applications}, Wiley: New York. Chapter 2.
 #' @keywords datasets
 #' @examples
-#' plot(Price ~ Mileage, data=auto,pch=19,col=2)
-#' points(auto$Mileage[auto$Country=="USA"],auto$Price[auto$Country=="USA"],pch=19,col=4)
-#' legend(30,25000,legend=c("USA","Japan"),pch=19,col=c(4,2))
+#' plot(Price ~ Mileage, data=auto, pch=19, col=2)
+#' points(auto$Mileage[auto$Country=="USA"],
+#'  auto$Price[auto$Country=="USA"], pch=19, col=4)
+#' legend(30,25000,legend=c("USA","Japan"), pch=19, col=c(4,2))
 #'
 "auto"
 
@@ -132,7 +133,7 @@
 #' methods and applications}, John Wiley & Sons: New York. Exercise 5.4
 #' @keywords datasets
 #' @examples
-#' plot(production~score,data=dexter,pch=19,col=3)
+#' plot(production~score, data=dexter, pch=19, col=3)
 #'
 "dexter"
 
@@ -150,7 +151,7 @@
 #' methods and applications}, John Wiley & Sons: New York. Exercise 5.5
 #' @keywords datasets
 #' @examples
-#' plot(Mwh ~ temp, data=econsumption,pch=19,col=4)
+#' plot(Mwh ~ temp, data=econsumption, pch=19, col=4)
 #'
 "econsumption"
 
@@ -171,11 +172,11 @@
 #' @keywords datasets
 #' @examples
 #' par(mfrow=c(2,1))
-#' plot(ibm[,1],xlim=c(1954,2000),ylim=c(0,200),
-#'     ylab="Sales (billions of $)",xlab="Year",type="o")
+#' plot(ibm[,1], xlim=c(1954,2000), ylim=c(0,200),
+#'   ylab="Sales (billions of $)", xlab="Year", type="o")
 #' lines(ibm[,3],col=2,type="o")
-#' plot(ibm[,2],xlim=c(1954,2000),ylim=c(-10,30),
-#'     ylab="Profits (billions of $)",xlab="Year",type="o")
+#' plot(ibm[,2], xlim=c(1954,2000), ylim=c(-10,30),
+#'   ylab="Profits (billions of $)", xlab="Year", type="o")
 #' lines(ibm[,4],col=2,type="o")
 #'
 "ibm"
@@ -195,7 +196,7 @@
 #' 5.6.
 #' @keywords datasets
 #' @examples
-#' plot(weight~height,data=kkong,pch=19,col=2)
+#' plot(weight~height, data=kkong, pch=19, col=2)
 #'
 "kkong"
 
@@ -213,7 +214,7 @@
 #' methods and applications}, John Wiley & Sons: New York. Exercise 5.9
 #' @keywords datasets
 #' @examples
-#' plot(mortality~typeA,data=mortal)
+#' plot(mortality~typeA, data=mortal)
 #'
 "mortal"
 
@@ -233,7 +234,8 @@
 #' methods and applications}, John Wiley & Sons: New York. Exercise 8.7.
 #' @keywords datasets
 #' @examples
-#' plot(motel[,2],motel[,1], xlab="Room nights", ylab="Takings",pch=19,col=4)
+#' plot(motel[,2], motel[,1], xlab="Room nights", ylab="Takings",
+#'   pch=19, col=4)
 #'
 "motel"
 
@@ -251,7 +253,7 @@
 #' methods and applications}, John Wiley & Sons: New York. Exercise 5.7
 #' @keywords datasets
 #' @examples
-#' plot(time~Year,data=olympic,pch=19,col=3)
+#' plot(time~Year, data=olympic, pch=19, col=3)
 #'
 "olympic"
 
@@ -269,7 +271,7 @@
 #' methods and applications}, John Wiley & Sons: New York. Exercise 5.3.
 #' @keywords datasets
 #' @examples
-#' plot(ozonedep~melanoma,data=ozone,pch=19,col=2)
+#' plot(ozonedep~melanoma, data=ozone, pch=19, col=2)
 #'
 "ozone"
 
@@ -287,7 +289,7 @@
 #' methods and applications}, John Wiley & Sons: New York. Chapter 5.
 #' @keywords datasets
 #' @examples
-#' plot(PCV~GDP,data=pcv,pch=20,col=2)
+#' plot(PCV~GDP, data=pcv, pch=20, col=2)
 #'
 "pcv"
 
@@ -305,7 +307,7 @@
 #' methods and applications}, John Wiley & Sons: New York. Chapter 5.
 #' @keywords datasets
 #' @examples
-#' plot(shipments~price,data=pulpprice)
+#' plot(shipments~price, data=pulpprice)
 #'
 "pulpprice"
 
@@ -322,7 +324,7 @@
 #' methods and applications}, John Wiley & Sons: New York. Exercise 2.5.
 #' @keywords datasets
 #' @examples
-#' plot(times~capacity,data=running,pch=19,col=2)
+#' plot(times~capacity, data=running, pch=19, col=2)
 #'
 "running"
 

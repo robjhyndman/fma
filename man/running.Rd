@@ -16,7 +16,7 @@ running
 Running times and maximal aerobic capacity for 14 female runners.
 }
 \examples{
-plot(times~capacity,data=running,pch=19,col=2)
+plot(times~capacity, data=running, pch=19, col=2)
 
 }
 \references{

@@ -20,7 +20,7 @@ dexter
 Scores on manual dexterity test and production ratings for 20 workers.
 }
 \examples{
-plot(production~score,data=dexter,pch=19,col=3)
+plot(production~score, data=dexter, pch=19, col=3)
 
 }
 \keyword{datasets}

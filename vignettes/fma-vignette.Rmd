@@ -2,7 +2,10 @@
 title: "Using FMA: Worked Examples and Explanations"
 author: "Justin Carmody, Rob J Hyndman"
 date: "`r Sys.Date()`"
-output: rmarkdown::html_vignette
+output: 
+  rmarkdown::html_vignette:
+    fig_width: 7.15
+    fig_height: 4.42
 vignette: >
   %\VignetteIndexEntry{Using FMA: Worked Examples and Explanations}
   %\VignetteEngine{knitr::rmarkdown}
@@ -14,62 +17,52 @@ knitr::opts_chunk$set(
   collapse = TRUE,
   comment = "#>"
 )
-library(tidyverse)
 library(fma)
-library(forecast)
-library(gridExtra)
-data(beer)
-data(auto)
+library(tidyverse)
 ```
 
-
 # Introduction
-This package contains a collection of datasets and functions that are designed to accompany the textbook "Forecasting: Methods and Applications" by Makridakis, Wheelwright & Hyndman (Wiley, 3rd ed., 1998). The book can be purchased [here](https://www.amazon.com/Forecasting-Applications-Spyros-G-Makridakis/dp/0471532339).
 
-<center>
-![](cover.jpg)
-</center>
+This package contains a collection of datasets and functions that are designed to accompany the textbook "Forecasting: Methods and Applications" by Makridakis, Wheelwright & Hyndman (Wiley, 3rd ed., 1998). The book can be purchased [here](http://amzn.com/0471532339/?tag=otexts-20).
 
-This vignette will give a brief introduction to the ways in which the datasets in the `fma` package can be manipulated with `tidyverse` functions together with the `forecast` package. The figure numbers used here correspond to figures in the textbook. Any calculated statistics that are different to the textbook reflect the fact that the data sets may have changed over time.
-<br/><br/>
+[![](https://robjhyndman.com/img/fma.jpg)](http://robjhyndman.com/forecasting/)
+
+This vignette will give a brief introduction to the ways in which the datasets in the `fma` package can be analysed using the `forecast` package, along with some functionality from the `tidyverse` set of packages. Most of the figures from Chapter 2 are reproduced here. The figure numbers used here correspond to figures in the textbook. 
 
 # Data Sets
+
 There are a number of data sets that are included in the `fma` package, which are referenced in examples throughout the book. Descriptions of the data sets that are used in this vignette are included below:
 
-- **auto** <br/>
-    Cross-Sectional data for 45 automobiles from *Consumer Reports*, April 1990, pp. 235-255. <br/>
-    Can be loaded with the command `data(auto)`. <br/>
-    Column Specification:
+- **auto** 
+    Cross-sectional data for 45 automobiles from *Consumer Reports*, April 1990, pp. 235-255. 
+    Columns:
     + **Model**: The name of the automobile
     + **Country**: The country of origin of the automobile
     + **Mileage**: The mileage of the automobile (in miles per gallon)
-    + **Price**: The price of the car (in $USD)
+    + **Price**: The price of the car (in $US)
 
-- **beer** <br/>
-    Time-series data for the monthly Australian beer production (in megalitres) from January 1991 to August 1995. <br/>
-    Can be loaded with the command `data(beer)`. <br/>
-    + This data is represented as a time series (`ts`) object. The row names indicate the **year** while the column names indicate the **month** of the year. The values indicate the **beer production** in megalitres for the corresponding year and month. <br/>
+- **beer** 
+    Monthly time series data for Australian beer production (in megalitres) from January 1991 to August 1995. 
     
-- **elec** <br/>
-    Time-series data containing monthly Australian electricity production from January 1956 to August 1995. <br/>
-    Can be loaded with the command `load(elec)`. <br/>
-    + This data is included as a time series (`ts`) object. The row names indicate the **year** while the column names indicate the **month** of the year. The values indicate the electricity production in kWh.
+- **elec** 
+    Monthly time series data for Australian electricity production from January 1956 to August 1995 in kWh.
     
-- **milk** <br/>
-    Time-series data containing monthly milk production per cow over a 14 year time period. <br/>
-    Can be loaded with the command `load(milk)`. <br/>
-    + This data is included as a time series (`ts`) object. The row names provide an index over the **year** while the column names indicate the **month** of the year. The values indicate the milk production in pounds.
-<br/><br/>
+- **milk** 
+    Monthly time series data for milk production per cow (in pounds) over a 14 year time period. 
 
 # Graphical Summaries
-The single most important thing to do when first exploring the data is to visualize it through graphs. The basic features of the data, including patterns and unusual observations, are most easily seen through graphs. Sometimes graphs also suggest possible explanations for some of the variation in the data. <br/>
 
-Chapter 2 describes three main types of graph that are useful for forecasting. R code that can be used to reproduce these examples will be shown below. <br/>
+The single most important thing to do when first exploring the data is to visualize it through graphs. The basic features of the data, including patterns and unusual observations, are most easily seen through graphs. Sometimes graphs also suggest possible explanations for some of the variation in the data. 
+
+Chapter 2 describes three main types of graph that are useful for forecasting. R code that can be used to reproduce these examples will be shown below. 
 
 ### Time Plots and Time Series Patterns
+
 For time series data the most obvious graphical form is a *time plot* (in which the data are plotted over time). A time plot immediately reveals any trends over time, any regular seasonal behavior, and other systematic features of the data.
-**Figure 2-1** below shows a time plot of the beer data. This reveals the range of the data and the time at which peaks occur, the relative size of the peaks and the randomness in the time series. <br/>
-```{r fig.width=7.15, fig.height=5}
+
+**Figure 2-1** below shows a time plot of the beer data. This reveals the range of the data and the time at which peaks occur, the relative size of the peaks and the randomness in the time series. 
+
+```{r}
 beer %>%
   autoplot() +
   ggtitle("Monthly Australian Beer Production") +
@@ -77,64 +70,61 @@ beer %>%
   ylab("Megalitres") +
   labs(caption = "Figure 2-1: Time plot of monthly Australian beer production (megaliters, Ml) from January 1991–August 1995.")
 ```
-<br/>
 
 ### Seasonal Plots
 
-For time series data that have seasonal patterns, it is often useful to also produce a seasonal plot. This involves grouping the data by a chosen 'season', and overlapping the plots from those seasons for different time periods. This can make the underlying seasonal pattern more obvious, as well as more easily identify deviations from this pattern. **Figure 2-2** shows a seasonal plot of the `beer` data. <br/>
-<br/>
-This can be done using the `ggseasonplot()` function from the `forecast` package:<br/>
-```{r fig.width=7.15, fig.height=5}
+For time series data that have seasonal patterns, it is often useful to also produce a *seasonal plot*. This consists of the data plotted against the individuals "seasons" in which the data were observed. This is something like a time plot except that the data from each season are overlapped. A seasonal plot enables the underlying seasonal pattern more obvious, as well as more easily identify deviations from this pattern. **Figure 2-2** shows a seasonal plot of the `beer` data. 
+
+This can be done using the `ggseasonplot()` function from the `forecast` package:
+
+```{r}
 ggseasonplot(beer, col = rainbow(5), year.labels = TRUE) +
-  labs(title = 'Monthly Australian Beer Production',
-       x = 'Months',
-       y = 'Megalitres',
-       caption = 'Figure 2-2: A seasonal plot of the Australian beer production data. Note that 
-       production peaks in November and December in preparation for the southern 
-       hemisphere summer and is least in winter.')
+  ggtitle('Monthly Australian Beer Production') +
+  xlab('Months') + ylab('Megalitres') +
+  labs(caption = 'Figure 2-2: A seasonal plot of the Australian beer production data. Note that production peaks in
+    November and December in preparation for the southern hemisphere summer and is least in winter.')
 ```
 
 ### Scatterplots
-Timeplots and Seasonal Plots are not appropriate for cross-sectional data. Patterns in these data can be more readily visualised with **scatterplots**. Scatterplots help to visualise the relationships between variables of interest in a data set. **Figure 2-3** shows a plot of two variables from the `auto` data set; **Price** (in $US) and **Mileage** (in miles per gallon): <br/>
-<br/>
-```{r fig.width=7.15, fig.height=5}
+
+Time plots and seasonal plots are not appropriate for cross-sectional data. Patterns in these data can be readily visualised with **scatterplots**. Scatterplots help to visualise the relationships between variables of interest in a data set. **Figure 2-3** shows a plot of two variables from the `auto` data set.
+
+```{r}
 auto %>%
   ggplot(aes(x = Mileage, y = Price)) +
-  geom_point(size = 3) +
-  labs(x = 'Mileage (mpg)',
-       y = 'Price ($US)',
-       title = 'Price/Mileage Relationship for 45 Automobiles',
-       caption = 'Figure 2-3: A scatterplot of price versus mileage for the automobile data.')
+  geom_point() +
+  xlab("Mileage (mpg)") + ylab("Price ($US)") +
+  ggtitle("Price/Mileage Relationship for 45 Automobiles") +
+  labs(caption = 'Figure 2-3: A scatterplot of price versus mileage for the automobile data.')
 ```
-<br/>
-<br/>
-The `auto` data also has an additional explanatory variable **Country**. It is a categorical variable so cannot be plotted against **Price** in the same way as the continuous **Mileage** variable. However, we can include the **Country** information in our scatterplot with a shape aesthetic. This is displayed in **Figure 2-4** below: <br/>
-<br/>
-```{r fig.width=7.15, fig.height=5}
+
+The `auto` data also has an additional explanatory variable **Country**. It is a categorical variable so cannot be plotted against **Price** in the same way as the continuous **Mileage** variable. However, we can include the **Country** information in our scatterplot with a shape aesthetic. This is displayed in **Figure 2-4** below. 
+
+```{r}
 auto %>%
   ggplot(aes(x = Mileage, y = Price, shape=Country)) +
-  geom_point(size = 3) +
-  labs(x = 'Mileage (mpg)',
-       y = 'Price ($US)',
-       title = 'Price/Mileage Relationship for 45 Automobiles',
-       caption = 'Figure 2-4: A scatterplot showing price, mileage, and the country of origin 
-       for the automobile data.')
+  geom_point(size=2) +
+  xlab("Mileage (mpg)") + ylab("Price ($US)") +
+  ggtitle("Price/Mileage Relationship for 45 Automobiles") +
+  labs(caption = 'Figure 2-4: A scatterplot showing price, mileage, and the country of origin for the automobile data.')
 ```
-<br/>
-<br/>
 
 # Numerical Summaries
+
 In addition to graphics, it is also helpful to provide numerical summaries. A summary number for a data set is called a *statistic*.
 
 ### Univariate Statistics
-**Table 2-4** shows the computation of some useful univariate statistics for the **Mileage** variable in the `auto` dataset, after filtering the data set to only include cars from Japan. These statistics are defined and explained in the textbook. The following code produces these summary statistics:<br/>
-<br/>
+
+**Table 2-4** shows the computation of some useful univariate statistics for the **Mileage** variable in the `auto` dataset, after filtering the data set to only include cars from Japan. These statistics are defined and explained in the textbook. The following code produces these summary statistics:
 
 ```{r warning=FALSE}
 auto_japan <- auto %>%
   filter(Country == 'Japan')
 auto_japan
 ```
+
+**Table 2-4**
+
 ```{r}
 auto_japan %>%
   summarise(mean = mean(Mileage),
@@ -144,10 +134,14 @@ auto_japan %>%
             Variance = var(Mileage),
             Std_Dev = sd(Mileage))
 ```
-**Table 2-4**
+
 
 ### Bivariate Statistics 
-This section introduces the concepts of **covariance**, **correlation** and **auto-correlation**. **Table 2-6** below shows the calculation of these bivariate statistics for the `auto` data with **Country == 'Japan'** (the same data used in **Table 2-5**). The variables being considered are **Price** and **Mileage**. For this section the units of **Price** will be converted to thousands of dollars. Calculation of these statistics is given below:<br/>
+
+This section introduces the concepts of **covariance**, **correlation** and **auto-correlation**. **Table 2-6** below shows the calculation of these bivariate statistics for the `auto` data with `Country == "Japan"` (the same data used in **Table 2-5**). The variables being considered are **Price** and **Mileage**. For this section the units of **Price** will be converted to thousands of dollars. Calculation of these statistics is given below:
+
+**Table 2-6**
+
 ```{r}
 auto_japan %>%
   mutate(Price = Price/1000) %>%
@@ -158,192 +152,107 @@ auto_japan %>%
             covariance = cov(Price, Mileage),
             correlation = cor(Price, Mileage))
 ```
-**Table 2-6**
 
 ### Autocorrelation
-The covariance and correlation coefficient are statistics that measure the extent of the linear relationship between two variables and can be used to identify explanatory relationships. Autocovariance and autocorrelation are comparable measures that serve the same purpose for a single time series. <br/>
-<br/>
-For example, if we compare Y~t~ (the observation at time t) with Y~t−1~ (the observation at time t−1), then we see how consecutive observations are related. The observation Y~t−1~ is described as *lagged* by one period.<br/>
-<br/>
-**Table 2-7** takes the `beer` data set and shows the **lagged** series, then shows the calculation of **autocorrelation** and **autocovariance** for this lag of one period. The `lag()` function is demonstrated, and the calculations of autocorrelation and autocovariance are shown for a lag of one period:<br/>
-<br/>
+
+The covariance and correlation coefficient are statistics that measure the extent of the linear relationship between two variables and can be used to identify explanatory relationships. Autocovariance and autocorrelation are comparable measures that serve the same purpose for a single time series. 
+
+For example, if we compare $Y_t$ (the observation at time $t$) with $Y_{t−1}$ (the observation at time $t−1$), then we see how consecutive observations are related. The observation $Y_{t−1}$ is described as *lagged* by one period.
+
+Together the autocorrelations at lags 1, 2, ..., make up the autocorrelation function or **ACF**. It is much easier to understand the autocorrelations by plotting them against the lag. This plot is known as a *correlogram*. **Figure 2-6** shows the ACF for the beer data:
+
 ```{r}
-beer
-```
-```{r}
-stats::lag(beer, -1)
-```
-```{r}
-stats::lag(beer, -2)
-```
-Autocorrelation and autocovariance are then calculated using **Equation (2.10)** and **Equation (2.11)**, and a lag of one period. The R code below reproduces the calculations in the textbook in **Table 2-7**.
-```{r}
-beer_lag1 <- stats::lag(beer, -1)
-
-mean <- sum(beer) / length(beer)
-
-autocovar_lag1 <- sum((beer - mean) * (beer_lag1 - mean)) / length(beer)
-
-autocorr_lag1 <- sum((beer - mean) * (beer_lag1 - mean)) / sum((beer - mean)^2)
-
-mean
-autocovar_lag1
-autocorr_lag1
-```
-
-
-**Table 2-7**
-<br/>
-<br/>
-Together the autocorrelations at lags 1, 2, ..., make up the autocorrelation function or **ACF**. It is much easier to understand the autocorrelations by plotting them against the lag. This plot is known as a *correlogram*. **Figure 2-6** shows the ACF for the beer data:<br/>
-```{r fig.width=7.15, fig.height=5}
 ggAcf(beer) +
-  labs(title = 'ACF of Beer Production',
-       x = 'Lag',
-       y = 'ACF',
-       caption = 'Figure 2-6: The correlogram (or ACF plot) for the beer production data.')
+  ggtitle('ACF of Beer Production') + 
+  labs(caption = 'Figure 2-6: The correlogram (or ACF plot) for the beer production data.')
 ```
-<br/><br/>
 
 # Forecast Accuracy
-In many instances, the word “accuracy” refers to “goodness of fit,” which in turn refers to how well the forecasting model is able to reproduce the data that are already known. To the consumer of forecasts, it is the accuracy of the future forecast that is most important.<br/>
-In this section of the book, a variety of measures of forecasting (or modelling) accuracy are defined. This section of the vignette will show the functions from the `forecast` package that can be used to calculate these accuracy measures.<br/>
-<br/>
 
-The textbook refers to a simple forecasting method called *Naive Forecast 1* (NF1) which is generally used as a base line with which to compare more sophisticated methods. This method uses the most recent observation available as a forecast. **Table 2-11** shows NF1 used to forecast the monthly beer production for the year of 1995. Below this table in the textbook, the calculations of the MAE and the MAPE are shown. Here, the `accuracy()` function from the forecast package is used, which outputs the MAE and the MAPE as well as a number of other measures of accuracy.
-<br/><br/>
+In this section of the book, a variety of measures of forecasting (or modelling) accuracy are defined. Functions from the `forecast` package can be used to calculate these accuracy measures.
+
+The textbook refers to a simple forecasting method called *Naive Forecast 1* (NF1) which is used as a benchmark against which to compare more sophisticated methods. This method uses the most recent observation available as a forecast. **Table 2-11** shows NF1 used to forecast the monthly beer production for the year of 1995. 
+
+
 ```{r}
-fcst <- window(beer, start=1995)
-fcst_lag1 <- window(stats::lag(beer, -1), start=1995)
-
-accuracy(fcst_lag1, fcst)
+window(beer, start=c(1994,12)) %>%
+  naive() %>%
+  accuracy()
 ```
-<br/><br/>
 
+It can be helpful to look at the autocorrelations in forecast errors. Figure 2.7 shows the forecast errors obtained by applying the NF1 method to the Australia monthly beer data.
+
+```{r, fig.show="hold"}
+beer %>% naive() %>% residuals() -> e
+autoplot(e) + ggtitle("Errors from NF1 forecasts")
+ggAcf(e) + ggtitle("") +
+  labs(caption="Figure 2-7: Top: Forecast errors obtained by applying the NF1 method to the beer data. 
+    Bottom: The ACF of the forecast errors.")
+```
 
 
 
 # Transformations and Adjustments
-Sometimes adjusting the data will lead to a simpler and more interpretable forecasting model. This section of the book deals with three kinds of adjustments. Examples of each are given below:<br/>
+
+Sometimes adjusting the data will lead to a simpler and more interpretable forecasting model. This section of the book deals with three kinds of adjustments. Examples of each are given below:
 
 ### Mathematical Transformations
-**Figure 2-10** below shows a plot of the `elec` data set. <br/>
-```{r fig.width=7.15, fig.height=5}
+
+**Figure 2-10** below shows a plot of the `elec` data set. 
+
+```{r}
 elec %>%
   autoplot() +
   ggtitle("Australian Monthly Electricity Production") +
-  xlab("Year") +
-  ylab("million kWh") +
+  xlab("Year") + ylab("million kWh") +
   labs(caption = "Figure 2-10: Monthly Australian electricity production from January 1956 to August 1995. 
        Note the increasing variation as the level of the series increases.")
 ```
-<br/><br/>
-This time plot shows that, for this data set, the size of the annual seasonal variation increases as the level of the series increases. The variation at the start (towards the left) is about 300 million kWh, while in more recent years (to the right) the variation exceeds 2500 kWh. A mathematical transformation is a convenient method for the necessary task of including this increasing variation into the forecasts for this data. <br/>
-<br/>
-One possible transformation is the *square root* function. This transform is plotted below: <br/>
-```{r fig.width=7.15, fig.height=5}
+
+This time plot shows that the size of the annual seasonal variation increases as the level of the series increases. The variation at the start (towards the left) is about 300 million kWh, while in more recent years (to the right) the variation exceeds 2500 kWh. A mathematical transformation is a convenient method for the necessary task of including this increasing variation into the forecasts for this data. 
+
+One possible transformation is the *square root* function. This transform is plotted below: 
+
+```{r}
 elec %>%
   sqrt() %>%
   autoplot() +
   ggtitle("Square Root of Electricity Production") +
-  xlab("Year") +
-  ylab("sqrt(million kWh)")
-```
-<br/><br/>
-So we can see that this transformation has helped in reducing the variation in the seasonal cycles. This will make the forecasting task easier than the un-transformed data shown in **Figure 2-10**. <br/>
-<br/>
-There are a number of other useful transformations. One of the most common is the logarithm, as it is relatively easy to interpret. **Section 2/7** of the textbook gives the formulation for the the set of *power transformations*. The plots below show a selection of these transformations. <br/>
-```{r fig.width=7.15, fig.height=15}
-# create plot for square root
-p1 <- elec %>%
-  sqrt() %>%
-  autoplot() +
-  ggtitle("Square Root of Electricity Production") +
-  xlab("Year") +
-  ylab("sqrt(million kWh)")
-
-# create plot for cube root
-p2 <- elec ^ (1/3) %>%
-  autoplot() +
-  ggtitle("Cube Root of Electricity Production") +
-  xlab("Year") +
-  ylab("million kWh ^ 1/3")
-
-# create plot for logarithm
-p3 <- elec %>%
-  log() %>%
-  autoplot() +
-  ggtitle("Logarithm of Electricity Production") +
-  xlab("Year") +
-  ylab("log(million kWh)")
-
-# create plot for negative reciprocal
-p4 <- (-1 / elec) %>%
-  autoplot() +
-  ggtitle("Negative Reciprocal of Electricity Production") +
-  xlab("Year") +
-  ylab("-1 / million kWh")
-
-grid.arrange(p1, p2, p3, p4, ncol = 1)
+  xlab("Year") + ylab("sqrt(million kWh)")
 ```
 
+So we can see that this transformation has helped in reducing the variation in the seasonal cycles. This will make the forecasting task easier than the un-transformed data shown in **Figure 2-10**. 
+
+There are a number of other useful transformations. One of the most common is the logarithm, as it is relatively easy to interpret. **Section 2/7** of the textbook gives the formulation for the set of *power transformations*. The plots below show a selection of these transformations. 
+
+```{r, fig.height=9}
+cbind(
+    `Square root` = sqrt(elec),
+    `Cube root` = elec^(1/3),
+    `Log` = log(elec),
+    `Inverse` = -1/elec) %>%
+  autoplot(facet=TRUE) +
+    xlab("Year") +
+    ggtitle("Transformations of the electricity production data") +
+    labs(caption="Figure 2-11: Transformations of the electricity production data.")
+```
 
 ### Calendar Adjustments
-Some of the variation in a time series may be due to the variation in the number of days (or trading days) each month. It is a good idea to adjust for this known source of variation to allow study of other interesting features. <br/>
-<br/>
-**Month length** can make quite an impact since number of days in a month can differ by (31-28)/30 = 10%. If this is not removed, seasonal patterns become hard to interpret. **Section 2/7/2** in the textbook shows how to make this adjustment. <br/>
-**Figure 2-12** shows the `milk` data set with and without being adjusted for month length. The simpler pattern will lead to better forecasts and easier identification of unusual observations. <br/>
-<br/>
-```{r fig.width=7.15, fig.height=8}
-p1 <- milk %>%
-  autoplot() +
+
+Some of the variation in a time series may be due to the variation in the number of days (or trading days) each month. It is a good idea to adjust for this known source of variation to allow study of other interesting features. 
+
+**Month length** can make quite an impact since number of days in a month can differ by (31-28)/30 = 10%. If this is not removed, seasonal patterns become hard to interpret. **Section 2/7/2** in the textbook shows how to make this adjustment. 
+
+**Figure 2-12** shows the `milk` data set with and without being adjusted for month length. The simpler pattern will lead to better forecasts and easier identification of unusual observations. 
+
+```{r}
+cbind(
+    Milk = milk,
+    `Milk per day` = milk/monthdays(milk)
+  ) %>%
+  autoplot(facet=TRUE) +
   ggtitle("Monthly Milk Production per Cow") +
-  xlab("Months") +
-  ylab("Pounds")
-
-p2 <- cbind(milk/monthdays(milk)) %>%
-  autoplot() +
-  ggtitle("Adjusted Monthly Milk Production per Cow") +
-  xlab("Months") +
-  ylab("Pounds")
-
-grid.arrange(p1, p2, ncol=1)
+  xlab("Months") + ylab("Pounds") +
+  labs(caption="Figure 2-12: Monthly milk production per cow over 14 years.
+    The second graph shows the data adjusted for the length of the month.")
 ```
-
-
-### Inflation and Population Changes
-Inflation
-
-+ The standard approach is to use equivalent value from the earliest year in the data set
-<br/>
-
-Population
-
-+ As an example, when forecasting the number of public transport users in a city, it is preferable to take into account the effect of population changes. In this case, the data could be adjusted by the total number of people in the city.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

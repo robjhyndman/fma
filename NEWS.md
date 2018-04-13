@@ -1,5 +1,6 @@
-## Version 2.4 (??? 2017)
+## Version 2.4 (13 April 2018)
   * Added pkgdown
+  * Added a vignette
 
 ## Version 2.3 (12 Feb 2017)
   * Removed tseries dependency

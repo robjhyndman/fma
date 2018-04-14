@@ -82,7 +82,7 @@
 </div>
 <div id="data-sets" class="section level1">
 <h1 class="hasAnchor">
-<a href="#data-sets" class="anchor"></a>Data Sets</h1>
+<a href="#data-sets" class="anchor"></a>Data sets</h1>
 <p>There are a number of data sets that are included in the <code>fma</code> package, which are referenced in examples throughout the book. Descriptions of the data sets that are used in this vignette are included below:</p>
 <ul>
 <li>
@@ -105,12 +105,12 @@
 </div>
 <div id="graphical-summaries" class="section level1">
 <h1 class="hasAnchor">
-<a href="#graphical-summaries" class="anchor"></a>Graphical Summaries</h1>
+<a href="#graphical-summaries" class="anchor"></a>Graphical summaries</h1>
 <p>The single most important thing to do when first exploring the data is to visualize it through graphs. The basic features of the data, including patterns and unusual observations, are most easily seen through graphs. Sometimes graphs also suggest possible explanations for some of the variation in the data.</p>
 <p>Chapter 2 describes three main types of graph that are useful for forecasting. R code that can be used to reproduce these examples will be shown below.</p>
 <div id="time-plots-and-time-series-patterns" class="section level3">
 <h3 class="hasAnchor">
-<a href="#time-plots-and-time-series-patterns" class="anchor"></a>Time Plots and Time Series Patterns</h3>
+<a href="#time-plots-and-time-series-patterns" class="anchor"></a>Time plots and time series patterns</h3>
 <p>For time series data the most obvious graphical form is a <em>time plot</em> (in which the data are plotted over time). A time plot immediately reveals any trends over time, any regular seasonal behavior, and other systematic features of the data.</p>
 <p><strong>Figure 2-1</strong> below shows a time plot of the beer data. This reveals the range of the data and the time at which peaks occur, the relative size of the peaks and the randomness in the time series.</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" data-line-number="1">beer <span class="op">%&gt;%</span></a>
@@ -123,7 +123,7 @@
 </div>
 <div id="seasonal-plots" class="section level3">
 <h3 class="hasAnchor">
-<a href="#seasonal-plots" class="anchor"></a>Seasonal Plots</h3>
+<a href="#seasonal-plots" class="anchor"></a>Seasonal plots</h3>
 <p>For time series data that have seasonal patterns, it is often useful to also produce a <em>seasonal plot</em>. This consists of the data plotted against the individuals “seasons” in which the data were observed. This is something like a time plot except that the data from each season are overlapped. A seasonal plot enables the underlying seasonal pattern more obvious, as well as more easily identify deviations from this pattern. <strong>Figure 2-2</strong> shows a seasonal plot of the <code>beer</code> data.</p>
 <p>This can be done using the <code>ggseasonplot()</code> function from the <code>forecast</code> package:</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb2-1" data-line-number="1"><span class="kw">ggseasonplot</span>(beer, <span class="dt">col =</span> <span class="kw">rainbow</span>(<span class="dv">5</span>), <span class="dt">year.labels =</span> <span class="ot">TRUE</span>) <span class="op">+</span></a>
@@ -156,11 +156,11 @@
 </div>
 <div id="numerical-summaries" class="section level1">
 <h1 class="hasAnchor">
-<a href="#numerical-summaries" class="anchor"></a>Numerical Summaries</h1>
+<a href="#numerical-summaries" class="anchor"></a>Numerical summaries</h1>
 <p>In addition to graphics, it is also helpful to provide numerical summaries. A summary number for a data set is called a <em>statistic</em>.</p>
 <div id="univariate-statistics" class="section level3">
 <h3 class="hasAnchor">
-<a href="#univariate-statistics" class="anchor"></a>Univariate Statistics</h3>
+<a href="#univariate-statistics" class="anchor"></a>Univariate statistics</h3>
 <p><strong>Table 2-4</strong> shows the computation of some useful univariate statistics for the <strong>Mileage</strong> variable in the <code>auto</code> dataset, after filtering the data set to only include cars from Japan. These statistics are defined and explained in the textbook. The following code produces these summary statistics:</p>
 <div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb5-1" data-line-number="1">auto_japan &lt;-<span class="st"> </span>auto <span class="op">%&gt;%</span></a>
 <a class="sourceLine" id="cb5-2" data-line-number="2"><span class="st">  </span><span class="kw">filter</span>(Country <span class="op">==</span><span class="st"> 'Japan'</span>)</a>
@@ -198,7 +198,7 @@
 </div>
 <div id="bivariate-statistics" class="section level3">
 <h3 class="hasAnchor">
-<a href="#bivariate-statistics" class="anchor"></a>Bivariate Statistics</h3>
+<a href="#bivariate-statistics" class="anchor"></a>Bivariate statistics</h3>
 <p>This section introduces the concepts of <strong>covariance</strong>, <strong>correlation</strong> and <strong>auto-correlation</strong>. <strong>Table 2-6</strong> below shows the calculation of these bivariate statistics for the <code>auto</code> data with <code>Country == "Japan"</code> (the same data used in <strong>Table 2-5</strong>). The variables being considered are <strong>Price</strong> and <strong>Mileage</strong>. For this section the units of <strong>Price</strong> will be converted to thousands of dollars. Calculation of these statistics is given below:</p>
 <p><strong>Table 2-6</strong></p>
 <div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb7-1" data-line-number="1">auto_japan <span class="op">%&gt;%</span></a>
@@ -226,7 +226,7 @@
 </div>
 <div id="forecast-accuracy" class="section level1">
 <h1 class="hasAnchor">
-<a href="#forecast-accuracy" class="anchor"></a>Forecast Accuracy</h1>
+<a href="#forecast-accuracy" class="anchor"></a>Forecast accuracy</h1>
 <p>In this section of the book, a variety of measures of forecasting (or modelling) accuracy are defined. Functions from the <code>forecast</code> package can be used to calculate these accuracy measures.</p>
 <p>The textbook refers to a simple forecasting method called <em>Naive Forecast 1</em> (NF1) which is used as a benchmark against which to compare more sophisticated methods. This method uses the most recent observation available as a forecast. <strong>Table 2-11</strong> shows NF1 used to forecast the monthly beer production for the year of 1995.</p>
 <div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb9-1" data-line-number="1"><span class="kw">window</span>(beer, <span class="dt">start=</span><span class="kw">c</span>(<span class="dv">1994</span>,<span class="dv">12</span>)) <span class="op">%&gt;%</span></a>
@@ -244,11 +244,11 @@
 </div>
 <div id="transformations-and-adjustments" class="section level1">
 <h1 class="hasAnchor">
-<a href="#transformations-and-adjustments" class="anchor"></a>Transformations and Adjustments</h1>
+<a href="#transformations-and-adjustments" class="anchor"></a>Transformations and adjustments</h1>
 <p>Sometimes adjusting the data will lead to a simpler and more interpretable forecasting model. This section of the book deals with three kinds of adjustments. Examples of each are given below:</p>
 <div id="mathematical-transformations" class="section level3">
 <h3 class="hasAnchor">
-<a href="#mathematical-transformations" class="anchor"></a>Mathematical Transformations</h3>
+<a href="#mathematical-transformations" class="anchor"></a>Mathematical transformations</h3>
 <p><strong>Figure 2-10</strong> below shows a plot of the <code>elec</code> data set.</p>
 <div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb11-1" data-line-number="1">elec <span class="op">%&gt;%</span></a>
 <a class="sourceLine" id="cb11-2" data-line-number="2"><span class="st">  </span><span class="kw">autoplot</span>() <span class="op">+</span></a>
@@ -280,7 +280,7 @@
 </div>
 <div id="calendar-adjustments" class="section level3">
 <h3 class="hasAnchor">
-<a href="#calendar-adjustments" class="anchor"></a>Calendar Adjustments</h3>
+<a href="#calendar-adjustments" class="anchor"></a>Calendar adjustments</h3>
 <p>Some of the variation in a time series may be due to the variation in the number of days (or trading days) each month. It is a good idea to adjust for this known source of variation to allow study of other interesting features.</p>
 <p><strong>Month length</strong> can make quite an impact since number of days in a month can differ by (31-28)/30 = 10%. If this is not removed, seasonal patterns become hard to interpret. <strong>Section 2/7/2</strong> in the textbook shows how to make this adjustment.</p>
 <p><strong>Figure 2-12</strong> shows the <code>milk</code> data set with and without being adjusted for month length. The simpler pattern will lead to better forecasts and easier identification of unusual observations.</p>
@@ -305,11 +305,11 @@
 <a href="#tocnav" class="anchor"></a>Contents</h2>
       <ul class="nav nav-pills nav-stacked">
 <li><a href="#introduction">Introduction</a></li>
-      <li><a href="#data-sets">Data Sets</a></li>
-      <li><a href="#graphical-summaries">Graphical Summaries</a></li>
-      <li><a href="#numerical-summaries">Numerical Summaries</a></li>
-      <li><a href="#forecast-accuracy">Forecast Accuracy</a></li>
-      <li><a href="#transformations-and-adjustments">Transformations and Adjustments</a></li>
+      <li><a href="#data-sets">Data sets</a></li>
+      <li><a href="#graphical-summaries">Graphical summaries</a></li>
+      <li><a href="#numerical-summaries">Numerical summaries</a></li>
+      <li><a href="#forecast-accuracy">Forecast accuracy</a></li>
+      <li><a href="#transformations-and-adjustments">Transformations and adjustments</a></li>
       </ul>
 </div>
       </div>

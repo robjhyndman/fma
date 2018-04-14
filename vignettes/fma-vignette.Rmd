@@ -31,7 +31,7 @@ When the `fma` package is loaded, the `forecast` package is also loaded, providi
 
 This vignette will give a brief introduction to the ways in which the datasets in the `fma` package can be analysed using the `forecast` package. Most of the figures from Chapter 2 are reproduced here. The figure numbers used here correspond to figures in the textbook.
 
-# Data Sets
+# Data sets
 
 There are a number of data sets that are included in the `fma` package, which are referenced in examples throughout the book. Descriptions of the data sets that are used in this vignette are included below:
 
@@ -52,13 +52,13 @@ There are a number of data sets that are included in the `fma` package, which ar
 - **milk**
     Monthly time series data for milk production per cow (in pounds) over a 14 year time period.
 
-# Graphical Summaries
+# Graphical summaries
 
 The single most important thing to do when first exploring the data is to visualize it through graphs. The basic features of the data, including patterns and unusual observations, are most easily seen through graphs. Sometimes graphs also suggest possible explanations for some of the variation in the data.
 
 Chapter 2 describes three main types of graph that are useful for forecasting. R code that can be used to reproduce these examples will be shown below.
 
-### Time Plots and Time Series Patterns
+### Time plots and time series patterns
 
 For time series data the most obvious graphical form is a *time plot* (in which the data are plotted over time). A time plot immediately reveals any trends over time, any regular seasonal behavior, and other systematic features of the data.
 
@@ -73,7 +73,7 @@ beer %>%
   labs(caption = "Figure 2-1: Time plot of monthly Australian beer production (megaliters, Ml) from January 1991–August 1995.")
 ```
 
-### Seasonal Plots
+### Seasonal plots
 
 For time series data that have seasonal patterns, it is often useful to also produce a *seasonal plot*. This consists of the data plotted against the individuals "seasons" in which the data were observed. This is something like a time plot except that the data from each season are overlapped. A seasonal plot enables the underlying seasonal pattern more obvious, as well as more easily identify deviations from this pattern. **Figure 2-2** shows a seasonal plot of the `beer` data.
 
@@ -111,11 +111,11 @@ auto %>%
   labs(caption = 'Figure 2-4: A scatterplot showing price, mileage, and the country of origin for the automobile data.')
 ```
 
-# Numerical Summaries
+# Numerical summaries
 
 In addition to graphics, it is also helpful to provide numerical summaries. A summary number for a data set is called a *statistic*.
 
-### Univariate Statistics
+### Univariate statistics
 
 **Table 2-4** shows the computation of some useful univariate statistics for the **Mileage** variable in the `auto` dataset, after filtering the data set to only include cars from Japan. These statistics are defined and explained in the textbook. The following code produces these summary statistics:
 
@@ -138,7 +138,7 @@ auto_japan %>%
 ```
 
 
-### Bivariate Statistics
+### Bivariate statistics
 
 This section introduces the concepts of **covariance**, **correlation** and **auto-correlation**. **Table 2-6** below shows the calculation of these bivariate statistics for the `auto` data with `Country == "Japan"` (the same data used in **Table 2-5**). The variables being considered are **Price** and **Mileage**. For this section the units of **Price** will be converted to thousands of dollars. Calculation of these statistics is given below:
 
@@ -169,7 +169,7 @@ ggAcf(beer) +
   labs(caption = 'Figure 2-6: The correlogram (or ACF plot) for the beer production data.')
 ```
 
-# Forecast Accuracy
+# Forecast accuracy
 
 In this section of the book, a variety of measures of forecasting (or modelling) accuracy are defined. Functions from the `forecast` package can be used to calculate these accuracy measures.
 
@@ -194,11 +194,11 @@ ggAcf(e) + ggtitle("") +
 
 
 
-# Transformations and Adjustments
+# Transformations and adjustments
 
 Sometimes adjusting the data will lead to a simpler and more interpretable forecasting model. This section of the book deals with three kinds of adjustments. Examples of each are given below:
 
-### Mathematical Transformations
+### Mathematical transformations
 
 **Figure 2-10** below shows a plot of the `elec` data set.
 
@@ -239,7 +239,7 @@ cbind(
     labs(caption="Figure 2-11: Transformations of the electricity production data.")
 ```
 
-### Calendar Adjustments
+### Calendar adjustments
 
 Some of the variation in a time series may be due to the variation in the number of days (or trading days) each month. It is a good idea to adjust for this known source of variation to allow study of other interesting features.
 

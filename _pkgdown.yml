@@ -11,6 +11,8 @@ navbar:
   left:
     - text: "Reference"
       href: reference/index.html
+    - text: "Vignette"
+      href: articles/fma-vignette.html
     - text: "Change Log"
       href: news/index.html
   right:

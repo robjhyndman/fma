@@ -18,13 +18,17 @@
 <!-- Font Awesome icons -->
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
 
+<!-- clipboard.js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.7.1/clipboard.min.js" integrity="sha384-cV+rhyOuRHc9Ub/91rihWcGmMmCXDeksTtCihMupQHSsi8GIIRDG0ThDc3HGQFJ3" crossorigin="anonymous"></script>
 
 <!-- pkgdown -->
 <link href="../pkgdown.css" rel="stylesheet">
 <script src="../jquery.sticky-kit.min.js"></script>
 <script src="../pkgdown.js"></script>
-  
-  
+<meta property="og:title" content="Attributes of some US and Japanese automobiles — auto" />
+
+<meta property="og:description" content="Price, mileage, age and country of origin for 45 automobiles." />
+<meta name="twitter:card" content="summary" />
 <!-- mathjax -->
 <script src='https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
 
@@ -55,6 +59,9 @@
   <a href="../reference/index.html">Reference</a>
 </li>
 <li>
+  <a href="../articles/fma-vignette.html">Vignette</a>
+</li>
+<li>
   <a href="../news/index.html">Change Log</a>
 </li>
       </ul>
@@ -78,6 +85,7 @@
   <div class="col-md-9 contents">
     <div class="page-header">
     <h1>Attributes of some US and Japanese automobiles</h1>
+    <small>Source: <a href='https:/github.com/robjhyndman/fma/blob/master/R/data.R'><code>R/data.R</code></a></small>
     </div>
 
     
@@ -106,7 +114,8 @@ methods and applications</em>, Wiley: New York. Chapter 2.</p>
     
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='fu'>plot</span>(<span class='no'>Price</span> ~ <span class='no'>Mileage</span>, <span class='kw'>data</span><span class='kw'>=</span><span class='no'>auto</span>,<span class='kw'>pch</span><span class='kw'>=</span><span class='fl'>19</span>,<span class='kw'>col</span><span class='kw'>=</span><span class='fl'>2</span>)</div><div class='input'><span class='fu'>points</span>(<span class='no'>auto</span>$<span class='no'>Mileage</span>[<span class='no'>auto</span>$<span class='no'>Country</span><span class='kw'>==</span><span class='st'>"USA"</span>],<span class='no'>auto</span>$<span class='no'>Price</span>[<span class='no'>auto</span>$<span class='no'>Country</span><span class='kw'>==</span><span class='st'>"USA"</span>],<span class='kw'>pch</span><span class='kw'>=</span><span class='fl'>19</span>,<span class='kw'>col</span><span class='kw'>=</span><span class='fl'>4</span>)</div><div class='input'><span class='fu'>legend</span>(<span class='fl'>30</span>,<span class='fl'>25000</span>,<span class='kw'>legend</span><span class='kw'>=</span><span class='fu'>c</span>(<span class='st'>"USA"</span>,<span class='st'>"Japan"</span>),<span class='kw'>pch</span><span class='kw'>=</span><span class='fl'>19</span>,<span class='kw'>col</span><span class='kw'>=</span><span class='fu'>c</span>(<span class='fl'>4</span>,<span class='fl'>2</span>))</div><div class='img'><img src='auto-1.png' alt='' width='700' height='432.632880098887' /></div><div class='input'>
+    <pre class="examples"><div class='input'><span class='fu'>plot</span>(<span class='no'>Price</span> ~ <span class='no'>Mileage</span>, <span class='kw'>data</span><span class='kw'>=</span><span class='no'>auto</span>, <span class='kw'>pch</span><span class='kw'>=</span><span class='fl'>19</span>, <span class='kw'>col</span><span class='kw'>=</span><span class='fl'>2</span>)</div><div class='input'><span class='fu'>points</span>(<span class='no'>auto</span>$<span class='no'>Mileage</span>[<span class='no'>auto</span>$<span class='no'>Country</span><span class='kw'>==</span><span class='st'>"USA"</span>],
+ <span class='no'>auto</span>$<span class='no'>Price</span>[<span class='no'>auto</span>$<span class='no'>Country</span><span class='kw'>==</span><span class='st'>"USA"</span>], <span class='kw'>pch</span><span class='kw'>=</span><span class='fl'>19</span>, <span class='kw'>col</span><span class='kw'>=</span><span class='fl'>4</span>)</div><div class='input'><span class='fu'>legend</span>(<span class='fl'>30</span>,<span class='fl'>25000</span>,<span class='kw'>legend</span><span class='kw'>=</span><span class='fu'>c</span>(<span class='st'>"USA"</span>,<span class='st'>"Japan"</span>), <span class='kw'>pch</span><span class='kw'>=</span><span class='fl'>19</span>, <span class='kw'>col</span><span class='kw'>=</span><span class='fu'>c</span>(<span class='fl'>4</span>,<span class='fl'>2</span>))</div><div class='img'><img src='auto-1.png' alt='' width='700' height='432.632880098887' /></div><div class='input'>
 </div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
@@ -131,7 +140,7 @@ methods and applications</em>, Wiley: New York. Chapter 2.</p>
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="http://hadley.github.io/pkgdown/">pkgdown</a>.</p>
+  <p>Site built with <a href="http://pkgdown.r-lib.org/">pkgdown</a>.</p>
 </div>
 
       </footer>
@@ -139,3 +148,4 @@ methods and applications</em>, Wiley: New York. Chapter 2.</p>
 
   </body>
 </html>
+

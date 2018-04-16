@@ -13,7 +13,7 @@ methods and applications}, John Wiley & Sons: New York. Chapter 2.
 milk
 }
 \description{
-Average monthly milk production per cow over 14 years.
+Average monthly milk production per cow over 14 years (January 1994 - December 2007).
 }
 \examples{
 par(mfrow=c(2,1))

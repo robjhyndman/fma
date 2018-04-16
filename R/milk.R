@@ -1,7 +1,7 @@
 
 #' Monthly milk production per cow
 #'
-#' Average monthly milk production per cow over 14 years.
+#' Average monthly milk production per cow over 14 years (January 1994 - December 2007).
 #'
 #'
 #' @format Time series data
@@ -33,4 +33,4 @@ milk <- stats::ts(c(589, 561, 640, 656, 727, 697, 640, 599, 568, 577,
 855, 809, 810, 766, 805, 821, 773, 883, 898, 957, 924, 881, 837,
 784, 791, 760, 802, 828, 778, 889, 902, 969, 947, 908, 867, 815,
 812, 773, 813, 834, 782, 892, 903, 966, 937, 896, 858, 817, 827,
-797, 843), f=12,s=1)
+797, 843), f=12,s=1994)

@@ -1,6 +1,7 @@
-## Version 2.4 (13 April 2018)
+## Version 2.4 (14 Jan 2020)
   * Added pkgdown
   * Added a vignette
+  * Fixed start date in milk data set
 
 ## Version 2.3 (12 Feb 2017)
   * Removed tseries dependency

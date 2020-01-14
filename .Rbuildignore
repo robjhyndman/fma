@@ -1,5 +1,12 @@
 ^.*\.Rproj$
 ^\.Rproj\.user$
 ^_pkgdown\.yml$
+^cran-comments\.md$
+^CRAN-RELEASE$
+^docs$
+^Meta$
+^pkgdown$
+^revdep$
 Makefile
-docs
+vignettes/*_cache
+

@@ -21,6 +21,7 @@ airline passengers (1949--1960).
 plot(airpass)
 seasonplot(airpass)
 tsdisplay(airpass)
+
 }
 \references{
 Box, Jenkins and Reinsell (1994) \emph{Time series analysis:

@@ -17,5 +17,6 @@ French index of industry.
 }
 \examples{
 plot(french)
+
 }
 \keyword{datasets}

@@ -21,6 +21,7 @@ cow. Data are chirps per 5-minute interval minus 800.
 \examples{
 plot(cowtemp)
 tsdisplay(cowtemp)
+
 }
 \references{
 Velleman, Paul. (1981) \emph{The ABC of EDA}, Duxbury Press.

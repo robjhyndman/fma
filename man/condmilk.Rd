@@ -19,5 +19,6 @@ Manufacturer's Stocks of evaporated and sweetened condensed milk.
 plot(condmilk)
 seasonplot(condmilk)
 tsdisplay(condmilk)
+
 }
 \keyword{datasets}

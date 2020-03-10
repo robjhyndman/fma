@@ -22,5 +22,6 @@ Monthly sales and advertising expenditure for an automotive parts company.
 }
 \examples{
 plot(sales ~ advert, data=advert)
+
 }
 \keyword{datasets}

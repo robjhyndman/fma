@@ -17,5 +17,6 @@ Sales of electric knives: Jan 1991 - April 1992.
 }
 \examples{
 plot(eknives)
+
 }
 \keyword{datasets}

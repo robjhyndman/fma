@@ -17,5 +17,6 @@ White noise series.
 }
 \examples{
 tsdisplay(wn)
+
 }
 \keyword{datasets}

@@ -19,5 +19,6 @@ Monthly sales of product A for a plastics manufacturer.
 plot(plastics)
 seasonplot(plastics)
 plot(stl(plastics,"periodic"))
+
 }
 \keyword{datasets}

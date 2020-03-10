@@ -10,3 +10,4 @@
 Makefile
 vignettes/*_cache
 
+^data-raw$

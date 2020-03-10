@@ -18,5 +18,6 @@ Number of users logged on to an internet server each minute over a
 }
 \examples{
 tsdisplay(internet)
+
 }
 \keyword{datasets}

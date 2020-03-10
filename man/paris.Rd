@@ -19,5 +19,6 @@ Average monthly temperature in Paris.
 plot(paris)
 seasonplot(paris)
 tsdisplay(paris)
+
 }
 \keyword{datasets}

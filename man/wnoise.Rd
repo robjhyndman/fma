@@ -17,5 +17,6 @@ White noise time series with 36 values.
 }
 \examples{
 tsdisplay(wnoise)
+
 }
 \keyword{datasets}

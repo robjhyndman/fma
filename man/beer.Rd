@@ -19,5 +19,6 @@ Monthly Australian beer production: Jan 1991 -- Aug 1995.
 plot(beer)
 seasonplot(beer)
 tsdisplay(beer)
+
 }
 \keyword{datasets}

@@ -17,5 +17,6 @@ Quarterly CPI (consumer price index) for Victoria: Q1 1980 to Q2 1995.
 }
 \examples{
 tsdisplay(cpimel)
+
 }
 \keyword{datasets}

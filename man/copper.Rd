@@ -17,5 +17,6 @@ Yearly copper prices, 1800--1997 (in constant 1997 dollars).
 }
 \examples{
 plot(copper)
+
 }
 \keyword{datasets}

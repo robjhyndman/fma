@@ -19,5 +19,6 @@ Sales of new one-family houses in the USA (Jan 1987 -- Nov 1995).
 plot(hsales2)
 seasonplot(hsales2)
 tsdisplay(hsales2)
+
 }
 \keyword{datasets}

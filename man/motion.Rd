@@ -20,6 +20,7 @@ Jan 1955 -- Dec 1970.
 plot(motion)
 seasonplot(motion)
 tsdisplay(motion)
+
 }
 \references{
 "Employment and earnings, US 1909--1978", Department of Labor,

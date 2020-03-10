@@ -21,6 +21,7 @@ rates (Jan 1983 - Oct 1989).
 }
 \examples{
 plot(housing)
+
 }
 \references{
 Survey of current business, US Department of Commerce, 1990.

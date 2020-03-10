@@ -18,5 +18,6 @@ between 1974 and the third quarter of 1975.
 }
 \examples{
 plot(canadian)
+
 }
 \keyword{datasets}

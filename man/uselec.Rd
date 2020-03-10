@@ -20,5 +20,6 @@ Monthly total generation of electricity by the U.S. electric industry (Jan
 plot(uselec)
 seasonplot(uselec)
 tsdisplay(uselec)
+
 }
 \keyword{datasets}

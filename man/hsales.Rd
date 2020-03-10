@@ -18,6 +18,7 @@ Monthly sales of new one-family houses sold in the USA since 1973.
 \examples{
 plot(hsales)
 plot(stl(hsales,"periodic"),main="Sales of new one-family houses, USA")
+
 }
 \references{
 US Census Bureau, Manufacturing and Construction Division

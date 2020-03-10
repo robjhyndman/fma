@@ -17,5 +17,6 @@ Dow-Jones index, 28 Aug - 18 Dec 1972.
 }
 \examples{
 tsdisplay(dowjones)
+
 }
 \keyword{datasets}

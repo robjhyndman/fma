@@ -13,9 +13,10 @@ methods and applications}, John Wiley & Sons: New York. Chapter 9.
 wagesuk
 }
 \description{
-Real daily wages in pound, England: 1260--1994.
+Real daily wages in pounds, England: 1260--1994.
 }
 \examples{
 plot(wagesuk)
+
 }
 \keyword{datasets}

@@ -1,0 +1,4 @@
+productC <- stats::ts(c(0, 2, 0, 1, 0, 11, 0, 0, 0, 0, 2, 0, 6, 3, 0, 0,
+0, 0, 0, 7, 0, 0, 0, 0, 0, 0, 0, 3, 1, 0, 0, 1, 0, 1, 0,
+0),f=12,s=1)
+usethis::use_data(productC, overwrite=TRUE)

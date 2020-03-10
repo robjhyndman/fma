@@ -17,5 +17,6 @@ Wheat prices in constant 1996 pounds: 1264--1996.
 }
 \examples{
 plot(wheat)
+
 }
 \keyword{datasets}

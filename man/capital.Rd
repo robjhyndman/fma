@@ -4,11 +4,13 @@
 \name{capital}
 \alias{capital}
 \title{Quarterly capital expenditure and appropriations}
-\format{Bivariate time series containing the following columns:
+\format{
+Bivariate time series containing the following columns:
 \describe{
   \item{capital}{Quarterly capital expenditure for US manufacturing.}
   \item{appropriations}{Quarterly capital appropriations for US manufacturing.}
-}}
+}
+}
 \source{
 Makridakis, Wheelwright and Hyndman (1998) \emph{Forecasting:
 methods and applications}, John Wiley & Sons: New York. Chapter 8.

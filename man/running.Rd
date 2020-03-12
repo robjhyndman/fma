@@ -4,7 +4,9 @@
 \name{running}
 \alias{running}
 \title{Running times and maximal aerobic capacity}
-\format{Time series data}
+\format{
+Time series data
+}
 \source{
 Makridakis, Wheelwright and Hyndman (1998) \emph{Forecasting:
 methods and applications}, John Wiley & Sons: New York. Exercise 2.5.

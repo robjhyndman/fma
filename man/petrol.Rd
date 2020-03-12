@@ -4,13 +4,15 @@
 \name{petrol}
 \alias{petrol}
 \title{Sales of petroleum and related product}
-\format{Multivariate time series data:
+\format{
+Multivariate time series data:
 \describe{
   \item{Chemicals}{Sales of chemicals and allied products}
   \item{Coal}{Sales of Bituminous coal products}
   \item{Petrol}{Sales of petroleum and coal products}
   \item{Vehicles}{Sales of motor vehicles and parts}
-}}
+}
+}
 \source{
 Makridakis, Wheelwright and Hyndman (1998) \emph{Forecasting:
 methods and applications}, John Wiley & Sons: New York. Chapter 8.

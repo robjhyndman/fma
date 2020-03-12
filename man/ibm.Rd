@@ -4,13 +4,15 @@
 \name{ibm}
 \alias{ibm}
 \title{IBM sales and profit}
-\format{Time series data
+\format{
+Time series data
   \describe{
     \item{Sales}{IBM annual sales}
     \item{Profit}{IBM annual profit}
     \item{FSales}{Forecast of IBM sales made in 1984}
     \item{FProfit}{Forecast of IBM profits made in 1984}
-}}
+}
+}
 \source{
 Makridakis, Wheelwright and Hyndman (1998) \emph{Forecasting:
 methods and applications}, John Wiley & Sons: New York. Chapter 9.

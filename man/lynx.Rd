@@ -4,7 +4,9 @@
 \name{lynx}
 \alias{lynx}
 \title{Annual Canadian Lynx trappings 1821--1934}
-\format{Time series data}
+\format{
+Time series data
+}
 \source{
 Makridakis, Wheelwright and Hyndman (1998) \emph{Forecasting:
 methods and applications}, John Wiley & Sons: New York. Exercise 2.3.

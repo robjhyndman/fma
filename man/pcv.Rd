@@ -4,11 +4,13 @@
 \name{pcv}
 \alias{pcv}
 \title{GDP}
-\format{Bivariate time series consisting of the following columns
+\format{
+Bivariate time series consisting of the following columns
 \describe{
   \item{GDP}{GDP Western Europe}
   \item{PCV}{PCV Industry sales}
-}}
+}
+}
 \source{
 Makridakis, Wheelwright and Hyndman (1998) \emph{Forecasting:
 methods and applications}, John Wiley & Sons: New York. Chapter 5.

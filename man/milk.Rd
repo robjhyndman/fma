@@ -4,7 +4,9 @@
 \name{milk}
 \alias{milk}
 \title{Monthly milk production per cow}
-\format{Time series data}
+\format{
+Time series data
+}
 \source{
 Makridakis, Wheelwright and Hyndman (1998) \emph{Forecasting:
 methods and applications}, John Wiley & Sons: New York. Chapter 2.

@@ -4,7 +4,9 @@
 \name{shampoo}
 \alias{shampoo}
 \title{Sales of shampoo}
-\format{Time series data}
+\format{
+Time series data
+}
 \source{
 Makridakis, Wheelwright and Hyndman (1998) \emph{Forecasting:
 methods and applications}, John Wiley & Sons: New York. Chapter 3.

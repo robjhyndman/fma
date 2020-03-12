@@ -4,11 +4,13 @@
 \name{olympic}
 \alias{olympic}
 \title{Men's 400 m final winning times in each Olympic Games}
-\format{Data frame containing the following columns:
+\format{
+Data frame containing the following columns:
 \describe{
   \item{Year}{Year of Olympics}
   \item{time}{Winning time in 400m final}
-}}
+}
+}
 \source{
 Makridakis, Wheelwright and Hyndman (1998) \emph{Forecasting:
 methods and applications}, John Wiley & Sons: New York. Exercise 5.7

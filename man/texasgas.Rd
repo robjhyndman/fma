@@ -4,11 +4,13 @@
 \name{texasgas}
 \alias{texasgas}
 \title{Price and consumption of natural gas}
-\format{Data frame containing the following columns:
+\format{
+Data frame containing the following columns:
 \describe{
   \item{price}{Average price in cents per thousand cubic feet}
   \item{consumption}{Consumption per customer in thousand cubic feet.}
-}}
+}
+}
 \source{
 Makridakis, Wheelwright and Hyndman (1998) \emph{Forecasting:
 methods and applications}, John Wiley & Sons: New York. Exercise 5.10.

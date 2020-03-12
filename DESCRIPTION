@@ -11,7 +11,7 @@ Authors@R: c(
 License: GPL-3
 URL: https://pkg.robjhyndman.com/fma/, https://github.com/robjhyndman/fma
 BugReports: https://github.com/robjhyndman/fma/issues
-RoxygenNote: 7.0.2
+RoxygenNote: 7.1.0
 Suggests: 
   knitr,
   rmarkdown,

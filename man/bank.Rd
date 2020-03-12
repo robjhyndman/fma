@@ -4,12 +4,14 @@
 \name{bank}
 \alias{bank}
 \title{Mutual savings bank deposits}
-\format{Data frame containing the following columns:
+\format{
+Data frame containing the following columns:
 \describe{
   \item{EOM}{End of month balance}
   \item{AAA}{Composite AAA bond rates}
   \item{threefour}{US Government 3-4 year bonds}
-}}
+}
+}
 \source{
 Makridakis, Wheelwright and Hyndman (1998) \emph{Forecasting:
 methods and applications}, John Wiley & Sons: New York. Chapter 6.

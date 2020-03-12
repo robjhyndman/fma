@@ -4,7 +4,9 @@
 \name{french}
 \alias{french}
 \title{Industry index}
-\format{Time series data}
+\format{
+Time series data
+}
 \source{
 Makridakis, Wheelwright and Hyndman (1998) \emph{Forecasting:
 methods and applications}, John Wiley & Sons: New York. Exercise 4.4.

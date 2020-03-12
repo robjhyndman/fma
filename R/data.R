@@ -224,11 +224,10 @@
 #' hotel, motel and guest house in Victoria, Australia: Jan 1980 - June 1995.
 #'
 #' @name motel
-#' @format Trivariate time series containing the following columns:
+#' @format Bivariate time series containing the following columns:
 #'   \describe{
 #'     \item{Roomnights}{Total room nights}
 #'     \item{Takings}{Total monthly takings (thousands of dollars)}
-#'     \item{CPI}{Quarterly CPI values}
 #' }
 #' @source Makridakis, Wheelwright and Hyndman (1998) \emph{Forecasting:
 #' methods and applications}, John Wiley & Sons: New York. Exercise 8.7.

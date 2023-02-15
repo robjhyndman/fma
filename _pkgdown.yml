@@ -20,6 +20,10 @@ navbar:
       href: https://github.com/robjhyndman/fma
 
 reference:
+  - title: "Package"
+    desc: "fma package"
+    contents:
+      - fma-package
   - title: "Super-Annual Data"
     desc: "Data recorded at intervals greater than one year"
     contents:
@@ -128,5 +132,3 @@ reference:
       - ozone
       - running
       - texasgas
-
-

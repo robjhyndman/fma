@@ -11,10 +11,11 @@ Authors@R: c(
 License: GPL-3
 URL: https://pkg.robjhyndman.com/fma/, https://github.com/robjhyndman/fma
 BugReports: https://github.com/robjhyndman/fma/issues
-RoxygenNote: 7.1.0
-Suggests: 
+RoxygenNote: 7.2.3
+Suggests:
   knitr,
   rmarkdown,
   ggplot2,
   dplyr
 VignetteBuilder: knitr
+Encoding: UTF-8

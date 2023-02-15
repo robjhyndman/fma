@@ -1,14 +1,15 @@
 ## Test environments
-* ubuntu 19.10: R 3.6.2
-* win-builder: R-release, R-devel, R-devel ATC, R-oldrelease
+
+* ubuntu 22.04 (local): R 4.2.2
+* macOS (on GitHub Actions): release
+* windows (on GitHub Actions): release
+* ubuntu 22.04.1 (on GitHub Actions): devel, release, oldrel
+* win-builder: devel, release, oldrelease
 
 ## R CMD check results
 
-0 errors | 0 warnings | 1 notes
-
-Note concerns dropping my middle initial for consistency on CRAN
+0 errors | 0 warnings | 0 notes
 
 ## revdep checks
 
-Both revdeps have been checked with no problems.
-
+All reverse dependencies have been checked with no new errors detected.

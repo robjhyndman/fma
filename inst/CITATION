@@ -14,7 +14,7 @@ bibentry(bibtype = "Manual",
   author = "Rob J Hyndman",
   year = year,
   note = vers,
-  url = "http://pkg.robjhyndman.com/fma")
+  url = "http://pkg.robjhyndman.com/fma/")
 
 bibentry(bibtype = "Book",
   title="Forecasting: methods and applications",

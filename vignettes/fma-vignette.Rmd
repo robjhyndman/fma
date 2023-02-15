@@ -23,7 +23,7 @@ library(tidyverse)
 
 # Introduction
 
-This package contains a collection of datasets that are designed to accompany the textbook "Forecasting: Methods and Applications" by Makridakis, Wheelwright & Hyndman (Wiley, 3rd ed., 1998). The book can be purchased [here](https://amzn.com/0471532339/?tag=otexts-20).
+This package contains a collection of datasets that are designed to accompany the textbook "Forecasting: Methods and Applications" by Makridakis, Wheelwright & Hyndman (Wiley, 3rd ed., 1998). The book can be purchased [here](https://www.amazon.com/d/p0471532339/?tag=otexts-20).
 
 [![](https://robjhyndman.com/img/fma.jpg)](https://robjhyndman.com/forecasting/)
 

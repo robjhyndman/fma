@@ -7,7 +7,7 @@ output:
     fig_width: 7.15
     fig_height: 4.42
 vignette: >
-  %\VignetteIndexEntry{Using FMA: Worked Examples and Explanations}
+  %\VignetteIndexEntry{Using fma: worked examples}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---

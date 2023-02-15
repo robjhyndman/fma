@@ -1,21 +1,21 @@
-## Version 2.5 (15 Feb 2023)
+## Version 2.5
   * Reduced package dependencies
 
-## Version 2.4 (14 Jan 2020)
+## Version 2.4
   * Added pkgdown
   * Added a vignette
   * Fixed start date in milk data set
 
-## Version 2.3 (12 Feb 2017)
+## Version 2.3
   * Removed tseries dependency
 
-## Version 2.02 (4 June 2016)
+## Version 2.2
   * Changed URL for book
 
-## Version 2.01 (30 October 2012)
+## Version 2.01
 	* NAMESPACE added and .First.lib removed.
 
-## Version 2.00 (7 September 2009)
+## Version 2.00
   * Package removed from forecasting bundle
 
 For details of earlier versions, please see the Changelog of the forecast package.

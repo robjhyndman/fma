@@ -1,3 +1,6 @@
+## Version 2.5 (15 Feb 2023)
+  * Reduced package dependencies
+
 ## Version 2.4 (14 Jan 2020)
   * Added pkgdown
   * Added a vignette
@@ -16,4 +19,3 @@
   * Package removed from forecasting bundle
 
 For details of earlier versions, please see the Changelog of the forecast package.
-

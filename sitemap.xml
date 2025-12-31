@@ -1,279 +1,95 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>/404.html</loc>
-  </url>
-  <url>
-    <loc>/articles/fma-vignette.html</loc>
-  </url>
-  <url>
-    <loc>/articles/index.html</loc>
-  </url>
-  <url>
-    <loc>/authors.html</loc>
-  </url>
-  <url>
-    <loc>/index.html</loc>
-  </url>
-  <url>
-    <loc>/news/index.html</loc>
-  </url>
-  <url>
-    <loc>/reference/advert.html</loc>
-  </url>
-  <url>
-    <loc>/reference/advsales.html</loc>
-  </url>
-  <url>
-    <loc>/reference/airpass.html</loc>
-  </url>
-  <url>
-    <loc>/reference/auto.html</loc>
-  </url>
-  <url>
-    <loc>/reference/bank.html</loc>
-  </url>
-  <url>
-    <loc>/reference/beer.html</loc>
-  </url>
-  <url>
-    <loc>/reference/bicoal.html</loc>
-  </url>
-  <url>
-    <loc>/reference/books.html</loc>
-  </url>
-  <url>
-    <loc>/reference/boston.html</loc>
-  </url>
-  <url>
-    <loc>/reference/bricksq.html</loc>
-  </url>
-  <url>
-    <loc>/reference/canadian.html</loc>
-  </url>
-  <url>
-    <loc>/reference/capital.html</loc>
-  </url>
-  <url>
-    <loc>/reference/cement.html</loc>
-  </url>
-  <url>
-    <loc>/reference/chicken.html</loc>
-  </url>
-  <url>
-    <loc>/reference/condmilk.html</loc>
-  </url>
-  <url>
-    <loc>/reference/copper.html</loc>
-  </url>
-  <url>
-    <loc>/reference/copper1.html</loc>
-  </url>
-  <url>
-    <loc>/reference/copper2.html</loc>
-  </url>
-  <url>
-    <loc>/reference/copper3.html</loc>
-  </url>
-  <url>
-    <loc>/reference/cowtemp.html</loc>
-  </url>
-  <url>
-    <loc>/reference/cpimel.html</loc>
-  </url>
-  <url>
-    <loc>/reference/dexter.html</loc>
-  </url>
-  <url>
-    <loc>/reference/dj.html</loc>
-  </url>
-  <url>
-    <loc>/reference/dole.html</loc>
-  </url>
-  <url>
-    <loc>/reference/dowjones.html</loc>
-  </url>
-  <url>
-    <loc>/reference/econsumption.html</loc>
-  </url>
-  <url>
-    <loc>/reference/eggs.html</loc>
-  </url>
-  <url>
-    <loc>/reference/eknives.html</loc>
-  </url>
-  <url>
-    <loc>/reference/elco.html</loc>
-  </url>
-  <url>
-    <loc>/reference/elec.html</loc>
-  </url>
-  <url>
-    <loc>/reference/expenditure.html</loc>
-  </url>
-  <url>
-    <loc>/reference/fancy.html</loc>
-  </url>
-  <url>
-    <loc>/reference/fma-package.html</loc>
-  </url>
-  <url>
-    <loc>/reference/french.html</loc>
-  </url>
-  <url>
-    <loc>/reference/housing.html</loc>
-  </url>
-  <url>
-    <loc>/reference/hsales.html</loc>
-  </url>
-  <url>
-    <loc>/reference/hsales2.html</loc>
-  </url>
-  <url>
-    <loc>/reference/huron.html</loc>
-  </url>
-  <url>
-    <loc>/reference/ibm.html</loc>
-  </url>
-  <url>
-    <loc>/reference/ibmclose.html</loc>
-  </url>
-  <url>
-    <loc>/reference/index.html</loc>
-  </url>
-  <url>
-    <loc>/reference/input.html</loc>
-  </url>
-  <url>
-    <loc>/reference/internet.html</loc>
-  </url>
-  <url>
-    <loc>/reference/invent15.html</loc>
-  </url>
-  <url>
-    <loc>/reference/jcars.html</loc>
-  </url>
-  <url>
-    <loc>/reference/kkong.html</loc>
-  </url>
-  <url>
-    <loc>/reference/labour.html</loc>
-  </url>
-  <url>
-    <loc>/reference/lynx.html</loc>
-  </url>
-  <url>
-    <loc>/reference/milk.html</loc>
-  </url>
-  <url>
-    <loc>/reference/mink.html</loc>
-  </url>
-  <url>
-    <loc>/reference/mortal.html</loc>
-  </url>
-  <url>
-    <loc>/reference/motel.html</loc>
-  </url>
-  <url>
-    <loc>/reference/motion.html</loc>
-  </url>
-  <url>
-    <loc>/reference/nail.html</loc>
-  </url>
-  <url>
-    <loc>/reference/oilprice.html</loc>
-  </url>
-  <url>
-    <loc>/reference/olympic.html</loc>
-  </url>
-  <url>
-    <loc>/reference/ozone.html</loc>
-  </url>
-  <url>
-    <loc>/reference/paris.html</loc>
-  </url>
-  <url>
-    <loc>/reference/pcv.html</loc>
-  </url>
-  <url>
-    <loc>/reference/petrol.html</loc>
-  </url>
-  <url>
-    <loc>/reference/pigs.html</loc>
-  </url>
-  <url>
-    <loc>/reference/plastics.html</loc>
-  </url>
-  <url>
-    <loc>/reference/pollution.html</loc>
-  </url>
-  <url>
-    <loc>/reference/productC.html</loc>
-  </url>
-  <url>
-    <loc>/reference/pulpprice.html</loc>
-  </url>
-  <url>
-    <loc>/reference/qelec.html</loc>
-  </url>
-  <url>
-    <loc>/reference/qsales.html</loc>
-  </url>
-  <url>
-    <loc>/reference/running.html</loc>
-  </url>
-  <url>
-    <loc>/reference/sales.html</loc>
-  </url>
-  <url>
-    <loc>/reference/schizo.html</loc>
-  </url>
-  <url>
-    <loc>/reference/shampoo.html</loc>
-  </url>
-  <url>
-    <loc>/reference/sheep.html</loc>
-  </url>
-  <url>
-    <loc>/reference/ship.html</loc>
-  </url>
-  <url>
-    <loc>/reference/shipex.html</loc>
-  </url>
-  <url>
-    <loc>/reference/strikes.html</loc>
-  </url>
-  <url>
-    <loc>/reference/telephone.html</loc>
-  </url>
-  <url>
-    <loc>/reference/texasgas.html</loc>
-  </url>
-  <url>
-    <loc>/reference/ukdeaths.html</loc>
-  </url>
-  <url>
-    <loc>/reference/usdeaths.html</loc>
-  </url>
-  <url>
-    <loc>/reference/uselec.html</loc>
-  </url>
-  <url>
-    <loc>/reference/ustreas.html</loc>
-  </url>
-  <url>
-    <loc>/reference/wagesuk.html</loc>
-  </url>
-  <url>
-    <loc>/reference/wheat.html</loc>
-  </url>
-  <url>
-    <loc>/reference/wn.html</loc>
-  </url>
-  <url>
-    <loc>/reference/wnoise.html</loc>
-  </url>
-  <url>
-    <loc>/reference/writing.html</loc>
-  </url>
+<urlset xmlns = 'http://www.sitemaps.org/schemas/sitemap/0.9'>
+<url><loc>/404.html</loc></url>
+<url><loc>/articles/fma-vignette.html</loc></url>
+<url><loc>/articles/index.html</loc></url>
+<url><loc>/authors.html</loc></url>
+<url><loc>/index.html</loc></url>
+<url><loc>/news/index.html</loc></url>
+<url><loc>/reference/advert.html</loc></url>
+<url><loc>/reference/advsales.html</loc></url>
+<url><loc>/reference/airpass.html</loc></url>
+<url><loc>/reference/auto.html</loc></url>
+<url><loc>/reference/bank.html</loc></url>
+<url><loc>/reference/beer.html</loc></url>
+<url><loc>/reference/bicoal.html</loc></url>
+<url><loc>/reference/books.html</loc></url>
+<url><loc>/reference/boston.html</loc></url>
+<url><loc>/reference/bricksq.html</loc></url>
+<url><loc>/reference/canadian.html</loc></url>
+<url><loc>/reference/capital.html</loc></url>
+<url><loc>/reference/cement.html</loc></url>
+<url><loc>/reference/chicken.html</loc></url>
+<url><loc>/reference/condmilk.html</loc></url>
+<url><loc>/reference/copper.html</loc></url>
+<url><loc>/reference/copper1.html</loc></url>
+<url><loc>/reference/copper2.html</loc></url>
+<url><loc>/reference/copper3.html</loc></url>
+<url><loc>/reference/cowtemp.html</loc></url>
+<url><loc>/reference/cpimel.html</loc></url>
+<url><loc>/reference/dexter.html</loc></url>
+<url><loc>/reference/dj.html</loc></url>
+<url><loc>/reference/dole.html</loc></url>
+<url><loc>/reference/dowjones.html</loc></url>
+<url><loc>/reference/econsumption.html</loc></url>
+<url><loc>/reference/eggs.html</loc></url>
+<url><loc>/reference/eknives.html</loc></url>
+<url><loc>/reference/elco.html</loc></url>
+<url><loc>/reference/elec.html</loc></url>
+<url><loc>/reference/expenditure.html</loc></url>
+<url><loc>/reference/fancy.html</loc></url>
+<url><loc>/reference/fma-package.html</loc></url>
+<url><loc>/reference/french.html</loc></url>
+<url><loc>/reference/housing.html</loc></url>
+<url><loc>/reference/hsales.html</loc></url>
+<url><loc>/reference/hsales2.html</loc></url>
+<url><loc>/reference/huron.html</loc></url>
+<url><loc>/reference/ibm.html</loc></url>
+<url><loc>/reference/ibmclose.html</loc></url>
+<url><loc>/reference/index.html</loc></url>
+<url><loc>/reference/input.html</loc></url>
+<url><loc>/reference/internet.html</loc></url>
+<url><loc>/reference/invent15.html</loc></url>
+<url><loc>/reference/jcars.html</loc></url>
+<url><loc>/reference/kkong.html</loc></url>
+<url><loc>/reference/labour.html</loc></url>
+<url><loc>/reference/lynx.html</loc></url>
+<url><loc>/reference/milk.html</loc></url>
+<url><loc>/reference/mink.html</loc></url>
+<url><loc>/reference/mortal.html</loc></url>
+<url><loc>/reference/motel.html</loc></url>
+<url><loc>/reference/motion.html</loc></url>
+<url><loc>/reference/nail.html</loc></url>
+<url><loc>/reference/oilprice.html</loc></url>
+<url><loc>/reference/olympic.html</loc></url>
+<url><loc>/reference/ozone.html</loc></url>
+<url><loc>/reference/paris.html</loc></url>
+<url><loc>/reference/pcv.html</loc></url>
+<url><loc>/reference/petrol.html</loc></url>
+<url><loc>/reference/pigs.html</loc></url>
+<url><loc>/reference/plastics.html</loc></url>
+<url><loc>/reference/pollution.html</loc></url>
+<url><loc>/reference/productC.html</loc></url>
+<url><loc>/reference/pulpprice.html</loc></url>
+<url><loc>/reference/qelec.html</loc></url>
+<url><loc>/reference/qsales.html</loc></url>
+<url><loc>/reference/running.html</loc></url>
+<url><loc>/reference/sales.html</loc></url>
+<url><loc>/reference/schizo.html</loc></url>
+<url><loc>/reference/shampoo.html</loc></url>
+<url><loc>/reference/sheep.html</loc></url>
+<url><loc>/reference/ship.html</loc></url>
+<url><loc>/reference/shipex.html</loc></url>
+<url><loc>/reference/strikes.html</loc></url>
+<url><loc>/reference/telephone.html</loc></url>
+<url><loc>/reference/texasgas.html</loc></url>
+<url><loc>/reference/ukdeaths.html</loc></url>
+<url><loc>/reference/usdeaths.html</loc></url>
+<url><loc>/reference/uselec.html</loc></url>
+<url><loc>/reference/ustreas.html</loc></url>
+<url><loc>/reference/wagesuk.html</loc></url>
+<url><loc>/reference/wheat.html</loc></url>
+<url><loc>/reference/wn.html</loc></url>
+<url><loc>/reference/wnoise.html</loc></url>
+<url><loc>/reference/writing.html</loc></url>
 </urlset>
+

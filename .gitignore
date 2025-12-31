@@ -5,3 +5,4 @@
 inst/doc
 vignettes/*.R
 vignettes/*.html
+fma_padded.png

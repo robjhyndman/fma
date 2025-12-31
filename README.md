@@ -1,4 +1,4 @@
-# fma
+# fma <img src="man/figures/fma-hex.png" align="right" width = 150 />
 
 [![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/fma)](https://cran.r-project.org/package=fma)
 [![Downloads](http://cranlogs.r-pkg.org/badges/fma)](https://cran.r-project.org/package=fma)

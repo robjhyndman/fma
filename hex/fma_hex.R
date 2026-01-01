@@ -50,3 +50,9 @@ ggplot() +
   coord_fixed()
 
 ggsave("./man/figures/fma-hex.png", height = 2.5, width = 2.5)
+
+# Trim transparent edges
+img <- image_read("./man/figures/fma-hex.png")
+img_trim <- image_trim(img)
+
+image_write(img_trim, "./man/figures/fma-hex.png")

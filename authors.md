@@ -12,14 +12,14 @@
 Source:
 [`inst/CITATION`](https://github.com/robjhyndman/fma/blob/master/inst/CITATION)
 
-Hyndman RJ (2025). *fma: Data sets from "Forecasting: methods and
+Hyndman RJ (2026). *fma: Data sets from "Forecasting: methods and
 applications" by Makridakis, Wheelwright & Hyndman (1998)*. R package
 version 2.5.0.9000, <http://pkg.robjhyndman.com/fma/>.
 
     @Manual{,
       title = {fma: Data sets from "Forecasting: methods and applications" by Makridakis, Wheelwright & Hyndman (1998)},
       author = {Rob J Hyndman},
-      year = {2025},
+      year = {2026},
       note = {R package version 2.5.0.9000},
       url = {http://pkg.robjhyndman.com/fma/},
     }

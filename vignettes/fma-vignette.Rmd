@@ -82,10 +82,10 @@ This can be done using the `ggseasonplot()` function from the `forecast` package
 
 ```{r}
 ggseasonplot(beer, col = rainbow(5), year.labels = TRUE) +
-  ggtitle('Monthly Australian Beer Production') +
-  xlab('Months') + ylab('Megalitres') +
-  labs(caption = 'Figure 2-2: A seasonal plot of the Australian beer production data. Note that production peaks in
-    November and December in preparation for the southern hemisphere summer and is least in winter.')
+  ggtitle("Monthly Australian Beer Production") +
+  xlab("Months") + ylab("Megalitres") +
+  labs(caption = "Figure 2-2: A seasonal plot of the Australian beer production data. Note that production peaks in
+    November and December in preparation for the southern hemisphere summer and is least in winter.")
 ```
 
 ### Scatterplots
@@ -96,20 +96,22 @@ Time plots and seasonal plots are not appropriate for cross-sectional data. Patt
 auto %>%
   ggplot(aes(x = Mileage, y = Price)) +
   geom_point() +
-  xlab("Mileage (mpg)") + ylab("Price ($US)") +
+  xlab("Mileage (mpg)") +
+  ylab("Price ($US)") +
   ggtitle("Price/Mileage Relationship for 45 Automobiles") +
-  labs(caption = 'Figure 2-3: A scatterplot of price versus mileage for the automobile data.')
+  labs(caption = "Figure 2-3: A scatterplot of price versus mileage for the automobile data.")
 ```
 
 The `auto` data also has an additional explanatory variable **Country**. It is a categorical variable so cannot be plotted against **Price** in the same way as the continuous **Mileage** variable. However, we can include the **Country** information in our scatterplot with a shape aesthetic. This is displayed in **Figure 2-4** below.
 
 ```{r}
 auto %>%
-  ggplot(aes(x = Mileage, y = Price, shape=Country)) +
-  geom_point(size=2) +
-  xlab("Mileage (mpg)") + ylab("Price ($US)") +
+  ggplot(aes(x = Mileage, y = Price, shape = Country)) +
+  geom_point(size = 2) +
+  xlab("Mileage (mpg)") +
+  ylab("Price ($US)") +
   ggtitle("Price/Mileage Relationship for 45 Automobiles") +
-  labs(caption = 'Figure 2-4: A scatterplot showing price, mileage, and the country of origin for the automobile data.')
+  labs(caption = "Figure 2-4: A scatterplot showing price, mileage, and the country of origin for the automobile data.")
 ```
 
 # Numerical summaries
@@ -122,7 +124,7 @@ In addition to graphics, it is also helpful to provide numerical summaries. A su
 
 ```{r warning=FALSE}
 auto_japan <- auto %>%
-  filter(Country == 'Japan')
+  filter(Country == "Japan")
 auto_japan
 ```
 
@@ -130,12 +132,14 @@ auto_japan
 
 ```{r}
 auto_japan %>%
-  summarise(mean = mean(Mileage),
-            median= median(Mileage),
-            MAD = sum(abs(Mileage - mean(Mileage)))/n(),
-            MSD = sum((Mileage - mean(Mileage))^2)/n(),
-            Variance = var(Mileage),
-            Std_Dev = sd(Mileage))
+  summarise(
+    mean = mean(Mileage),
+    median = median(Mileage),
+    MAD = sum(abs(Mileage - mean(Mileage))) / n(),
+    MSD = sum((Mileage - mean(Mileage))^2) / n(),
+    Variance = var(Mileage),
+    Std_Dev = sd(Mileage)
+  )
 ```
 
 
@@ -147,13 +151,15 @@ This section introduces the concepts of **covariance**, **correlation** and **au
 
 ```{r}
 auto_japan %>%
-  mutate(Price = Price/1000) %>%
-  summarise(mean_mileage = mean(Mileage),
-            mean_price = mean(Price),
-            sd_mileage = sd(Mileage),
-            sd_price = sd(Price),
-            covariance = cov(Price, Mileage),
-            correlation = cor(Price, Mileage))
+  mutate(Price = Price / 1000) %>%
+  summarise(
+    mean_mileage = mean(Mileage),
+    mean_price = mean(Price),
+    sd_mileage = sd(Mileage),
+    sd_price = sd(Price),
+    covariance = cov(Price, Mileage),
+    correlation = cor(Price, Mileage)
+  )
 ```
 
 ### Autocorrelation
@@ -166,8 +172,8 @@ Together the autocorrelations at lags 1, 2, ..., make up the autocorrelation fun
 
 ```{r}
 ggAcf(beer) +
-  ggtitle('ACF of Beer Production') +
-  labs(caption = 'Figure 2-6: The correlogram (or ACF plot) for the beer production data.')
+  ggtitle("ACF of Beer Production") +
+  labs(caption = "Figure 2-6: The correlogram (or ACF plot) for the beer production data.")
 ```
 
 # Forecast accuracy
@@ -178,7 +184,7 @@ The textbook refers to a simple forecasting method called *Naive Forecast 1* (NF
 
 
 ```{r}
-window(beer, start=c(1994,12)) %>%
+window(beer, start = c(1994, 12)) %>%
   naive() %>%
   accuracy()
 ```
@@ -186,10 +192,12 @@ window(beer, start=c(1994,12)) %>%
 It can be helpful to look at the autocorrelations in forecast errors. Figure 2-7 shows the forecast errors obtained by applying the NF1 method to the Australian monthly beer data.
 
 ```{r, fig.show="hold"}
-beer %>% naive() %>% residuals() -> e
+beer %>%
+  naive() %>%
+  residuals() -> e
 autoplot(e) + ggtitle("Errors from NF1 forecasts")
 ggAcf(e) + ggtitle("") +
-  labs(caption="Figure 2-7: Top: Forecast errors obtained by applying the NF1 method to the beer data.
+  labs(caption = "Figure 2-7: Top: Forecast errors obtained by applying the NF1 method to the beer data.
     Bottom: The ACF of the forecast errors.")
 ```
 
@@ -230,14 +238,15 @@ There are a number of other useful transformations. One of the most common is th
 
 ```{r, fig.height=9}
 cbind(
-    `Square root` = sqrt(elec),
-    `Cube root` = elec^(1/3),
-    `Log` = log(elec),
-    `Inverse` = -1/elec) %>%
-  autoplot(facet=TRUE) +
-    xlab("Year") +
-    ggtitle("Transformations of the electricity production data") +
-    labs(caption="Figure 2-11: Transformations of the electricity production data.")
+  `Square root` = sqrt(elec),
+  `Cube root` = elec^(1 / 3),
+  `Log` = log(elec),
+  `Inverse` = -1 / elec
+) %>%
+  autoplot(facet = TRUE) +
+  xlab("Year") +
+  ggtitle("Transformations of the electricity production data") +
+  labs(caption = "Figure 2-11: Transformations of the electricity production data.")
 ```
 
 ### Calendar adjustments
@@ -250,12 +259,12 @@ Some of the variation in a time series may be due to the variation in the number
 
 ```{r}
 cbind(
-    Milk = milk,
-    `Milk per day` = milk/monthdays(milk)
-  ) %>%
-  autoplot(facet=TRUE) +
+  Milk = milk,
+  `Milk per day` = milk / monthdays(milk)
+) %>%
+  autoplot(facet = TRUE) +
   ggtitle("Monthly Milk Production per Cow") +
   xlab("Months") + ylab("Pounds") +
-  labs(caption="Figure 2-12: Monthly milk production per cow over 14 years.
+  labs(caption = "Figure 2-12: Monthly milk production per cow over 14 years.
     The second graph shows the data adjusted for the length of the month.")
 ```

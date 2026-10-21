@@ -9,11 +9,15 @@
 #' methods and applications}, John Wiley & Sons: New York. Chapter 2.
 #' @keywords datasets
 #' @examples
-#' par(mfrow=c(2,1))
-#' plot(milk,xlab="Year",ylab="pounds",
-#'     main="Monthly milk production per cow")
-#' milk.adj <- milk/monthdays(milk)*365.25/12
-#' plot(milk.adj,xlab="Year",ylab="pounds",
-#'     main="Adjusted monthly milk production per cow")
+#' par(mfrow = c(2, 1))
+#' plot(milk,
+#'   xlab = "Year", ylab = "pounds",
+#'   main = "Monthly milk production per cow"
+#' )
+#' milk.adj <- milk / monthdays(milk) * 365.25 / 12
+#' plot(milk.adj,
+#'   xlab = "Year", ylab = "pounds",
+#'   main = "Adjusted monthly milk production per cow"
+#' )
 #'
 "milk"

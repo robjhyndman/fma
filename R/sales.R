@@ -7,7 +7,7 @@
 #' methods and applications}, John Wiley & Sons: New York. Chapter 5.
 #' @keywords datasets
 #' @examples
-#' plot(sales,type="p")
-#' abline(lsfit(1:10,sales))
+#' plot(sales, type = "p")
+#' abline(lsfit(1:10, sales))
 #'
 "sales"

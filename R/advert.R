@@ -13,6 +13,6 @@
 #' Exercise 8.1.
 #' @keywords datasets
 #' @examples
-#' plot(sales ~ advert, data=advert)
+#' plot(sales ~ advert, data = advert)
 #'
 "advert"

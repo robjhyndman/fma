@@ -10,5 +10,4 @@
 #' @examples
 #' plot(chicken)
 #'
-#'
 "chicken"

@@ -9,6 +9,6 @@
 #' @examples
 #' plot(plastics)
 #' seasonplot(plastics)
-#' plot(stl(plastics,"periodic"))
+#' plot(stl(plastics, "periodic"))
 #'
 "plastics"

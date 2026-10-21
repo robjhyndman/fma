@@ -9,7 +9,7 @@ Time series data
 }
 \source{
 Makridakis, Wheelwright and Hyndman (1998) \emph{Forecasting:
-methods and applications}, John Wiley & Sons: New York. Exercise 7.4
+methods and applications}, John Wiley & Sons: New York. Exercise 7.4.
 }
 \usage{
 strikes

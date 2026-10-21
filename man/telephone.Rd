@@ -15,7 +15,7 @@ methods and applications}, John Wiley & Sons: New York. Chapter 9.
 telephone
 }
 \description{
-Telephone cost in San Francisco, New York: 1915--1996.
+Cost of a telephone call between San Francisco and New York: 1915--1996.
 }
 \examples{
 plot(telephone)

@@ -1,4 +1,3 @@
-
 #' Total deaths and serious injuries
 #'
 #' Monthly total deaths and serious injuries on UK roads: Jan 1975 -- Dec 1984.

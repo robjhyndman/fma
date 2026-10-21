@@ -3,7 +3,7 @@
 \docType{data}
 \name{plastics}
 \alias{plastics}
-\title{Sales of plastic product}
+\title{Sales of plastic products}
 \format{
 Time series data
 }

@@ -15,7 +15,7 @@ methods and applications}, John Wiley & Sons: New York. Exercise 2.4.
 mink
 }
 \description{
-Annual number of minks trapped in McKenzie river district of northwest
+Annual number of minks trapped in Mackenzie River district of northwest
 Canada: 1848--1911.
 }
 \examples{

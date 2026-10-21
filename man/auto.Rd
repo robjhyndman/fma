@@ -9,13 +9,13 @@ This data frame contains the following columns:
 \describe{
   \item{Model}{Name of model}
   \item{Country}{Country of manufacture}
-  \item{Mileage}{Mileage per gallon}
+  \item{Mileage}{Miles per gallon}
   \item{Price}{Price of car at time of measurement}
 }
 }
 \source{
 Makridakis, Wheelwright and Hyndman (1998) \emph{Forecasting:
-methods and applications}, Wiley: New York. Chapter 2.
+methods and applications}, John Wiley & Sons: New York. Chapter 2.
 }
 \usage{
 auto

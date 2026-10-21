@@ -16,7 +16,7 @@ methods and applications}, John Wiley & Sons: New York. Exercises 2.3 and
 usdeaths
 }
 \description{
-Monthly accidental deaths in USA.
+Monthly accidental deaths in USA: Jan 1973 -- Dec 1978.
 }
 \examples{
 plot(usdeaths)

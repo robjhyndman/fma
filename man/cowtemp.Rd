@@ -16,7 +16,7 @@ methods and applications}, John Wiley & Sons: New York. Exercises 2.3 and
 cowtemp
 }
 \description{
-Daily morning temperature of a cow. Measure at 6.30am for 75 consecutive
+Daily morning temperature of a cow. Measured at 6.30am for 75 consecutive
 mornings by counting chirps from a telemetric thermometer implanted in the
 cow. Data are chirps per 5-minute interval minus 800.
 }

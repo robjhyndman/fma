@@ -16,7 +16,7 @@ labour
 }
 \description{
 Number of persons in the civilian labour force in Australia each month (Feb
-1978 - Aug 1995).
+1978 -- Aug 1995).
 }
 \examples{
 plot(labour)

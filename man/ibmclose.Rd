@@ -22,7 +22,7 @@ tsdisplay(ibmclose)
 
 }
 \references{
-Box, Jenkins and Reinsell (1994) \emph{Time series analysis:
-forecasting and control}, 3rd edition, Holden-Day: San Francisco.
+Box, Jenkins and Reinsel (1994) \emph{Time series analysis:
+forecasting and control}, 3rd edition, Prentice Hall: Englewood Cliffs.
 }
 \keyword{datasets}

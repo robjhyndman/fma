@@ -3,9 +3,9 @@
 #' Monthly sales and advertising expenditure for an automotive parts company.
 #'
 #'
-#' @format Data frame containing the following columns:
+#' @format Bivariate time series containing the following columns:
 #' \describe{
-#'   \item{advert}{Monthly Advertising expenditure}
+#'   \item{advert}{Monthly advertising expenditure}
 #'   \item{sales}{Monthly sales volume}
 #' }
 #' @source Makridakis, Wheelwright and Hyndman (1998) \emph{Forecasting:

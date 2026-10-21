@@ -2,20 +2,37 @@
 % Please edit documentation in R/fma-package.R
 \docType{package}
 \name{fma-package}
-\alias{fma-package}
 \alias{fma}
-\title{Data sets from "Forecasting: methods and applications" by Makridakis,
-Wheelwright and Hyndman (1998)}
+\alias{fma-package}
+\title{fma: Data Sets from "Forecasting: Methods and Applications" by Makridakis, Wheelwright & Hyndman (1998)}
 \description{
-All data sets from "Forecasting: methods and applications" by Makridakis,
-Wheelwright and Hyndman (Wiley, 3rd ed., 1998).
+All data sets from "Forecasting: methods and applications" by Makridakis, Wheelwright & Hyndman (Wiley, 3rd ed., 1998) \url{https://robjhyndman.com/forecasting/}.
 }
 \references{
 Makridakis, Wheelwright and Hyndman (1998) \emph{Forecasting:
 methods and applications}, John Wiley & Sons: New York.
-\url{https://robjhyndman.com/forecasting/}
+}
+\seealso{
+Useful links:
+\itemize{
+  \item \url{https://pkg.robjhyndman.com/fma/}
+  \item \url{https://github.com/robjhyndman/fma}
+  \item Report bugs at \url{https://github.com/robjhyndman/fma/issues}
+}
+
 }
 \author{
-Rob J Hyndman. \email{Rob.Hyndman@monash.edu}
+\strong{Maintainer}: Rob Hyndman \email{Rob.Hyndman@monash.edu} (\href{https://orcid.org/0000-0002-2140-5352}{ORCID}) [copyright holder]
+
+Authors:
+\itemize{
+  \item Rob Hyndman \email{Rob.Hyndman@monash.edu} (\href{https://orcid.org/0000-0002-2140-5352}{ORCID}) [copyright holder]
+}
+
+Other contributors:
+\itemize{
+  \item Justin Carmody [contributor]
+}
+
 }
 \keyword{package}

@@ -7,12 +7,12 @@
 #' \describe{
 #'   \item{Model}{Name of model}
 #'   \item{Country}{Country of manufacture}
-#'   \item{Mileage}{Mileage per gallon}
+#'   \item{Mileage}{Miles per gallon}
 #'   \item{Price}{Price of car at time of measurement}
 #' }
 #' @references \emph{Consumer Reports}, April 1990, pp.235-255.
 #' @source Makridakis, Wheelwright and Hyndman (1998) \emph{Forecasting:
-#' methods and applications}, Wiley: New York. Chapter 2.
+#' methods and applications}, John Wiley & Sons: New York. Chapter 2.
 #' @keywords datasets
 #' @examples
 #' plot(Price ~ Mileage, data=auto, pch=19, col=2)
@@ -73,7 +73,7 @@
 #' @references McGee and Carleton (1970) Piecewise regression, \emph{Journal of
 #' the American Statistical Association}, \bold{65}, 1109--1124.
 #' @source Makridakis, Wheelwright and Hyndman (1998) \emph{Forecasting:
-#' methods and applications}, John Wiley & Sons: New York. Exercise 6.5
+#' methods and applications}, John Wiley & Sons: New York. Exercise 6.5.
 #' @keywords datasets
 #' @examples
 #' plot(boston)
@@ -112,7 +112,7 @@
 #'   \item{heat}{Heat emitted in calories per gram of cement.}
 #' }
 #' @source Makridakis, Wheelwright and Hyndman (1998) \emph{Forecasting:
-#' methods and applications}, John Wiley & Sons: New York. Exercise 6.4
+#' methods and applications}, John Wiley & Sons: New York. Exercise 6.4.
 #' @keywords datasets
 #' @examples
 #' plot(cement)
@@ -130,7 +130,7 @@
 #'   \item{production}{Production rating}
 #' }
 #' @source Makridakis, Wheelwright and Hyndman (1998) \emph{Forecasting:
-#' methods and applications}, John Wiley & Sons: New York. Exercise 5.4
+#' methods and applications}, John Wiley & Sons: New York. Exercise 5.4.
 #' @keywords datasets
 #' @examples
 #' plot(production~score, data=dexter, pch=19, col=3)
@@ -148,7 +148,7 @@
 #'   \item{temp}{Daily maximum temperature (degrees Celsius)}
 #' }
 #' @source Makridakis, Wheelwright and Hyndman (1998) \emph{Forecasting:
-#' methods and applications}, John Wiley & Sons: New York. Exercise 5.5
+#' methods and applications}, John Wiley & Sons: New York. Exercise 5.5.
 #' @keywords datasets
 #' @examples
 #' plot(Mwh ~ temp, data=econsumption, pch=19, col=4)
@@ -160,7 +160,7 @@
 #' IBM sales and profit (1954-1984) and forecasts.
 #'
 #' @name ibm
-#' @format Time series data
+#' @format Multivariate time series containing the following columns:
 #'   \describe{
 #'     \item{Sales}{IBM annual sales}
 #'     \item{Profit}{IBM annual profit}
@@ -186,7 +186,7 @@
 #' King Kong data.
 #'
 #' @name kkong
-#' @format Data frame consisting of following columns
+#' @format Data frame containing the following columns:
 #' \describe{
 #'   \item{weight}{Weights of 21 gorillas}
 #'   \item{height}{Heights of 21 gorillas}
@@ -202,7 +202,7 @@
 
 #' Mortality
 #'
-#' Bird mortality for 156 poultry farms, Aug 1995 - Jul 1996.
+#' Bird mortality for 156 poultry farms, Aug 1995 -- Jul 1996.
 #'
 #' @name mortal
 #' @format Data frame containing the following columns:
@@ -211,7 +211,7 @@
 #'   \item{mortality}{Percentage mortality of all birds for each farm.}
 #' }
 #' @source Makridakis, Wheelwright and Hyndman (1998) \emph{Forecasting:
-#' methods and applications}, John Wiley & Sons: New York. Exercise 5.9
+#' methods and applications}, John Wiley & Sons: New York. Exercise 5.9.
 #' @keywords datasets
 #' @examples
 #' plot(mortality~typeA, data=mortal)
@@ -221,19 +221,19 @@
 #' Total accommodation at hotel, motel and guest house
 #'
 #' Total room nights occupied and total monthly takings from accommodation at
-#' hotel, motel and guest house in Victoria, Australia: Jan 1980 - June 1995.
+#' hotel, motel and guest house in Victoria, Australia: Jan 1980 -- Jun 1995.
 #'
 #' @name motel
 #' @format Bivariate time series containing the following columns:
 #'   \describe{
-#'     \item{Roomnights}{Total room nights}
-#'     \item{Takings}{Total monthly takings (thousands of dollars)}
+#'     \item{Roomnights}{Total room nights (thousands)}
+#'     \item{Takings}{Total monthly takings (millions of dollars)}
 #' }
 #' @source Makridakis, Wheelwright and Hyndman (1998) \emph{Forecasting:
 #' methods and applications}, John Wiley & Sons: New York. Exercise 8.7.
 #' @keywords datasets
 #' @examples
-#' plot(motel[,2], motel[,1], xlab="Room nights", ylab="Takings",
+#' plot(motel[,1], motel[,2], xlab="Room nights", ylab="Takings",
 #'   pch=19, col=4)
 #'
 "motel"
@@ -249,7 +249,7 @@
 #'   \item{time}{Winning time in 400m final}
 #' }
 #' @source Makridakis, Wheelwright and Hyndman (1998) \emph{Forecasting:
-#' methods and applications}, John Wiley & Sons: New York. Exercise 5.7
+#' methods and applications}, John Wiley & Sons: New York. Exercise 5.7.
 #' @keywords datasets
 #' @examples
 #' plot(time~Year, data=olympic, pch=19, col=3)
@@ -279,7 +279,7 @@
 #' GDP for Western Europe and PCV industry sales.
 #'
 #' @name pcv
-#' @format Bivariate time series consisting of the following columns
+#' @format Data frame containing the following columns:
 #' \describe{
 #'   \item{GDP}{GDP Western Europe}
 #'   \item{PCV}{PCV Industry sales}
@@ -297,7 +297,7 @@
 #' World pulp price and shipments.
 #'
 #' @name pulpprice
-#' @format Data frame consisting of following columns
+#' @format Data frame containing the following columns:
 #' \describe{
 #'   \item{shipments}{World pulp shipments}
 #'   \item{price}{World pulp price}
@@ -315,7 +315,11 @@
 #' Running times and maximal aerobic capacity for 14 female runners.
 #'
 #' @name running
-#' @format Time series data
+#' @format Data frame containing the following columns:
+#' \describe{
+#'   \item{capacity}{Maximal aerobic capacity}
+#'   \item{times}{Running time}
+#' }
 #' @references Conley, Krahenbuhl, Burkett and Millar (1981) Physiological
 #' correlates of female road racing performance, \emph{Research Quarterly
 #' Exercise Sport}, \bold{52}, 441--448.

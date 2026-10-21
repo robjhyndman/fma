@@ -5,7 +5,7 @@
 \alias{pulpprice}
 \title{Pulp price and shipments}
 \format{
-Data frame consisting of following columns
+Data frame containing the following columns:
 \describe{
   \item{shipments}{World pulp shipments}
   \item{price}{World pulp price}

@@ -15,7 +15,7 @@ methods and applications}, John Wiley & Sons: New York. Exercise 4.2.
 eknives
 }
 \description{
-Sales of electric knives: Jan 1991 - April 1992.
+Sales of electric knives: Jan 1991 -- Apr 1992.
 }
 \examples{
 plot(eknives)

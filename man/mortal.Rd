@@ -13,13 +13,13 @@ Data frame containing the following columns:
 }
 \source{
 Makridakis, Wheelwright and Hyndman (1998) \emph{Forecasting:
-methods and applications}, John Wiley & Sons: New York. Exercise 5.9
+methods and applications}, John Wiley & Sons: New York. Exercise 5.9.
 }
 \usage{
 mortal
 }
 \description{
-Bird mortality for 156 poultry farms, Aug 1995 - Jul 1996.
+Bird mortality for 156 poultry farms, Aug 1995 -- Jul 1996.
 }
 \examples{
 plot(mortality~typeA, data=mortal)

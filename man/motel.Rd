@@ -7,8 +7,8 @@
 \format{
 Bivariate time series containing the following columns:
   \describe{
-    \item{Roomnights}{Total room nights}
-    \item{Takings}{Total monthly takings (thousands of dollars)}
+    \item{Roomnights}{Total room nights (thousands)}
+    \item{Takings}{Total monthly takings (millions of dollars)}
 }
 }
 \source{
@@ -20,10 +20,10 @@ motel
 }
 \description{
 Total room nights occupied and total monthly takings from accommodation at
-hotel, motel and guest house in Victoria, Australia: Jan 1980 - June 1995.
+hotel, motel and guest house in Victoria, Australia: Jan 1980 -- Jun 1995.
 }
 \examples{
-plot(motel[,2], motel[,1], xlab="Room nights", ylab="Takings",
+plot(motel[,1], motel[,2], xlab="Room nights", ylab="Takings",
   pch=19, col=4)
 
 }

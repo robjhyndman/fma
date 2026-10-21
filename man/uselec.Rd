@@ -16,7 +16,7 @@ uselec
 }
 \description{
 Monthly total generation of electricity by the U.S. electric industry (Jan
-1985 - Oct 1996.
+1985 -- Oct 1996).
 }
 \examples{
 plot(uselec)

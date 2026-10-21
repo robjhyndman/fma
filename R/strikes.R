@@ -5,7 +5,7 @@
 #' @format Time series data
 #' @references Brockwell and Davis (1991)
 #' @source Makridakis, Wheelwright and Hyndman (1998) \emph{Forecasting:
-#' methods and applications}, John Wiley & Sons: New York. Exercise 7.4
+#' methods and applications}, John Wiley & Sons: New York. Exercise 7.4.
 #' @keywords datasets
 #' @examples
 #' tsdisplay(strikes)

@@ -5,7 +5,7 @@
 \alias{ibm}
 \title{IBM sales and profit}
 \format{
-Time series data
+Multivariate time series containing the following columns:
   \describe{
     \item{Sales}{IBM annual sales}
     \item{Profit}{IBM annual profit}

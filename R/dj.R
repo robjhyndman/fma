@@ -1,6 +1,6 @@
 #' Dow-Jones index
 #'
-#' Dow-Jones index on 251 trading days ending 26 Aug 1994.
+#' Dow-Jones index on 292 trading days ending 26 Aug 1994.
 #'
 #' @format Time series data
 #' @references Brockwell and Davis (1996)

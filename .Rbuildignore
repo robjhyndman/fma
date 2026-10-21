@@ -12,3 +12,4 @@ vignettes/*_cache
 ^data-raw$
 ^\.github$
 rstudio
+^hex$

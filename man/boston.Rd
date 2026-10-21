@@ -13,7 +13,7 @@ Bivariate time series containing the following columns:
 }
 \source{
 Makridakis, Wheelwright and Hyndman (1998) \emph{Forecasting:
-methods and applications}, John Wiley & Sons: New York. Exercise 6.5
+methods and applications}, John Wiley & Sons: New York. Exercise 6.5.
 }
 \usage{
 boston

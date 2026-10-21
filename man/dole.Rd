@@ -15,7 +15,7 @@ methods and applications}, John Wiley & Sons: New York. Exercise 2.3.
 dole
 }
 \description{
-Monthly total of people on unemployment benefits in Australia (Jan 1965 --
+Monthly total of people on unemployment benefits in Australia (Jan 1956 --
 Jul 1992).
 }
 \examples{

@@ -1,6 +1,6 @@
 #' Motor vehicle production
 #'
-#' Japanese motor vehicle production in thousand (1947--1989).
+#' Japanese motor vehicle production in thousands (1947--1989).
 #'
 #' @format Time series data
 #' @references \emph{World motor vehicle data}, Motor Vehicle Manufacturers of

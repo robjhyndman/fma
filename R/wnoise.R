@@ -4,7 +4,7 @@
 #'
 #' @format Time series data
 #' @source Makridakis, Wheelwright and Hyndman (1998) \emph{Forecasting:
-#' methods and applications}, John Wiley & Sons: New York. Chpater 7.
+#' methods and applications}, John Wiley & Sons: New York. Chapter 7.
 #' @keywords datasets
 #' @examples
 #' tsdisplay(wnoise)

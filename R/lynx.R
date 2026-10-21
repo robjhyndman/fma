@@ -1,10 +1,10 @@
 #' Annual Canadian Lynx trappings 1821--1934
 #'
-#' Annual number of lynx trapped in McKenzie river district of northwest
+#' Annual number of lynx trapped in Mackenzie River district of northwest
 #' Canada: 1821--1934.
 #'
 #' @format Time series data
-#' @references Campbell, M. J.and A. M. Walker (1977). A Survey of statistical
+#' @references Campbell, M. J. and A. M. Walker (1977). A Survey of statistical
 #' work on the Mackenzie River series of annual Canadian lynx trappings for the
 #' years 1821--1934 and a new analysis. \emph{Journal of the Royal Statistical
 #' Society series A}, \bold{140}, 411--431.

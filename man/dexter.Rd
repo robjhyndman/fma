@@ -13,7 +13,7 @@ Data frame containing the following columns:
 }
 \source{
 Makridakis, Wheelwright and Hyndman (1998) \emph{Forecasting:
-methods and applications}, John Wiley & Sons: New York. Exercise 5.4
+methods and applications}, John Wiley & Sons: New York. Exercise 5.4.
 }
 \usage{
 dexter

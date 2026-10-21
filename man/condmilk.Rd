@@ -15,7 +15,7 @@ methods and applications}, John Wiley & Sons: New York. Exercise 7.5.
 condmilk
 }
 \description{
-Manufacturer's Stocks of evaporated and sweetened condensed milk.
+Manufacturers' stocks of evaporated and sweetened condensed milk: Jan 1971 -- Dec 1980.
 }
 \examples{
 plot(condmilk)

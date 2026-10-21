@@ -1,6 +1,6 @@
 #' Sales of electric knives
 #'
-#' Sales of electric knives: Jan 1991 - April 1992.
+#' Sales of electric knives: Jan 1991 -- Apr 1992.
 #'
 #' @format Time series data
 #' @source Makridakis, Wheelwright and Hyndman (1998) \emph{Forecasting:

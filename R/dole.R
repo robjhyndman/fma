@@ -1,6 +1,6 @@
 #' Unemployment benefits in Australia
 #'
-#' Monthly total of people on unemployment benefits in Australia (Jan 1965 --
+#' Monthly total of people on unemployment benefits in Australia (Jan 1956 --
 #' Jul 1992).
 #'
 #' @format Time series data

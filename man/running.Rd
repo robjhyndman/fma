@@ -5,7 +5,11 @@
 \alias{running}
 \title{Running times and maximal aerobic capacity}
 \format{
-Time series data
+Data frame containing the following columns:
+\describe{
+  \item{capacity}{Maximal aerobic capacity}
+  \item{times}{Running time}
+}
 }
 \source{
 Makridakis, Wheelwright and Hyndman (1998) \emph{Forecasting:

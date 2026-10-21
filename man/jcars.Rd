@@ -16,7 +16,7 @@ Chapter 8.
 jcars
 }
 \description{
-Japanese motor vehicle production in thousand (1947--1989).
+Japanese motor vehicle production in thousands (1947--1989).
 }
 \examples{
 plot(jcars)

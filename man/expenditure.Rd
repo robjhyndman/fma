@@ -5,7 +5,7 @@
 \alias{expenditure}
 \title{Expenditure}
 \format{
-Time series data
+Numeric vector
 }
 \source{
 Makridakis, Wheelwright and Hyndman (1998) \emph{Forecasting:

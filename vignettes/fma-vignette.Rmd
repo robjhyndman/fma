@@ -48,7 +48,7 @@ There are a number of data sets that are included in the `fma` package, which ar
     Monthly time series data for Australian beer production (in megalitres) from January 1991 to August 1995.
 
 - **elec**
-    Monthly time series data for Australian electricity production from January 1956 to August 1995 in kWh.
+    Monthly time series data for Australian electricity production from January 1956 to August 1995 (in million kWh).
 
 - **milk**
     Monthly time series data for milk production per cow (in pounds) over a 14 year time period.
@@ -71,12 +71,12 @@ beer %>%
   ggtitle("Monthly Australian Beer Production") +
   xlab("Year") +
   ylab("Megalitres") +
-  labs(caption = "Figure 2-1: Time plot of monthly Australian beer production (megaliters, Ml) from January 1991–August 1995.")
+  labs(caption = "Figure 2-1: Time plot of monthly Australian beer production (megalitres, Ml) from January 1991–August 1995.")
 ```
 
 ### Seasonal plots
 
-For time series data that have seasonal patterns, it is often useful to also produce a *seasonal plot*. This consists of the data plotted against the individuals "seasons" in which the data were observed. This is something like a time plot except that the data from each season are overlapped. A seasonal plot enables the underlying seasonal pattern more obvious, as well as more easily identify deviations from this pattern. **Figure 2-2** shows a seasonal plot of the `beer` data.
+For time series data that have seasonal patterns, it is often useful to also produce a *seasonal plot*. This consists of the data plotted against the individual "seasons" in which the data were observed. This is something like a time plot except that the data from each season are overlapped. A seasonal plot makes the underlying seasonal pattern more obvious, and makes it easier to identify deviations from this pattern. **Figure 2-2** shows a seasonal plot of the `beer` data.
 
 This can be done using the `ggseasonplot()` function from the `forecast` package:
 
@@ -148,7 +148,7 @@ This section introduces the concepts of **covariance**, **correlation** and **au
 ```{r}
 auto_japan %>%
   mutate(Price = Price/1000) %>%
-  summarise(mean_milage = mean(Mileage),
+  summarise(mean_mileage = mean(Mileage),
             mean_price = mean(Price),
             sd_mileage = sd(Mileage),
             sd_price = sd(Price),
@@ -183,7 +183,7 @@ window(beer, start=c(1994,12)) %>%
   accuracy()
 ```
 
-It can be helpful to look at the autocorrelations in forecast errors. Figure 2.7 shows the forecast errors obtained by applying the NF1 method to the Australia monthly beer data.
+It can be helpful to look at the autocorrelations in forecast errors. Figure 2-7 shows the forecast errors obtained by applying the NF1 method to the Australian monthly beer data.
 
 ```{r, fig.show="hold"}
 beer %>% naive() %>% residuals() -> e
@@ -212,7 +212,7 @@ elec %>%
        Note the increasing variation as the level of the series increases.")
 ```
 
-This time plot shows that the size of the annual seasonal variation increases as the level of the series increases. The variation at the start (towards the left) is about 300 million kWh, while in more recent years (to the right) the variation exceeds 2500 kWh. A mathematical transformation is a convenient method for the necessary task of including this increasing variation into the forecasts for this data.
+This time plot shows that the size of the annual seasonal variation increases as the level of the series increases. The variation at the start (towards the left) is about 300 million kWh, while in more recent years (to the right) the variation exceeds 2500 million kWh. A mathematical transformation is a convenient method for the necessary task of including this increasing variation into the forecasts for this data.
 
 One possible transformation is the *square root* function. This transform is plotted below:
 
@@ -244,7 +244,7 @@ cbind(
 
 Some of the variation in a time series may be due to the variation in the number of days (or trading days) each month. It is a good idea to adjust for this known source of variation to allow study of other interesting features.
 
-**Month length** can make quite an impact since number of days in a month can differ by (31-28)/30 = 10%. If this is not removed, seasonal patterns become hard to interpret. **Section 2/7/2** in the textbook shows how to make this adjustment.
+**Month length** can make quite an impact since the number of days in a month can differ by (31-28)/30 = 10%. If this is not removed, seasonal patterns become hard to interpret. **Section 2/7/2** in the textbook shows how to make this adjustment.
 
 **Figure 2-12** shows the `milk` data set with and without being adjusted for month length. The simpler pattern will lead to better forecasts and easier identification of unusual observations.
 

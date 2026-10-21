@@ -5,7 +5,7 @@
 \alias{kkong}
 \title{King Kong data}
 \format{
-Data frame consisting of following columns
+Data frame containing the following columns:
 \describe{
   \item{weight}{Weights of 21 gorillas}
   \item{height}{Heights of 21 gorillas}

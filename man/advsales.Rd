@@ -5,7 +5,11 @@
 \alias{advsales}
 \title{Sales volume and advertising expenditure}
 \format{
-Time series data
+Bivariate time series containing the following columns:
+\describe{
+  \item{sales}{Sales volume}
+  \item{advert}{Advertising expenditure}
+}
 }
 \source{
 Makridakis, Wheelwright and Hyndman (1998) \emph{Forecasting:

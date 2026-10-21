@@ -1,7 +1,7 @@
 #' Housing data
 #'
 #' Monthly housing starts, construction contracts and average new home mortgage
-#' rates (Jan 1983 - Oct 1989).
+#' rates (Jan 1983 -- Oct 1989).
 #'
 #' @format Trivariate time series containing the following columns:
 #' \describe{\item{hstarts}{Monthly housing starts (thousands of units)}

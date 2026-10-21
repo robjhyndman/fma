@@ -5,7 +5,7 @@
 \alias{pcv}
 \title{GDP}
 \format{
-Bivariate time series consisting of the following columns
+Data frame containing the following columns:
 \describe{
   \item{GDP}{GDP Western Europe}
   \item{PCV}{PCV Industry sales}

@@ -5,9 +5,9 @@
 \alias{advert}
 \title{Sales and advertising expenditure}
 \format{
-Data frame containing the following columns:
+Bivariate time series containing the following columns:
 \describe{
-  \item{advert}{Monthly Advertising expenditure}
+  \item{advert}{Monthly advertising expenditure}
   \item{sales}{Monthly sales volume}
 }
 }

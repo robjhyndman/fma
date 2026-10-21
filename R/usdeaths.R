@@ -1,6 +1,6 @@
 #' Accidental deaths in USA
 #'
-#' Monthly accidental deaths in USA.
+#' Monthly accidental deaths in USA: Jan 1973 -- Dec 1978.
 #'
 #'
 #' @format Time series data

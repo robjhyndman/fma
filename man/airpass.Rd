@@ -26,7 +26,7 @@ tsdisplay(airpass)
 
 }
 \references{
-Box, Jenkins and Reinsell (1994) \emph{Time series analysis:
-forecasting and control}, 3rd edition, Holden-Day: San Francisco. Series G.
+Box, Jenkins and Reinsel (1994) \emph{Time series analysis:
+forecasting and control}, 3rd edition, Prentice Hall: Englewood Cliffs. Series G.
 }
 \keyword{datasets}

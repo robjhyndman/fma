@@ -1,6 +1,6 @@
 #' Telephone cost
 #'
-#' Telephone cost in San Francisco, New York: 1915--1996.
+#' Cost of a telephone call between San Francisco and New York: 1915--1996.
 #'
 #'
 #' @format Time series data

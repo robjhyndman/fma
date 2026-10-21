@@ -1,6 +1,6 @@
 # Dow-Jones index
 
-Dow-Jones index, 28 Aug - 18 Dec 1972.
+Dow-Jones index, 28 Aug – 18 Dec 1972.
 
 ## Usage
 

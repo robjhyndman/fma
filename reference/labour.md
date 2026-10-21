@@ -1,7 +1,7 @@
 # Civilian labour force
 
 Number of persons in the civilian labour force in Australia each month
-(Feb 1978 - Aug 1995).
+(Feb 1978 – Aug 1995).
 
 ## Usage
 

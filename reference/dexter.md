@@ -23,7 +23,7 @@ Data frame containing the following columns:
 ## Source
 
 Makridakis, Wheelwright and Hyndman (1998) *Forecasting: methods and
-applications*, John Wiley & Sons: New York. Exercise 5.4
+applications*, John Wiley & Sons: New York. Exercise 5.4.
 
 ## Examples
 

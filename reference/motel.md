@@ -1,7 +1,7 @@
 # Total accommodation at hotel, motel and guest house
 
 Total room nights occupied and total monthly takings from accommodation
-at hotel, motel and guest house in Victoria, Australia: Jan 1980 - June
+at hotel, motel and guest house in Victoria, Australia: Jan 1980 – Jun
 1995.
 
 ## Usage
@@ -16,11 +16,11 @@ Bivariate time series containing the following columns:
 
 - Roomnights:
 
-  Total room nights
+  Total room nights (thousands)
 
 - Takings:
 
-  Total monthly takings (thousands of dollars)
+  Total monthly takings (millions of dollars)
 
 ## Source
 
@@ -30,7 +30,7 @@ applications*, John Wiley & Sons: New York. Exercise 8.7.
 ## Examples
 
 ``` r
-plot(motel[,2], motel[,1], xlab="Room nights", ylab="Takings",
+plot(motel[,1], motel[,2], xlab="Room nights", ylab="Takings",
   pch=19, col=4)
 
 ```

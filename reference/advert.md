@@ -11,11 +11,11 @@ advert
 
 ## Format
 
-Data frame containing the following columns:
+Bivariate time series containing the following columns:
 
 - advert:
 
-  Monthly Advertising expenditure
+  Monthly advertising expenditure
 
 - sales:
 

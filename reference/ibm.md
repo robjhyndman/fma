@@ -10,7 +10,7 @@ ibm
 
 ## Format
 
-Time series data
+Multivariate time series containing the following columns:
 
 - Sales:
 

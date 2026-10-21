@@ -10,7 +10,15 @@ running
 
 ## Format
 
-Time series data
+Data frame containing the following columns:
+
+- capacity:
+
+  Maximal aerobic capacity
+
+- times:
+
+  Running time
 
 ## Source
 

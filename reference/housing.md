@@ -1,7 +1,7 @@
 # Housing data
 
 Monthly housing starts, construction contracts and average new home
-mortgage rates (Jan 1983 - Oct 1989).
+mortgage rates (Jan 1983 – Oct 1989).
 
 ## Usage
 

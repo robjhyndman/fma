@@ -1,4 +1,4 @@
-# Sales of plastic product
+# Sales of plastic products
 
 Monthly sales of product A for a plastics manufacturer.
 

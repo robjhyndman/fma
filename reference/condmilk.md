@@ -1,6 +1,7 @@
 # Condensed milk
 
-Manufacturer's Stocks of evaporated and sweetened condensed milk.
+Manufacturers' stocks of evaporated and sweetened condensed milk: Jan
+1971 – Dec 1980.
 
 ## Usage
 

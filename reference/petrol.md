@@ -1,6 +1,6 @@
 # Sales of petroleum and related product
 
-US monthly sales of petroleum and related product: Jan 1971 - Dec 1991.
+US monthly sales of petroleum and related products: Jan 1971 – Dec 1991.
 
 ## Usage
 
@@ -18,7 +18,7 @@ Multivariate time series data:
 
 - Coal:
 
-  Sales of Bituminous coal products
+  Sales of bituminous coal products
 
 - Petrol:
 

@@ -10,7 +10,7 @@ expenditure
 
 ## Format
 
-Time series data
+Numeric vector
 
 ## Source
 

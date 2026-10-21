@@ -1,7 +1,7 @@
 # Canadian unemployment rate
 
 Canadian unemployment rate as a percentage of the civilian labor force
-between 1974 and the third quarter of 1975.
+from Q1 1974 to Q3 1975.
 
 ## Usage
 

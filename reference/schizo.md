@@ -1,7 +1,7 @@
 # Perceptual speed scores
 
 Daily perceptual speed scores for a schizophrenic patient. The patient
-began receiving a powerful tranquilizer (chlorpromzaine) on the 61st day
+began receiving a powerful tranquilizer (chlorpromazine) on the 61st day
 and continued receiving the drug for the remainder of the sample period.
 It is expected that this drug would reduce perceptual speed.
 

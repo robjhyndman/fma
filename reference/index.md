@@ -4,9 +4,9 @@
 
 fma package
 
-- [`fma-package`](fma-package.md) [`fma`](fma-package.md) : Data sets
-  from "Forecasting: methods and applications" by Makridakis,
-  Wheelwright and Hyndman (1998)
+- [`fma`](fma-package.md) [`fma-package`](fma-package.md) : fma: Data
+  Sets from "Forecasting: Methods and Applications" by Makridakis,
+  Wheelwright & Hyndman (1998)
 
 ## Super-Annual Data
 
@@ -82,7 +82,7 @@ Data recorded every month
 - [`paris`](paris.md) : Average temperature
 - [`petrol`](petrol.md) : Sales of petroleum and related product
 - [`pigs`](pigs.md) : Number of pigs slaughtered
-- [`plastics`](plastics.md) : Sales of plastic product
+- [`plastics`](plastics.md) : Sales of plastic products
 - [`pollution`](pollution.md) : Shipment of pollution equipment
 - [`productC`](productC.md) : Sales of product C
 - [`shampoo`](shampoo.md) : Sales of shampoo

@@ -19,8 +19,8 @@ applications*, John Wiley & Sons: New York. Exercise 7.2.
 
 ## References
 
-Box, Jenkins and Reinsell (1994) *Time series analysis: forecasting and
-control*, 3rd edition, Holden-Day: San Francisco.
+Box, Jenkins and Reinsel (1994) *Time series analysis: forecasting and
+control*, 3rd edition, Prentice Hall: Englewood Cliffs.
 
 ## Examples
 

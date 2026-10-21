@@ -1,7 +1,7 @@
 # Monthly milk production per cow
 
-Average monthly milk production per cow over 14 years (January 1962 -
-December 1975).
+Average monthly milk production per cow over 14 years (Jan 1962 – Dec
+1975).
 
 ## Usage
 

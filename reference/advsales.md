@@ -11,7 +11,15 @@ advsales
 
 ## Format
 
-Time series data
+Bivariate time series containing the following columns:
+
+- sales:
+
+  Sales volume
+
+- advert:
+
+  Advertising expenditure
 
 ## Source
 

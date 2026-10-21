@@ -10,7 +10,7 @@ pcv
 
 ## Format
 
-Bivariate time series consisting of the following columns
+Data frame containing the following columns:
 
 - GDP:
 

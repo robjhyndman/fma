@@ -1,6 +1,6 @@
 # Number of minks trapped
 
-Annual number of minks trapped in McKenzie river district of northwest
+Annual number of minks trapped in Mackenzie River district of northwest
 Canada: 1848–1911.
 
 ## Usage

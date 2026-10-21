@@ -1,6 +1,6 @@
 # Sales of electric knives
 
-Sales of electric knives: Jan 1991 - April 1992.
+Sales of electric knives: Jan 1991 – Apr 1992.
 
 ## Usage
 

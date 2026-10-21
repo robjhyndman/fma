@@ -24,7 +24,7 @@ Bivariate time series containing the following columns:
 ## Source
 
 Makridakis, Wheelwright and Hyndman (1998) *Forecasting: methods and
-applications*, John Wiley & Sons: New York. Exercise 6.5
+applications*, John Wiley & Sons: New York. Exercise 6.5.
 
 ## References
 

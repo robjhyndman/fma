@@ -10,7 +10,7 @@ kkong
 
 ## Format
 
-Data frame consisting of following columns
+Data frame containing the following columns:
 
 - weight:
 

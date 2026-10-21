@@ -1,6 +1,6 @@
 # Mortality
 
-Bird mortality for 156 poultry farms, Aug 1995 - Jul 1996.
+Bird mortality for 156 poultry farms, Aug 1995 – Jul 1996.
 
 ## Usage
 
@@ -23,7 +23,7 @@ Data frame containing the following columns:
 ## Source
 
 Makridakis, Wheelwright and Hyndman (1998) *Forecasting: methods and
-applications*, John Wiley & Sons: New York. Exercise 5.9
+applications*, John Wiley & Sons: New York. Exercise 5.9.
 
 ## Examples
 

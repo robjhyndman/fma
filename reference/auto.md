@@ -22,7 +22,7 @@ This data frame contains the following columns:
 
 - Mileage:
 
-  Mileage per gallon
+  Miles per gallon
 
 - Price:
 
@@ -31,7 +31,7 @@ This data frame contains the following columns:
 ## Source
 
 Makridakis, Wheelwright and Hyndman (1998) *Forecasting: methods and
-applications*, Wiley: New York. Chapter 2.
+applications*, John Wiley & Sons: New York. Chapter 2.
 
 ## References
 

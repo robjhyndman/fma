@@ -15,7 +15,7 @@ Time series data
 ## Source
 
 Makridakis, Wheelwright and Hyndman (1998) *Forecasting: methods and
-applications*, John Wiley & Sons: New York. Chpater 7.
+applications*, John Wiley & Sons: New York. Chapter 7.
 
 ## Examples
 

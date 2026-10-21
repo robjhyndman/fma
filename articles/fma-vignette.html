@@ -7,8 +7,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <title>Using fma: worked examples • fma</title>
 <script src="../deps/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<link href="../deps/bootstrap-5.3.1/bootstrap.min.css" rel="stylesheet">
-<script src="../deps/bootstrap-5.3.1/bootstrap.bundle.min.js"></script><link href="../deps/Fira_Sans-0.4.10/font.css" rel="stylesheet">
+<link href="../deps/bootstrap-5.3.8/bootstrap.min.css" rel="stylesheet">
+<script src="../deps/bootstrap-5.3.8/bootstrap.bundle.min.js"></script><link href="../deps/Fira_Sans-0.4.10/font.css" rel="stylesheet">
 <link href="../deps/font-awesome-6.5.2/css/all.min.css" rel="stylesheet">
 <link href="../deps/font-awesome-6.5.2/css/v4-shims.min.css" rel="stylesheet">
 <script src="../deps/headroom-0.11.0/headroom.min.js"></script><script src="../deps/headroom-0.11.0/jQuery.headroom.min.js"></script><script src="../deps/bootstrap-toc-1.0.1/bootstrap-toc.min.js"></script><script src="../deps/clipboard.js-2.0.11/clipboard.min.js"></script><script src="../deps/search-1.0.0/autocomplete.jquery.min.js"></script><script src="../deps/search-1.0.0/fuse.min.js"></script><script src="../deps/search-1.0.0/mark.min.js"></script><!-- pkgdown --><script src="../pkgdown.js"></script><link href="../extra.css" rel="stylesheet">
@@ -55,7 +55,7 @@
                         <h4 data-toc-skip class="author">Justin Carmody,
 Rob J Hyndman</h4>
             
-            <h4 data-toc-skip class="date">2026-01-01</h4>
+            <h4 data-toc-skip class="date">2026-10-21</h4>
       
       <small class="dont-index">Source: <a href="https://github.com/robjhyndman/fma/blob/master/vignettes/fma-vignette.Rmd" class="external-link"><code>vignettes/fma-vignette.Rmd</code></a></small>
       <div class="d-none name"><code>fma-vignette.Rmd</code></div>
@@ -108,7 +108,8 @@ per gallon)</li>
 beer production (in megalitres) from January 1991 to August
 1995.</p></li>
 <li><p><strong>elec</strong> Monthly time series data for Australian
-electricity production from January 1956 to August 1995 in kWh.</p></li>
+electricity production from January 1956 to August 1995 (in million
+kWh).</p></li>
 <li><p><strong>milk</strong> Monthly time series data for milk
 production per cow (in pounds) over a 14 year time period.</p></li>
 </ul>
@@ -141,7 +142,7 @@ series.</p>
 <span>  <span class="fu">ggtitle</span><span class="op">(</span><span class="st">"Monthly Australian Beer Production"</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu">xlab</span><span class="op">(</span><span class="st">"Year"</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu">ylab</span><span class="op">(</span><span class="st">"Megalitres"</span><span class="op">)</span> <span class="op">+</span></span>
-<span>  <span class="fu">labs</span><span class="op">(</span>caption <span class="op">=</span> <span class="st">"Figure 2-1: Time plot of monthly Australian beer production (megaliters, Ml) from January 1991–August 1995."</span><span class="op">)</span></span></code></pre></div>
+<span>  <span class="fu">labs</span><span class="op">(</span>caption <span class="op">=</span> <span class="st">"Figure 2-1: Time plot of monthly Australian beer production (megalitres, Ml) from January 1991–August 1995."</span><span class="op">)</span></span></code></pre></div>
 <p><img src="fma-vignette_files/figure-html/unnamed-chunk-1-1.png" class="r-plt" alt="" width="700"></p>
 </div>
 <div class="section level4">
@@ -149,24 +150,20 @@ series.</p>
 </h4>
 <p>For time series data that have seasonal patterns, it is often useful
 to also produce a <em>seasonal plot</em>. This consists of the data
-plotted against the individuals “seasons” in which the data were
+plotted against the individual “seasons” in which the data were
 observed. This is something like a time plot except that the data from
-each season are overlapped. A seasonal plot enables the underlying
-seasonal pattern more obvious, as well as more easily identify
+each season are overlapped. A seasonal plot makes the underlying
+seasonal pattern more obvious, and makes it easier to identify
 deviations from this pattern. <strong>Figure 2-2</strong> shows a
 seasonal plot of the <code>beer</code> data.</p>
 <p>This can be done using the <code>ggseasonplot()</code> function from
 the <code>forecast</code> package:</p>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu">ggseasonplot</span><span class="op">(</span><span class="va">beer</span>, col <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/grDevices/palettes.html" class="external-link">rainbow</a></span><span class="op">(</span><span class="fl">5</span><span class="op">)</span>, year.labels <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span> <span class="op">+</span></span>
-<span>  <span class="fu">ggtitle</span><span class="op">(</span><span class="st">'Monthly Australian Beer Production'</span><span class="op">)</span> <span class="op">+</span></span>
-<span>  <span class="fu">xlab</span><span class="op">(</span><span class="st">'Months'</span><span class="op">)</span> <span class="op">+</span> <span class="fu">ylab</span><span class="op">(</span><span class="st">'Megalitres'</span><span class="op">)</span> <span class="op">+</span></span>
-<span>  <span class="fu">labs</span><span class="op">(</span>caption <span class="op">=</span> <span class="st">'Figure 2-2: A seasonal plot of the Australian beer production data. Note that production peaks in</span></span>
-<span><span class="st">    November and December in preparation for the southern hemisphere summer and is least in winter.'</span><span class="op">)</span></span>
-<span><span class="co">#&gt; Warning in fortify(data, ...): Arguments in `...` must be used.</span></span>
-<span><span class="co">#&gt; <span style="color: #BB0000;">✖</span> Problematic argument:</span></span>
-<span><span class="co">#&gt; <span style="color: #00BBBB;">•</span> na.rm = TRUE</span></span>
-<span><span class="co">#&gt; <span style="color: #00BBBB;">ℹ</span> Did you misspell an argument name?</span></span></code></pre></div>
+<span>  <span class="fu">ggtitle</span><span class="op">(</span><span class="st">"Monthly Australian Beer Production"</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu">xlab</span><span class="op">(</span><span class="st">"Months"</span><span class="op">)</span> <span class="op">+</span> <span class="fu">ylab</span><span class="op">(</span><span class="st">"Megalitres"</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu">labs</span><span class="op">(</span>caption <span class="op">=</span> <span class="st">"Figure 2-2: A seasonal plot of the Australian beer production data. Note that production peaks in</span></span>
+<span><span class="st">    November and December in preparation for the southern hemisphere summer and is least in winter."</span><span class="op">)</span></span></code></pre></div>
 <p><img src="fma-vignette_files/figure-html/unnamed-chunk-2-1.png" class="r-plt" alt="" width="700"></p>
 </div>
 <div class="section level4">
@@ -182,9 +179,10 @@ relationships between variables of interest in a data set.
 <code class="sourceCode R"><span><span class="va">auto</span> <span class="op">%&gt;%</span></span>
 <span>  <span class="fu">ggplot</span><span class="op">(</span><span class="fu">aes</span><span class="op">(</span>x <span class="op">=</span> <span class="va">Mileage</span>, y <span class="op">=</span> <span class="va">Price</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu">geom_point</span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
-<span>  <span class="fu">xlab</span><span class="op">(</span><span class="st">"Mileage (mpg)"</span><span class="op">)</span> <span class="op">+</span> <span class="fu">ylab</span><span class="op">(</span><span class="st">"Price ($US)"</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu">xlab</span><span class="op">(</span><span class="st">"Mileage (mpg)"</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu">ylab</span><span class="op">(</span><span class="st">"Price ($US)"</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu">ggtitle</span><span class="op">(</span><span class="st">"Price/Mileage Relationship for 45 Automobiles"</span><span class="op">)</span> <span class="op">+</span></span>
-<span>  <span class="fu">labs</span><span class="op">(</span>caption <span class="op">=</span> <span class="st">'Figure 2-3: A scatterplot of price versus mileage for the automobile data.'</span><span class="op">)</span></span></code></pre></div>
+<span>  <span class="fu">labs</span><span class="op">(</span>caption <span class="op">=</span> <span class="st">"Figure 2-3: A scatterplot of price versus mileage for the automobile data."</span><span class="op">)</span></span></code></pre></div>
 <p><img src="fma-vignette_files/figure-html/unnamed-chunk-3-1.png" class="r-plt" alt="" width="700"></p>
 <p>The <code>auto</code> data also has an additional explanatory
 variable <strong>Country</strong>. It is a categorical variable so
@@ -194,11 +192,12 @@ the <strong>Country</strong> information in our scatterplot with a shape
 aesthetic. This is displayed in <strong>Figure 2-4</strong> below.</p>
 <div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">auto</span> <span class="op">%&gt;%</span></span>
-<span>  <span class="fu">ggplot</span><span class="op">(</span><span class="fu">aes</span><span class="op">(</span>x <span class="op">=</span> <span class="va">Mileage</span>, y <span class="op">=</span> <span class="va">Price</span>, shape<span class="op">=</span><span class="va">Country</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
-<span>  <span class="fu">geom_point</span><span class="op">(</span>size<span class="op">=</span><span class="fl">2</span><span class="op">)</span> <span class="op">+</span></span>
-<span>  <span class="fu">xlab</span><span class="op">(</span><span class="st">"Mileage (mpg)"</span><span class="op">)</span> <span class="op">+</span> <span class="fu">ylab</span><span class="op">(</span><span class="st">"Price ($US)"</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu">ggplot</span><span class="op">(</span><span class="fu">aes</span><span class="op">(</span>x <span class="op">=</span> <span class="va">Mileage</span>, y <span class="op">=</span> <span class="va">Price</span>, shape <span class="op">=</span> <span class="va">Country</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu">geom_point</span><span class="op">(</span>size <span class="op">=</span> <span class="fl">2</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu">xlab</span><span class="op">(</span><span class="st">"Mileage (mpg)"</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu">ylab</span><span class="op">(</span><span class="st">"Price ($US)"</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu">ggtitle</span><span class="op">(</span><span class="st">"Price/Mileage Relationship for 45 Automobiles"</span><span class="op">)</span> <span class="op">+</span></span>
-<span>  <span class="fu">labs</span><span class="op">(</span>caption <span class="op">=</span> <span class="st">'Figure 2-4: A scatterplot showing price, mileage, and the country of origin for the automobile data.'</span><span class="op">)</span></span></code></pre></div>
+<span>  <span class="fu">labs</span><span class="op">(</span>caption <span class="op">=</span> <span class="st">"Figure 2-4: A scatterplot showing price, mileage, and the country of origin for the automobile data."</span><span class="op">)</span></span></code></pre></div>
 <p><img src="fma-vignette_files/figure-html/unnamed-chunk-4-1.png" class="r-plt" alt="" width="700"></p>
 </div>
 </div>
@@ -218,7 +217,7 @@ cars from Japan. These statistics are defined and explained in the
 textbook. The following code produces these summary statistics:</p>
 <div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">auto_japan</span> <span class="op">&lt;-</span> <span class="va">auto</span> <span class="op">%&gt;%</span></span>
-<span>  <span class="fu"><a href="https://rdrr.io/r/stats/filter.html" class="external-link">filter</a></span><span class="op">(</span><span class="va">Country</span> <span class="op">==</span> <span class="st">'Japan'</span><span class="op">)</span></span>
+<span>  <span class="fu"><a href="https://rdrr.io/r/stats/filter.html" class="external-link">filter</a></span><span class="op">(</span><span class="va">Country</span> <span class="op">==</span> <span class="st">"Japan"</span><span class="op">)</span></span>
 <span><span class="va">auto_japan</span></span>
 <span><span class="co">#&gt;                            Model Country Mileage Price</span></span>
 <span><span class="co">#&gt; 6                   Mazda MPV V6   Japan      19 14944</span></span>
@@ -243,12 +242,14 @@ textbook. The following code produces these summary statistics:</p>
 <p><strong>Table 2-4</strong></p>
 <div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">auto_japan</span> <span class="op">%&gt;%</span></span>
-<span>  <span class="fu">summarise</span><span class="op">(</span>mean <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/mean.html" class="external-link">mean</a></span><span class="op">(</span><span class="va">Mileage</span><span class="op">)</span>,</span>
-<span>            median<span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/stats/median.html" class="external-link">median</a></span><span class="op">(</span><span class="va">Mileage</span><span class="op">)</span>,</span>
-<span>            MAD <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/sum.html" class="external-link">sum</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/MathFun.html" class="external-link">abs</a></span><span class="op">(</span><span class="va">Mileage</span> <span class="op">-</span> <span class="fu"><a href="https://rdrr.io/r/base/mean.html" class="external-link">mean</a></span><span class="op">(</span><span class="va">Mileage</span><span class="op">)</span><span class="op">)</span><span class="op">)</span><span class="op">/</span><span class="fu">n</span><span class="op">(</span><span class="op">)</span>,</span>
-<span>            MSD <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/sum.html" class="external-link">sum</a></span><span class="op">(</span><span class="op">(</span><span class="va">Mileage</span> <span class="op">-</span> <span class="fu"><a href="https://rdrr.io/r/base/mean.html" class="external-link">mean</a></span><span class="op">(</span><span class="va">Mileage</span><span class="op">)</span><span class="op">)</span><span class="op">^</span><span class="fl">2</span><span class="op">)</span><span class="op">/</span><span class="fu">n</span><span class="op">(</span><span class="op">)</span>,</span>
-<span>            Variance <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/stats/cor.html" class="external-link">var</a></span><span class="op">(</span><span class="va">Mileage</span><span class="op">)</span>,</span>
-<span>            Std_Dev <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/stats/sd.html" class="external-link">sd</a></span><span class="op">(</span><span class="va">Mileage</span><span class="op">)</span><span class="op">)</span></span>
+<span>  <span class="fu">summarise</span><span class="op">(</span></span>
+<span>    mean <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/mean.html" class="external-link">mean</a></span><span class="op">(</span><span class="va">Mileage</span><span class="op">)</span>,</span>
+<span>    median <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/stats/median.html" class="external-link">median</a></span><span class="op">(</span><span class="va">Mileage</span><span class="op">)</span>,</span>
+<span>    MAD <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/sum.html" class="external-link">sum</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/MathFun.html" class="external-link">abs</a></span><span class="op">(</span><span class="va">Mileage</span> <span class="op">-</span> <span class="fu"><a href="https://rdrr.io/r/base/mean.html" class="external-link">mean</a></span><span class="op">(</span><span class="va">Mileage</span><span class="op">)</span><span class="op">)</span><span class="op">)</span> <span class="op">/</span> <span class="fu">n</span><span class="op">(</span><span class="op">)</span>,</span>
+<span>    MSD <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/sum.html" class="external-link">sum</a></span><span class="op">(</span><span class="op">(</span><span class="va">Mileage</span> <span class="op">-</span> <span class="fu"><a href="https://rdrr.io/r/base/mean.html" class="external-link">mean</a></span><span class="op">(</span><span class="va">Mileage</span><span class="op">)</span><span class="op">)</span><span class="op">^</span><span class="fl">2</span><span class="op">)</span> <span class="op">/</span> <span class="fu">n</span><span class="op">(</span><span class="op">)</span>,</span>
+<span>    Variance <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/stats/cor.html" class="external-link">var</a></span><span class="op">(</span><span class="va">Mileage</span><span class="op">)</span>,</span>
+<span>    Std_Dev <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/stats/sd.html" class="external-link">sd</a></span><span class="op">(</span><span class="va">Mileage</span><span class="op">)</span></span>
+<span>  <span class="op">)</span></span>
 <span><span class="co">#&gt;       mean median      MAD      MSD Variance  Std_Dev</span></span>
 <span><span class="co">#&gt; 1 24.68421     23 4.371191 27.05817  28.5614 5.344287</span></span></code></pre></div>
 </div>
@@ -267,15 +268,17 @@ Calculation of these statistics is given below:</p>
 <p><strong>Table 2-6</strong></p>
 <div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">auto_japan</span> <span class="op">%&gt;%</span></span>
-<span>  <span class="fu">mutate</span><span class="op">(</span>Price <span class="op">=</span> <span class="va">Price</span><span class="op">/</span><span class="fl">1000</span><span class="op">)</span> <span class="op">%&gt;%</span></span>
-<span>  <span class="fu">summarise</span><span class="op">(</span>mean_milage <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/mean.html" class="external-link">mean</a></span><span class="op">(</span><span class="va">Mileage</span><span class="op">)</span>,</span>
-<span>            mean_price <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/mean.html" class="external-link">mean</a></span><span class="op">(</span><span class="va">Price</span><span class="op">)</span>,</span>
-<span>            sd_mileage <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/stats/sd.html" class="external-link">sd</a></span><span class="op">(</span><span class="va">Mileage</span><span class="op">)</span>,</span>
-<span>            sd_price <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/stats/sd.html" class="external-link">sd</a></span><span class="op">(</span><span class="va">Price</span><span class="op">)</span>,</span>
-<span>            covariance <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/stats/cor.html" class="external-link">cov</a></span><span class="op">(</span><span class="va">Price</span>, <span class="va">Mileage</span><span class="op">)</span>,</span>
-<span>            correlation <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/stats/cor.html" class="external-link">cor</a></span><span class="op">(</span><span class="va">Price</span>, <span class="va">Mileage</span><span class="op">)</span><span class="op">)</span></span>
-<span><span class="co">#&gt;   mean_milage mean_price sd_mileage sd_price covariance correlation</span></span>
-<span><span class="co">#&gt; 1    24.68421   13.93805   5.344287 5.400006  -21.00154  -0.7277246</span></span></code></pre></div>
+<span>  <span class="fu">mutate</span><span class="op">(</span>Price <span class="op">=</span> <span class="va">Price</span> <span class="op">/</span> <span class="fl">1000</span><span class="op">)</span> <span class="op">%&gt;%</span></span>
+<span>  <span class="fu">summarise</span><span class="op">(</span></span>
+<span>    mean_mileage <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/mean.html" class="external-link">mean</a></span><span class="op">(</span><span class="va">Mileage</span><span class="op">)</span>,</span>
+<span>    mean_price <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/mean.html" class="external-link">mean</a></span><span class="op">(</span><span class="va">Price</span><span class="op">)</span>,</span>
+<span>    sd_mileage <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/stats/sd.html" class="external-link">sd</a></span><span class="op">(</span><span class="va">Mileage</span><span class="op">)</span>,</span>
+<span>    sd_price <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/stats/sd.html" class="external-link">sd</a></span><span class="op">(</span><span class="va">Price</span><span class="op">)</span>,</span>
+<span>    covariance <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/stats/cor.html" class="external-link">cov</a></span><span class="op">(</span><span class="va">Price</span>, <span class="va">Mileage</span><span class="op">)</span>,</span>
+<span>    correlation <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/stats/cor.html" class="external-link">cor</a></span><span class="op">(</span><span class="va">Price</span>, <span class="va">Mileage</span><span class="op">)</span></span>
+<span>  <span class="op">)</span></span>
+<span><span class="co">#&gt;   mean_mileage mean_price sd_mileage sd_price covariance correlation</span></span>
+<span><span class="co">#&gt; 1     24.68421   13.93805   5.344287 5.400006  -21.00154  -0.7277246</span></span></code></pre></div>
 </div>
 <div class="section level4">
 <h4 id="autocorrelation">Autocorrelation<a class="anchor" aria-label="anchor" href="#autocorrelation"></a>
@@ -303,8 +306,8 @@ plot is known as a <em>correlogram</em>. <strong>Figure 2-6</strong>
 shows the ACF for the beer data:</p>
 <div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu">ggAcf</span><span class="op">(</span><span class="va">beer</span><span class="op">)</span> <span class="op">+</span></span>
-<span>  <span class="fu">ggtitle</span><span class="op">(</span><span class="st">'ACF of Beer Production'</span><span class="op">)</span> <span class="op">+</span></span>
-<span>  <span class="fu">labs</span><span class="op">(</span>caption <span class="op">=</span> <span class="st">'Figure 2-6: The correlogram (or ACF plot) for the beer production data.'</span><span class="op">)</span></span></code></pre></div>
+<span>  <span class="fu">ggtitle</span><span class="op">(</span><span class="st">"ACF of Beer Production"</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu">labs</span><span class="op">(</span>caption <span class="op">=</span> <span class="st">"Figure 2-6: The correlogram (or ACF plot) for the beer production data."</span><span class="op">)</span></span></code></pre></div>
 <p><img src="fma-vignette_files/figure-html/unnamed-chunk-8-1.png" class="r-plt" alt="" width="700"></p>
 </div>
 </div>
@@ -322,19 +325,21 @@ observation available as a forecast. <strong>Table 2-11</strong> shows
 NF1 used to forecast the monthly beer production for the year of
 1995.</p>
 <div class="sourceCode" id="cb9"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/stats/window.html" class="external-link">window</a></span><span class="op">(</span><span class="va">beer</span>, start<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1994</span>,<span class="fl">12</span><span class="op">)</span><span class="op">)</span> <span class="op">%&gt;%</span></span>
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/stats/window.html" class="external-link">window</a></span><span class="op">(</span><span class="va">beer</span>, start <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1994</span>, <span class="fl">12</span><span class="op">)</span><span class="op">)</span> <span class="op">%&gt;%</span></span>
 <span>  <span class="fu">naive</span><span class="op">(</span><span class="op">)</span> <span class="op">%&gt;%</span></span>
 <span>  <span class="fu">accuracy</span><span class="op">(</span><span class="op">)</span></span>
 <span><span class="co">#&gt;                  ME     RMSE    MAE       MPE     MAPE MASE       ACF1</span></span>
 <span><span class="co">#&gt; Training set -3.625 25.28587 22.125 -3.724331 15.88498  NaN -0.3339436</span></span></code></pre></div>
 <p>It can be helpful to look at the autocorrelations in forecast errors.
-Figure 2.7 shows the forecast errors obtained by applying the NF1 method
-to the Australia monthly beer data.</p>
+Figure 2-7 shows the forecast errors obtained by applying the NF1 method
+to the Australian monthly beer data.</p>
 <div class="sourceCode" id="cb10"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">beer</span> <span class="op">%&gt;%</span> <span class="fu">naive</span><span class="op">(</span><span class="op">)</span> <span class="op">%&gt;%</span> <span class="fu"><a href="https://rdrr.io/r/stats/residuals.html" class="external-link">residuals</a></span><span class="op">(</span><span class="op">)</span> <span class="op">-&gt;</span> <span class="va">e</span></span>
+<code class="sourceCode R"><span><span class="va">beer</span> <span class="op">%&gt;%</span></span>
+<span>  <span class="fu">naive</span><span class="op">(</span><span class="op">)</span> <span class="op">%&gt;%</span></span>
+<span>  <span class="fu"><a href="https://rdrr.io/r/stats/residuals.html" class="external-link">residuals</a></span><span class="op">(</span><span class="op">)</span> <span class="op">-&gt;</span> <span class="va">e</span></span>
 <span><span class="fu">autoplot</span><span class="op">(</span><span class="va">e</span><span class="op">)</span> <span class="op">+</span> <span class="fu">ggtitle</span><span class="op">(</span><span class="st">"Errors from NF1 forecasts"</span><span class="op">)</span></span>
 <span><span class="fu">ggAcf</span><span class="op">(</span><span class="va">e</span><span class="op">)</span> <span class="op">+</span> <span class="fu">ggtitle</span><span class="op">(</span><span class="st">""</span><span class="op">)</span> <span class="op">+</span></span>
-<span>  <span class="fu">labs</span><span class="op">(</span>caption<span class="op">=</span><span class="st">"Figure 2-7: Top: Forecast errors obtained by applying the NF1 method to the beer data.</span></span>
+<span>  <span class="fu">labs</span><span class="op">(</span>caption <span class="op">=</span> <span class="st">"Figure 2-7: Top: Forecast errors obtained by applying the NF1 method to the beer data.</span></span>
 <span><span class="st">    Bottom: The ACF of the forecast errors."</span><span class="op">)</span></span></code></pre></div>
 <p><img src="fma-vignette_files/figure-html/unnamed-chunk-10-1.png" class="r-plt" alt="" width="700"><img src="fma-vignette_files/figure-html/unnamed-chunk-10-2.png" class="r-plt" alt="" width="700"></p>
 </div>
@@ -360,9 +365,9 @@ three kinds of adjustments. Examples of each are given below:</p>
 <p>This time plot shows that the size of the annual seasonal variation
 increases as the level of the series increases. The variation at the
 start (towards the left) is about 300 million kWh, while in more recent
-years (to the right) the variation exceeds 2500 kWh. A mathematical
-transformation is a convenient method for the necessary task of
-including this increasing variation into the forecasts for this
+years (to the right) the variation exceeds 2500 million kWh. A
+mathematical transformation is a convenient method for the necessary
+task of including this increasing variation into the forecasts for this
 data.</p>
 <p>One possible transformation is the <em>square root</em> function.
 This transform is plotted below:</p>
@@ -384,14 +389,15 @@ the set of <em>power transformations</em>. The plots below show a
 selection of these transformations.</p>
 <div class="sourceCode" id="cb13"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/cbind.html" class="external-link">cbind</a></span><span class="op">(</span></span>
-<span>    `Square root` <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/MathFun.html" class="external-link">sqrt</a></span><span class="op">(</span><span class="va">elec</span><span class="op">)</span>,</span>
-<span>    `Cube root` <span class="op">=</span> <span class="va">elec</span><span class="op">^</span><span class="op">(</span><span class="fl">1</span><span class="op">/</span><span class="fl">3</span><span class="op">)</span>,</span>
-<span>    `Log` <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/Log.html" class="external-link">log</a></span><span class="op">(</span><span class="va">elec</span><span class="op">)</span>,</span>
-<span>    `Inverse` <span class="op">=</span> <span class="op">-</span><span class="fl">1</span><span class="op">/</span><span class="va">elec</span><span class="op">)</span> <span class="op">%&gt;%</span></span>
-<span>  <span class="fu">autoplot</span><span class="op">(</span>facet<span class="op">=</span><span class="cn">TRUE</span><span class="op">)</span> <span class="op">+</span></span>
-<span>    <span class="fu">xlab</span><span class="op">(</span><span class="st">"Year"</span><span class="op">)</span> <span class="op">+</span></span>
-<span>    <span class="fu">ggtitle</span><span class="op">(</span><span class="st">"Transformations of the electricity production data"</span><span class="op">)</span> <span class="op">+</span></span>
-<span>    <span class="fu">labs</span><span class="op">(</span>caption<span class="op">=</span><span class="st">"Figure 2-11: Transformations of the electricity production data."</span><span class="op">)</span></span></code></pre></div>
+<span>  `Square root` <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/MathFun.html" class="external-link">sqrt</a></span><span class="op">(</span><span class="va">elec</span><span class="op">)</span>,</span>
+<span>  `Cube root` <span class="op">=</span> <span class="va">elec</span><span class="op">^</span><span class="op">(</span><span class="fl">1</span> <span class="op">/</span> <span class="fl">3</span><span class="op">)</span>,</span>
+<span>  `Log` <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/Log.html" class="external-link">log</a></span><span class="op">(</span><span class="va">elec</span><span class="op">)</span>,</span>
+<span>  `Inverse` <span class="op">=</span> <span class="op">-</span><span class="fl">1</span> <span class="op">/</span> <span class="va">elec</span></span>
+<span><span class="op">)</span> <span class="op">%&gt;%</span></span>
+<span>  <span class="fu">autoplot</span><span class="op">(</span>facet <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu">xlab</span><span class="op">(</span><span class="st">"Year"</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu">ggtitle</span><span class="op">(</span><span class="st">"Transformations of the electricity production data"</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu">labs</span><span class="op">(</span>caption <span class="op">=</span> <span class="st">"Figure 2-11: Transformations of the electricity production data."</span><span class="op">)</span></span></code></pre></div>
 <p><img src="fma-vignette_files/figure-html/unnamed-chunk-13-1.png" class="r-plt" alt="" width="700"></p>
 </div>
 <div class="section level4">
@@ -401,8 +407,8 @@ selection of these transformations.</p>
 the number of days (or trading days) each month. It is a good idea to
 adjust for this known source of variation to allow study of other
 interesting features.</p>
-<p><strong>Month length</strong> can make quite an impact since number
-of days in a month can differ by (31-28)/30 = 10%. If this is not
+<p><strong>Month length</strong> can make quite an impact since the
+number of days in a month can differ by (31-28)/30 = 10%. If this is not
 removed, seasonal patterns become hard to interpret. <strong>Section
 2/7/2</strong> in the textbook shows how to make this adjustment.</p>
 <p><strong>Figure 2-12</strong> shows the <code>milk</code> data set
@@ -411,13 +417,13 @@ will lead to better forecasts and easier identification of unusual
 observations.</p>
 <div class="sourceCode" id="cb14"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/cbind.html" class="external-link">cbind</a></span><span class="op">(</span></span>
-<span>    Milk <span class="op">=</span> <span class="va">milk</span>,</span>
-<span>    `Milk per day` <span class="op">=</span> <span class="va">milk</span><span class="op">/</span><span class="fu">monthdays</span><span class="op">(</span><span class="va">milk</span><span class="op">)</span></span>
-<span>  <span class="op">)</span> <span class="op">%&gt;%</span></span>
-<span>  <span class="fu">autoplot</span><span class="op">(</span>facet<span class="op">=</span><span class="cn">TRUE</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  Milk <span class="op">=</span> <span class="va">milk</span>,</span>
+<span>  `Milk per day` <span class="op">=</span> <span class="va">milk</span> <span class="op">/</span> <span class="fu">monthdays</span><span class="op">(</span><span class="va">milk</span><span class="op">)</span></span>
+<span><span class="op">)</span> <span class="op">%&gt;%</span></span>
+<span>  <span class="fu">autoplot</span><span class="op">(</span>facet <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu">ggtitle</span><span class="op">(</span><span class="st">"Monthly Milk Production per Cow"</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu">xlab</span><span class="op">(</span><span class="st">"Months"</span><span class="op">)</span> <span class="op">+</span> <span class="fu">ylab</span><span class="op">(</span><span class="st">"Pounds"</span><span class="op">)</span> <span class="op">+</span></span>
-<span>  <span class="fu">labs</span><span class="op">(</span>caption<span class="op">=</span><span class="st">"Figure 2-12: Monthly milk production per cow over 14 years.</span></span>
+<span>  <span class="fu">labs</span><span class="op">(</span>caption <span class="op">=</span> <span class="st">"Figure 2-12: Monthly milk production per cow over 14 years.</span></span>
 <span><span class="st">    The second graph shows the data adjusted for the length of the month."</span><span class="op">)</span></span></code></pre></div>
 <p><img src="fma-vignette_files/figure-html/unnamed-chunk-14-1.png" class="r-plt" alt="" width="700"></p>
 </div>
@@ -433,7 +439,7 @@ observations.</p>
 </div>
 
 <div class="pkgdown-footer-right">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.2.0.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.2.1.</p>
 </div>
 
     </footer>

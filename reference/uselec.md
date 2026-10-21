@@ -1,7 +1,7 @@
 # Total generation of electricity
 
 Monthly total generation of electricity by the U.S. electric industry
-(Jan 1985 - Oct 1996.
+(Jan 1985 – Oct 1996).
 
 ## Usage
 

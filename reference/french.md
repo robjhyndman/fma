@@ -21,5 +21,4 @@ applications*, John Wiley & Sons: New York. Exercise 4.4.
 
 ``` r
 plot(french)
-
 ```

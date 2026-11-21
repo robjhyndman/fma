@@ -22,5 +22,4 @@ applications*, John Wiley & Sons: New York. Chapter 7.
 
 ``` r
 tsdisplay(pigs)
-
 ```

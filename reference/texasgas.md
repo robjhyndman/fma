@@ -29,5 +29,4 @@ applications*, John Wiley & Sons: New York. Exercise 5.10. Exercise 6.2.
 
 ``` r
 plot(consumption ~ price, data=texasgas)
-
 ```

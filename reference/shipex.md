@@ -22,5 +22,4 @@ applications*, John Wiley & Sons: New York. Exercise 3.1.
 
 ``` r
 plot(shipex)
-
 ```

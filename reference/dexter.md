@@ -29,5 +29,4 @@ applications*, John Wiley & Sons: New York. Exercise 5.4.
 
 ``` r
 plot(production~score, data=dexter, pch=19, col=3)
-
 ```

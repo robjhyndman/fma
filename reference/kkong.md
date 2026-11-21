@@ -29,5 +29,4 @@ applications*, John Wiley & Sons: New York. Chapter 5. Exercise 5.6.
 
 ``` r
 plot(weight~height, data=kkong, pch=19, col=2)
-
 ```

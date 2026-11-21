@@ -34,5 +34,4 @@ Survey of current business, US Department of Commerce, 1990.
 
 ``` r
 plot(housing)
-
 ```

@@ -24,5 +24,4 @@ applications*, John Wiley & Sons: New York. Exercise 5.8.
 plot(fancy)
 
 seasonplot(fancy)
-
 ```

@@ -34,5 +34,4 @@ Blattberg and Jeuland (1981).
 
 ``` r
 plot(advsales)
-
 ```

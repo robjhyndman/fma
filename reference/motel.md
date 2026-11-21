@@ -32,5 +32,4 @@ applications*, John Wiley & Sons: New York. Exercise 8.7.
 ``` r
 plot(motel[,1], motel[,2], xlab="Room nights", ylab="Takings",
   pch=19, col=4)
-
 ```

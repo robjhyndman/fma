@@ -21,5 +21,4 @@ applications*, John Wiley & Sons: New York. Exercise 3.7 and Table 4-7.
 
 ``` r
 plot(qsales)
-
 ```

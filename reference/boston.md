@@ -35,5 +35,4 @@ Statistical Association*, **65**, 1109–1124.
 
 ``` r
 plot(boston)
-
 ```

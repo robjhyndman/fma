@@ -32,5 +32,4 @@ plot(airpass)
 seasonplot(airpass)
 
 tsdisplay(airpass)
-
 ```

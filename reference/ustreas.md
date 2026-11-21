@@ -24,5 +24,4 @@ applications*, John Wiley & Sons: New York. Chapter 1.
 plot(ustreas)
 
 tsdisplay(ustreas)
-
 ```

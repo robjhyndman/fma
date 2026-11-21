@@ -22,5 +22,4 @@ applications*, John Wiley & Sons: New York. Chapter 5.
 ``` r
 plot(sales,type="p")
 abline(lsfit(1:10,sales))
-
 ```

@@ -29,5 +29,4 @@ Velleman, Paul. (1981) *The ABC of EDA*, Duxbury Press.
 plot(cowtemp)
 
 tsdisplay(cowtemp)
-
 ```

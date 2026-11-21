@@ -26,5 +26,4 @@ control*, 3rd edition, Prentice Hall: Englewood Cliffs.
 
 ``` r
 tsdisplay(ibmclose)
-
 ```

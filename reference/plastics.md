@@ -25,5 +25,4 @@ plot(plastics)
 seasonplot(plastics)
 
 plot(stl(plastics,"periodic"))
-
 ```

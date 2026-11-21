@@ -25,5 +25,4 @@ plot(hsales2)
 seasonplot(hsales2)
 
 tsdisplay(hsales2)
-
 ```

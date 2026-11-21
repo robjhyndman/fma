@@ -29,5 +29,4 @@ applications*, John Wiley & Sons: New York. Exercise 4.5.
 
 ``` r
 plot(books)
-
 ```

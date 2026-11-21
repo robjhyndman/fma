@@ -28,5 +28,4 @@ McCleary and Hay (1980).
 
 ``` r
 plot(schizo)
-
 ```

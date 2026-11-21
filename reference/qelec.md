@@ -21,5 +21,4 @@ applications*, John Wiley & Sons: New York. Exercise 3.4.
 
 ``` r
 plot(decompose(qelec))
-
 ```

@@ -25,5 +25,4 @@ plot(usdeaths)
 seasonplot(usdeaths)
 
 tsdisplay(usdeaths)
-
 ```

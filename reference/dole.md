@@ -24,5 +24,4 @@ applications*, John Wiley & Sons: New York. Exercise 2.3.
 plot(dole)
 
 tsdisplay(dole)
-
 ```

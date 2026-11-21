@@ -29,5 +29,4 @@ applications*, John Wiley & Sons: New York. Exercise 5.3.
 
 ``` r
 plot(ozonedep~melanoma, data=ozone, pch=19, col=2)
-
 ```

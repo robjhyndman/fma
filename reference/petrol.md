@@ -37,5 +37,4 @@ applications*, John Wiley & Sons: New York. Chapter 8.
 
 ``` r
 plot(petrol)
-
 ```

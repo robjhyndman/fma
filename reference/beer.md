@@ -25,5 +25,4 @@ plot(beer)
 seasonplot(beer)
 
 tsdisplay(beer)
-
 ```

@@ -25,5 +25,4 @@ plot(elec)
 seasonplot(elec)
 
 tsdisplay(elec)
-
 ```

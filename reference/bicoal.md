@@ -21,5 +21,4 @@ applications*, John Wiley & Sons: New York. Exercise 7.7.
 
 ``` r
 tsdisplay(bicoal)
-
 ```

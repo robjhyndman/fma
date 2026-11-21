@@ -22,5 +22,4 @@ applications*, John Wiley & Sons: New York. Exercise 2.4.
 
 ``` r
 tsdisplay(mink)
-
 ```

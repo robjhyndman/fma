@@ -25,5 +25,4 @@ Kendall (1976).
 
 ``` r
 tsdisplay(sheep)
-
 ```

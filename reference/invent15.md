@@ -22,5 +22,4 @@ applications*, John Wiley & Sons: New York. Exercise 2.6. Also Chapter
 
 ``` r
 plot(invent15)
-
 ```

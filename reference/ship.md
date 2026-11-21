@@ -21,5 +21,4 @@ applications*, John Wiley & Sons: New York. Chapter 4. Exercise 4.6.
 
 ``` r
 plot(ship)
-
 ```

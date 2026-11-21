@@ -25,5 +25,4 @@ Brockwell and Davis (1996)
 
 ``` r
 tsdisplay(dj)
-
 ```

@@ -30,5 +30,4 @@ applications*, John Wiley & Sons: New York. Exercise 5.5.
 
 ``` r
 plot(Mwh ~ temp, data=econsumption, pch=19, col=4)
-
 ```

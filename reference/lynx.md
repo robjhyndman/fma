@@ -31,5 +31,4 @@ Society series A*, **140**, 411–431.
 plot(lynx)
 
 tsdisplay(lynx)
-
 ```

@@ -37,5 +37,4 @@ applications*, John Wiley & Sons: New York. Exercise 6.4.
 
 ``` r
 plot(cement)
-
 ```

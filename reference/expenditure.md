@@ -21,5 +21,4 @@ applications*, John Wiley & Sons: New York. Chapter 2.
 
 ``` r
 hist(expenditure)
-
 ```

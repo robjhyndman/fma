@@ -25,5 +25,4 @@ plot(bricksq)
 seasonplot(bricksq)
 
 tsdisplay(bricksq)
-
 ```

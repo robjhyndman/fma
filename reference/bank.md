@@ -33,5 +33,4 @@ applications*, John Wiley & Sons: New York. Chapter 6.
 
 ``` r
 plot(bank)
-
 ```

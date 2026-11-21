@@ -31,5 +31,4 @@ plot(ukdeaths)
 seasonplot(ukdeaths)
 
 tsdisplay(ukdeaths)
-
 ```

@@ -30,5 +30,4 @@ plot(motion)
 seasonplot(motion)
 
 tsdisplay(motion)
-
 ```

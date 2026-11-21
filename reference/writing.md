@@ -24,5 +24,4 @@ applications*, John Wiley & Sons: New York. Chapter 7.
 tsdisplay(writing)
 
 seasonplot(writing)
-
 ```

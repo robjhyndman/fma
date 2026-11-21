@@ -35,5 +35,4 @@ of female road racing performance, *Research Quarterly Exercise Sport*,
 
 ``` r
 plot(times~capacity, data=running, pch=19, col=2)
-
 ```

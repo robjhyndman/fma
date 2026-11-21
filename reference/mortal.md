@@ -29,5 +29,4 @@ applications*, John Wiley & Sons: New York. Exercise 5.9.
 
 ``` r
 plot(mortality~typeA, data=mortal)
-
 ```

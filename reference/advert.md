@@ -30,5 +30,4 @@ applications*, John Wiley & Sons: New York. Exercise 6.7. Exercise 8.1.
 
 ``` r
 plot(sales ~ advert, data=advert)
-
 ```

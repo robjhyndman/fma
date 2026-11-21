@@ -22,5 +22,4 @@ applications*, John Wiley & Sons: New York. Chapter 9.
 
 ``` r
 plot(copper3)
-
 ```

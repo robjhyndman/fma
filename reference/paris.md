@@ -25,5 +25,4 @@ plot(paris)
 seasonplot(paris)
 
 tsdisplay(paris)
-
 ```

@@ -21,5 +21,4 @@ applications*, John Wiley & Sons: New York. Exercise 8.2.
 
 ``` r
 plot(huron)
-
 ```

@@ -30,5 +30,4 @@ applications*, John Wiley & Sons: New York. Exercise 5.7.
 
 ``` r
 plot(time~Year, data=olympic, pch=19, col=3)
-
 ```

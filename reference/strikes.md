@@ -25,5 +25,4 @@ Brockwell and Davis (1991)
 
 ``` r
 tsdisplay(strikes)
-
 ```

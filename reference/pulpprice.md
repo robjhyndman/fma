@@ -29,5 +29,4 @@ applications*, John Wiley & Sons: New York. Chapter 5.
 
 ``` r
 plot(shipments~price, data=pulpprice)
-
 ```

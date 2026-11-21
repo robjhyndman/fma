@@ -21,5 +21,4 @@ applications*, John Wiley & Sons: New York. Chapter 3.
 
 ``` r
 plot(shampoo)
-
 ```

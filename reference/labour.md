@@ -27,5 +27,4 @@ labour.stl <- stl(labour,10)
 plot(labour.stl)
 
 monthplot(labour.stl$time.series[,1],type="h")
-
 ```

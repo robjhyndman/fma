@@ -9,5 +9,4 @@
 #' @keywords datasets
 #' @examples
 #' plot(telephone)
-#'
 "telephone"

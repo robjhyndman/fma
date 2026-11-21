@@ -8,5 +8,4 @@
 #' @keywords datasets
 #' @examples
 #' tsdisplay(wnoise)
-#'
 "wnoise"

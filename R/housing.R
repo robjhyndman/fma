@@ -13,5 +13,4 @@
 #' @keywords datasets
 #' @examples
 #' plot(housing)
-#'
 "housing"

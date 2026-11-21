@@ -14,5 +14,4 @@
 #' @examples
 #' plot(lynx)
 #' tsdisplay(lynx)
-#'
 "lynx"

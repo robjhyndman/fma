@@ -8,5 +8,4 @@
 #' @keywords datasets
 #' @examples
 #' plot(decompose(qelec))
-#'
 "qelec"

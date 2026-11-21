@@ -19,6 +19,5 @@ Sales of product C (a lubricant sold in large containers).
 }
 \examples{
 plot(productC)
-
 }
 \keyword{datasets}

@@ -25,6 +25,5 @@ hotel, motel and guest house in Victoria, Australia: Jan 1980 -- Jun 1995.
 \examples{
 plot(motel[,1], motel[,2], xlab="Room nights", ylab="Takings",
   pch=19, col=4)
-
 }
 \keyword{datasets}

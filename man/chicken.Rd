@@ -19,7 +19,5 @@ Price of chicken in US (constant dollars): 1924--1993.
 }
 \examples{
 plot(chicken)
-
-
 }
 \keyword{datasets}

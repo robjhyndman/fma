@@ -24,6 +24,5 @@ manufacturing: 1953--1974.
 }
 \examples{
 plot(capital)
-
 }
 \keyword{datasets}

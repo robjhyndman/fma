@@ -9,5 +9,4 @@
 #' @keywords datasets
 #' @examples
 #' plot(invent15)
-#'
 "invent15"

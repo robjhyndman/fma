@@ -20,6 +20,5 @@ Sales data over 10 time periods.
 \examples{
 plot(sales,type="p")
 abline(lsfit(1:10,sales))
-
 }
 \keyword{datasets}

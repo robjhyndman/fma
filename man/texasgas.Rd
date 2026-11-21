@@ -24,6 +24,5 @@ Price and per capita consumption of natural gas in 20 towns in Texas.
 }
 \examples{
 plot(consumption ~ price, data=texasgas)
-
 }
 \keyword{datasets}

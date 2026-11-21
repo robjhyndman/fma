@@ -24,7 +24,6 @@ York and American stock exchange. January 1967 -- November 1969.
 }
 \examples{
 plot(boston)
-
 }
 \references{
 McGee and Carleton (1970) Piecewise regression, \emph{Journal of

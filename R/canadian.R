@@ -10,5 +10,4 @@
 #' @keywords datasets
 #' @examples
 #' plot(canadian)
-#'
 "canadian"

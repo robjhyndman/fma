@@ -23,6 +23,5 @@ Ozone depletion and melanoma rates in various locations.
 }
 \examples{
 plot(ozonedep~melanoma, data=ozone, pch=19, col=2)
-
 }
 \keyword{datasets}

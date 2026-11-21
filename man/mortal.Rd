@@ -23,6 +23,5 @@ Bird mortality for 156 poultry farms, Aug 1995 -- Jul 1996.
 }
 \examples{
 plot(mortality~typeA, data=mortal)
-
 }
 \keyword{datasets}

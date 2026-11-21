@@ -25,6 +25,5 @@ US monthly sales of petroleum and related products: Jan 1971 -- Dec 1991.
 }
 \examples{
 plot(petrol)
-
 }
 \keyword{datasets}

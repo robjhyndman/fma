@@ -23,6 +23,5 @@ World pulp price and shipments.
 }
 \examples{
 plot(shipments~price, data=pulpprice)
-
 }
 \keyword{datasets}

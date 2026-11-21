@@ -21,6 +21,5 @@ Queensland, Australia.
 \examples{
 plot(fancy)
 seasonplot(fancy)
-
 }
 \keyword{datasets}

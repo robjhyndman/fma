@@ -25,6 +25,5 @@ Cement composition and heat data.
 }
 \examples{
 plot(cement)
-
 }
 \keyword{datasets}

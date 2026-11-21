@@ -10,5 +10,4 @@
 #' @examples
 #' plot(fancy)
 #' seasonplot(fancy)
-#'
 "fancy"

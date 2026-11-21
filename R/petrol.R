@@ -14,5 +14,4 @@
 #' @keywords datasets
 #' @examples
 #' plot(petrol)
-#'
 "petrol"

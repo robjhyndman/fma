@@ -19,7 +19,6 @@ Sheep population (in millions) of England and Wales: 1867--1939.
 }
 \examples{
 tsdisplay(sheep)
-
 }
 \references{
 Kendall (1976).

@@ -22,6 +22,5 @@ Australian quarterly clay brick production: 1956--1994.
 plot(bricksq)
 seasonplot(bricksq)
 tsdisplay(bricksq)
-
 }
 \keyword{datasets}

@@ -22,6 +22,5 @@ Monthly accidental deaths in USA: Jan 1973 -- Dec 1978.
 plot(usdeaths)
 seasonplot(usdeaths)
 tsdisplay(usdeaths)
-
 }
 \keyword{datasets}

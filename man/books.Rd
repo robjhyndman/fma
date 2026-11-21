@@ -23,6 +23,5 @@ Daily sales of paperback and hardcover books at the same store.
 }
 \examples{
 plot(books)
-
 }
 \keyword{datasets}

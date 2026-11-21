@@ -12,5 +12,4 @@
 #' plot(uselec)
 #' seasonplot(uselec)
 #' tsdisplay(uselec)
-#'
 "uselec"

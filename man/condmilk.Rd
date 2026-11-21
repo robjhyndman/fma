@@ -21,6 +21,5 @@ Manufacturers' stocks of evaporated and sweetened condensed milk: Jan 1971 -- De
 plot(condmilk)
 seasonplot(condmilk)
 tsdisplay(condmilk)
-
 }
 \keyword{datasets}

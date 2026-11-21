@@ -10,5 +10,4 @@
 #' @examples
 #' plot(ustreas)
 #' tsdisplay(ustreas)
-#'
 "ustreas"

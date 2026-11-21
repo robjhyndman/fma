@@ -20,6 +20,5 @@ Aug 1995).
 }
 \examples{
 tsdisplay(pigs)
-
 }
 \keyword{datasets}

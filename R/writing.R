@@ -10,5 +10,4 @@
 #' @examples
 #' tsdisplay(writing)
 #' seasonplot(writing)
-#'
 "writing"

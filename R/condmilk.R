@@ -11,5 +11,4 @@
 #' plot(condmilk)
 #' seasonplot(condmilk)
 #' tsdisplay(condmilk)
-#'
 "condmilk"

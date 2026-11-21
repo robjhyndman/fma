@@ -9,5 +9,4 @@
 #' @keywords datasets
 #' @examples
 #' tsdisplay(bicoal)
-#'
 "bicoal"

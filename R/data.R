@@ -21,7 +21,6 @@
 #'   pch = 19, col = 4
 #' )
 #' legend(30, 25000, legend = c("USA", "Japan"), pch = 19, col = c(4, 2))
-#'
 "auto"
 
 #' Mutual savings bank deposits
@@ -40,7 +39,6 @@
 #' @keywords datasets
 #' @examples
 #' plot(bank)
-#'
 "bank"
 
 #' Sales of paperback and hardcover books
@@ -58,7 +56,6 @@
 #' @keywords datasets
 #' @examples
 #' plot(books)
-#'
 "books"
 
 #' Monthly dollar volume of sales
@@ -79,7 +76,6 @@
 #' @keywords datasets
 #' @examples
 #' plot(boston)
-#'
 "boston"
 
 #' Quarterly capital expenditure and appropriations
@@ -98,7 +94,6 @@
 #' @keywords datasets
 #' @examples
 #' plot(capital)
-#'
 "capital"
 
 #' Cement composition and heat data
@@ -118,7 +113,6 @@
 #' @keywords datasets
 #' @examples
 #' plot(cement)
-#'
 "cement"
 
 #' Dexterity test and production ratings
@@ -136,7 +130,6 @@
 #' @keywords datasets
 #' @examples
 #' plot(production ~ score, data = dexter, pch = 19, col = 3)
-#'
 "dexter"
 
 #' Electricity consumption and temperature
@@ -154,7 +147,6 @@
 #' @keywords datasets
 #' @examples
 #' plot(Mwh ~ temp, data = econsumption, pch = 19, col = 4)
-#'
 "econsumption"
 
 #' IBM sales and profit
@@ -184,7 +176,6 @@
 #'   ylab = "Profits (billions of $)", xlab = "Year", type = "o"
 #' )
 #' lines(ibm[, 4], col = 2, type = "o")
-#'
 "ibm"
 
 #' King Kong data
@@ -203,7 +194,6 @@
 #' @keywords datasets
 #' @examples
 #' plot(weight ~ height, data = kkong, pch = 19, col = 2)
-#'
 "kkong"
 
 #' Mortality
@@ -221,7 +211,6 @@
 #' @keywords datasets
 #' @examples
 #' plot(mortality ~ typeA, data = mortal)
-#'
 "mortal"
 
 #' Total accommodation at hotel, motel and guest house
@@ -243,7 +232,6 @@
 #'   xlab = "Room nights", ylab = "Takings",
 #'   pch = 19, col = 4
 #' )
-#'
 "motel"
 
 #' Men's 400 m final winning times in each Olympic Games
@@ -261,7 +249,6 @@
 #' @keywords datasets
 #' @examples
 #' plot(time ~ Year, data = olympic, pch = 19, col = 3)
-#'
 "olympic"
 
 #' Ozone depletion and melanoma rates
@@ -279,7 +266,6 @@
 #' @keywords datasets
 #' @examples
 #' plot(ozonedep ~ melanoma, data = ozone, pch = 19, col = 2)
-#'
 "ozone"
 
 #' GDP
@@ -297,7 +283,6 @@
 #' @keywords datasets
 #' @examples
 #' plot(PCV ~ GDP, data = pcv, pch = 20, col = 2)
-#'
 "pcv"
 
 #' Pulp price and shipments
@@ -315,7 +300,6 @@
 #' @keywords datasets
 #' @examples
 #' plot(shipments ~ price, data = pulpprice)
-#'
 "pulpprice"
 
 #' Running times and maximal aerobic capacity
@@ -336,7 +320,6 @@
 #' @keywords datasets
 #' @examples
 #' plot(times ~ capacity, data = running, pch = 19, col = 2)
-#'
 "running"
 
 #' Price and consumption of natural gas
@@ -355,5 +338,4 @@
 #' @keywords datasets
 #' @examples
 #' plot(consumption ~ price, data = texasgas)
-#'
 "texasgas"

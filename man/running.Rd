@@ -23,7 +23,6 @@ Running times and maximal aerobic capacity for 14 female runners.
 }
 \examples{
 plot(times~capacity, data=running, pch=19, col=2)
-
 }
 \references{
 Conley, Krahenbuhl, Burkett and Millar (1981) Physiological

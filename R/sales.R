@@ -9,5 +9,4 @@
 #' @examples
 #' plot(sales, type = "p")
 #' abline(lsfit(1:10, sales))
-#'
 "sales"

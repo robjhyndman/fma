@@ -14,5 +14,4 @@
 #' log.jcars <- BoxCox(jcars, 0)
 #' jcars.f <- holt(log.jcars)
 #' plot(jcars.f)
-#'
 "jcars"

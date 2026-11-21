@@ -13,5 +13,4 @@
 #' @examples
 #' plot(cowtemp)
 #' tsdisplay(cowtemp)
-#'
 "cowtemp"

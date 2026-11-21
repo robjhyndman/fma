@@ -19,6 +19,5 @@ Sales of shampoo over a three year period.
 }
 \examples{
 plot(shampoo)
-
 }
 \keyword{datasets}

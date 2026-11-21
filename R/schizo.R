@@ -12,5 +12,4 @@
 #' @keywords datasets
 #' @examples
 #' plot(schizo)
-#'
 "schizo"

@@ -14,5 +14,4 @@
 #' @keywords datasets
 #' @examples
 #' plot(sales ~ advert, data = advert)
-#'
 "advert"

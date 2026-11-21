@@ -9,5 +9,4 @@
 #' @keywords datasets
 #' @examples
 #' plot(copper1)
-#'
 "copper1"

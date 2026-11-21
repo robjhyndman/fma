@@ -19,5 +19,4 @@
 #'   xlab = "Year", ylab = "pounds",
 #'   main = "Adjusted monthly milk production per cow"
 #' )
-#'
 "milk"

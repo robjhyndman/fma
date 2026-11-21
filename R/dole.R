@@ -10,5 +10,4 @@
 #' @examples
 #' plot(dole)
 #' tsdisplay(dole)
-#'
 "dole"

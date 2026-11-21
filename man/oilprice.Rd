@@ -19,6 +19,5 @@ Oil prices in constant 1997 dollars: 1870--1997.
 }
 \examples{
 plot(oilprice)
-
 }
 \keyword{datasets}

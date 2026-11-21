@@ -8,5 +8,4 @@
 #' @keywords datasets
 #' @examples
 #' plot(copper3)
-#'
 "copper3"

@@ -19,6 +19,5 @@ Cost of a telephone call between San Francisco and New York: 1915--1996.
 }
 \examples{
 plot(telephone)
-
 }
 \keyword{datasets}

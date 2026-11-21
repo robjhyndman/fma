@@ -19,6 +19,5 @@ Monthly copper prices for 28 consecutive months (in constant 1997 dollars).
 }
 \examples{
 plot(copper1)
-
 }
 \keyword{datasets}

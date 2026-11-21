@@ -24,6 +24,5 @@ Deposits in a mutual savings bank in a large metropolitan area.
 }
 \examples{
 plot(bank)
-
 }
 \keyword{datasets}

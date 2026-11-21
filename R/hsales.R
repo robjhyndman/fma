@@ -10,5 +10,4 @@
 #' @examples
 #' plot(hsales)
 #' plot(stl(hsales, "periodic"), main = "Sales of new one-family houses, USA")
-#'
 "hsales"

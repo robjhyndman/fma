@@ -20,6 +20,5 @@ Electric can opener shipments.
 }
 \examples{
 plot(ship)
-
 }
 \keyword{datasets}

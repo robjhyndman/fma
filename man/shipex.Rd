@@ -20,6 +20,5 @@ randomness.
 }
 \examples{
 plot(shipex)
-
 }
 \keyword{datasets}

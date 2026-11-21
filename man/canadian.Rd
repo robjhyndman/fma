@@ -20,6 +20,5 @@ from Q1 1974 to Q3 1975.
 }
 \examples{
 plot(canadian)
-
 }
 \keyword{datasets}

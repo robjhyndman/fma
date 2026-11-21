@@ -19,6 +19,5 @@ Real daily wages in pounds, England: 1260--1994.
 }
 \examples{
 plot(wagesuk)
-
 }
 \keyword{datasets}

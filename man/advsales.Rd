@@ -24,7 +24,6 @@ product.
 }
 \examples{
 plot(advsales)
-
 }
 \references{
 Blattberg and Jeuland (1981).

@@ -15,5 +15,4 @@
 #' @keywords datasets
 #' @examples
 #' plot(advsales)
-#'
 "advsales"
